@@ -155,11 +155,11 @@ aspectratio=43,
 \begin{frame}
 	\frametitle{等价无穷小替换定理与常用的等价无穷小}
 	\begin{exampleblock}{例1}
-		$ \quad \lim _{x \rightarrow 0} \frac{\tan m x}{\sin n x}=\lim _{x \rightarrow 0} \frac{m x}{n x}=\frac{m}{n} \quad(\tan m x \sim m x, \sin n x\sim n x)$
+		$$ \quad \lim _{x \rightarrow 0} \frac{\tan m x}{\sin n x}=\lim _{x \rightarrow 0} \frac{m x}{n x}=\frac{m}{n}, \quad(\tan m x \sim m x, \sin n x\sim n x).$$
 	\end{exampleblock}
 	\pause
 	\begin{exampleblock}{例2}
-		$ \lim _{x \rightarrow 0} \frac{\sin ^2 x}{x^3+2 x^2}=\lim _{x \rightarrow 0} \frac{x^2}{x^3+2 x^2}=\lim _{x \rightarrow 0} \frac{1}{x+2}=\frac{1}{2}\left(\sin ^2 x \sim x^2\right)$
+		$$ \lim _{x \rightarrow 0} \frac{\sin ^2 x}{x^3+2 x^2}=\lim _{x \rightarrow 0} \frac{x^2}{x^3+2 x^2}=\lim _{x \rightarrow 0} \frac{1}{x+2}=\frac{1}{2}, \quad\left(\sin ^2 x \sim x^2\right)$$
 	\end{exampleblock}
 \end{frame}
 \begin{frame}
@@ -175,8 +175,8 @@ aspectratio=43,
 	\pause
 	\begin{exampleblock}{例4} \begin{equation*}
 		\begin{aligned}
-			  & \lim _{x \rightarrow 0} \frac{\left(1+x^2\right)^{\frac{1}{3}}-1}{\cos x-1}=\lim _{x \rightarrow 0} \frac{\frac{1}{3} x^2}{-\frac{1}{2} x^2}= -\frac{2}{3} \\
-			  & \left(\left(1+x^2\right)^{\frac{1}{3}}-1 \sim \frac{1}{3} x^2, \cos x-1 \sim-\frac{1}{2} x^2\right)                                                        
+			  & \lim _{x \rightarrow 0} \frac{\left(1+x^2\right)^{\frac{1}{3}}-1}{\cos x-1}=\lim _{x \rightarrow 0} \frac{\frac{1}{3} x^2}{-\frac{1}{2} x^2}= -\frac{2}{3}, \\
+			  & \left(\left(1+x^2\right)^{\frac{1}{3}}-1 \sim \frac{1}{3} x^2, \cos x-1 \sim-\frac{1}{2} x^2\right).
 		\end{aligned}
 		\end{equation*}
 	\end{exampleblock}
@@ -184,7 +184,6 @@ aspectratio=43,
 
 \section{函数的连续性}
 \subsection{增量与差分}
-
 \begin{frame}
 	\frametitle{增量, 差分与函数连续性}
 	\begin{block}{增量}
@@ -200,7 +199,7 @@ aspectratio=43,
 	\frametitle{函数的连续性概念}
 	\begin{block}{函数的连续性}
 		设函数 $y=f(x)$ 在点 $x_0$ 的某个邻域内有定义, 如果当自变量的增量 $\Delta x \rightarrow 0$ 时, 相应因变量的增量 $\Delta y \rightarrow 0$, 则称 $f(x)$ 在点 $x_0$ 处\textbf{连续},\\
-		记作 $$\lim _{\Delta x \rightarrow 0} \Delta y=0$$. 
+		记作 $$\lim _{\Delta x \rightarrow 0} \Delta y=0.$$
 	\end{block}
 	\pause
 	初等函数在定义域范围内都是连续的.
@@ -210,11 +209,9 @@ aspectratio=43,
 	\end{exampleblock}
 	\pause
 	初等函数在不包含于定义域的区间上都是不连续的.
-	
 	\begin{alertblock}{图像与极限存在}
 		如果是能采用图像方法精确描述的函数,图像上没有跳点,断点或者无穷大趋势,那么在该点上函数是连续的.
 	\end{alertblock}
-	
 \end{frame}
 
 \subsection{分段函数的连续性}
@@ -298,8 +295,8 @@ aspectratio=43,
 		\column{0.4\textwidth}
 		\[
 			f(x) = \begin{cases}
-			\sin(x) & \text{if } x < 0 \\
-			\sqrt{x} & \text{otherwise}
+			\sin(x), & \text{if } x < 0, \\
+			\sqrt{x}, & \text{otherwise}.
 			\end{cases}
 		\]
 		\column{0.6\textwidth}
@@ -321,9 +318,9 @@ aspectratio=43,
 		\column{0.4\textwidth}
 		\[
 			f(x) = \begin{cases}
-			-1 & \text{if } x < 0 \\
-			0 & \text{if } x = 0 \\
-			1 & \text{if } x > 0
+			-1, & \text{if } x < 0, \\
+			0, & \text{if } x = 0, \\
+			1, & \text{if } x > 0.
 			\end{cases}
 		\]
 		\column{0.6\textwidth}
@@ -348,13 +345,13 @@ aspectratio=43,
 	\begin{columns}[onlytextwidth]
 		\column{0.4\textwidth}
 		\[
-			f(x) = e^{\frac{1}{|x|-1}}
+			f(x) = e^{\displaystyle\frac{1}{|x|-1}}.
 		\]
 		\column{0.6\textwidth}
 		\begin{figure}
 			\centering
 			% Requires \usepackage{graphicx}
-			\includegraphics[width=5cm]{Exp[1/(Abs[x]-1)}
+			\includegraphics[width=5cm]{(Abs[x]-1)}
 				\end{figure}
 				\end{columns}
 				\end{frame}
@@ -363,8 +360,8 @@ aspectratio=43,
 					\begin{exampleblock}{Dirichlet 函数 $D(x)$}
 						\[
 							D(x) = \begin{cases}
-							1 & \text{if } x \in \mathbb{Q}, \\
-							0 & \text{if } x \in \mathbb{R} \setminus \mathbb{Q}.
+							1, & \text{if } x \in \mathbb{Q}, \\
+							0, & \text{if } x \in \mathbb{R} \setminus \mathbb{Q}.
 							\end{cases}
 						\]
 						
@@ -373,8 +370,8 @@ aspectratio=43,
 					\begin{exampleblock}{Riemann 函数 $R(x)$}
 						\[
 							R(x) = \begin{cases}
-							\displaystyle\frac1q & \text{if } x = \displaystyle\frac{p}{q}\in \mathbb{Q},\,\,gcd(p,q)=1, \\
-							0 & \text{if } x \in \mathbb{R} \setminus \mathbb{Q}.
+							\displaystyle\frac1q, & \text{if } x = \displaystyle\frac{p}{q}\in \mathbb{Q},\,\,gcd(p,q)=1, \\
+							0, & \text{if } x \in \mathbb{R} \setminus \mathbb{Q}.
 							\end{cases}
 						\]
 						
@@ -394,14 +391,13 @@ aspectratio=43,
 					\end{exampleblock}
 					\pause
 					\begin{exampleblock}{复合运算性质}
-						若函数 $u=\varphi(x)$ 在 $x_0$ 处连续, 而函数 $y=f(u)$ 在 $u_0=\varphi\left(x_0\right)$ 处也连续, 则复合函数 $y=f(\varphi(x))$ 在 $x=x_0$ 处连 续, 即有 $\lim _{x \rightarrow x_0} f[\varphi(x)]=f\left[\varphi\left(x_0\right)\right]$
-							
+						若函数 $u=\varphi(x)$ 在 $x_0$ 处连续, 而函数 $y=f(u)$ 在 $u_0=\varphi\left(x_0\right)$ 处也连续, 则复合函数 $y=f(\varphi(x))$ 在 $x=x_0$ 处连 续, 即有 
+						$$\lim _{x \rightarrow x_0} f[\varphi(x)]=f\left[\varphi\left(x_0\right)\right].$$
 					\end{exampleblock}
 					\pause
 					\begin{exampleblock}{反函数的连续性}
 						单调递增 (递减) 且连续的函数, 其反函数也单调递增 (递减) 且连续.
 					\end{exampleblock}
-						
 				\end{frame}
 				
 				\begin{frame}{连续函数的性质}{初等函数的连续性}
@@ -447,8 +443,7 @@ aspectratio=43,
 					\begin{equation*}
 						f(x) = x^{-1},\quad x\in(0,1).
 					\end{equation*}
-					\pause 以及推论: 闭区间上的连续函数是有界的.\\
-					\pause (开区间,半开半闭区间则没有这个结论)
+					\pause 以及推论: 闭区间上的连续函数是有界的. \pause (开区间,半开半闭区间则没有这个结论)
 				\end{frame}
 				
 				\begin{frame}{连续函数的性质}{连续函数在闭区间上的连续性}
@@ -462,12 +457,12 @@ aspectratio=43,
 						f(\xi)=0 .
 						$$
 					\end{block}
-					
+					\pause
 					\begin{exampleblock}{例题}
 						证明方程 $x^5-3 x=1$ 至少有一个根介于 1 和 2 之间.
 					\end{exampleblock}
 					\begin{equation*}
-						f(x):x^5-3 x-1, \,\, \pause f(1)=-3, \,\, \pause f(2)=32-6-1=25,\,\, \pause f(1)\cdot f(2) =-75.
+						\pause f(x):x^5-3 x-1, \,\, \pause f(1)=-3, \,\, \pause f(2)=32-6-1=25,\,\, \pause f(1)\cdot f(2) =-75.
 					\end{equation*}
 				\end{frame}
 				

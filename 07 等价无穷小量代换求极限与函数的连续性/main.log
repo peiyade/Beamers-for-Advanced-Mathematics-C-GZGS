@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Arch Linux) (preloaded format=xelatex 2023.10.11)  12 OCT 2023 15:00
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Arch Linux) (preloaded format=xelatex 2023.10.11)  12 OCT 2023 22:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1463,7 +1463,7 @@ Overfull \hbox (1.4111pt too wide) has occurred while \output is active
 [33
 
 ]
-Overfull \hbox (20.74588pt too wide) in paragraph at lines 317--317
+Overfull \hbox (20.74588pt too wide) in paragraph at lines 314--314
 [][]  
  []
 
@@ -1480,7 +1480,7 @@ Overfull \hbox (1.4111pt too wide) has occurred while \output is active
 [34
 
 ]
-Overfull \hbox (20.74588pt too wide) in paragraph at lines 345--345
+Overfull \hbox (20.74588pt too wide) in paragraph at lines 342--342
 [][]  
  []
 
@@ -1497,8 +1497,8 @@ Overfull \hbox (1.4111pt too wide) has occurred while \output is active
 [35
 
 ]
-File: Exp[1/(Abs[x]-1).png Graphic file (type bmp)
-<Exp[1/(Abs[x]-1).png>
+File: (Abs[x]-1).png Graphic file (type bmp)
+<(Abs[x]-1).png>
 
 Overfull \hbox (28.1877pt too wide) has occurred while \output is active
 []| []  \T1/lmss/m/n/6 ([])  
@@ -1764,7 +1764,7 @@ Overfull \hbox (1.4111pt too wide) has occurred while \output is active
 [57
 
 ]
-Overfull \vbox (1.92169pt too high) detected at line 472
+Overfull \vbox (1.92169pt too high) detected at line 467
  []
 
 
@@ -1780,7 +1780,7 @@ Overfull \hbox (1.4111pt too wide) has occurred while \output is active
 [58
 
 ]
-Overfull \vbox (1.92169pt too high) detected at line 472
+Overfull \vbox (1.92169pt too high) detected at line 467
  []
 
 
@@ -1796,7 +1796,7 @@ Overfull \hbox (1.4111pt too wide) has occurred while \output is active
 [59
 
 ]
-Overfull \vbox (1.92169pt too high) detected at line 472
+Overfull \vbox (1.92169pt too high) detected at line 467
  []
 
 
@@ -1812,7 +1812,7 @@ Overfull \hbox (1.4111pt too wide) has occurred while \output is active
 [60
 
 ]
-Overfull \vbox (1.92169pt too high) detected at line 472
+Overfull \vbox (1.92169pt too high) detected at line 467
  []
 
 
@@ -1828,7 +1828,7 @@ Overfull \hbox (1.4111pt too wide) has occurred while \output is active
 [61
 
 ]
-Overfull \vbox (1.92169pt too high) detected at line 472
+Overfull \vbox (1.92169pt too high) detected at line 467
  []
 
 
@@ -1844,7 +1844,7 @@ Overfull \hbox (1.4111pt too wide) has occurred while \output is active
 [62
 
 ]
-Overfull \vbox (1.92169pt too high) detected at line 472
+Overfull \vbox (1.92169pt too high) detected at line 467
  []
 
 
@@ -1859,7 +1859,39 @@ Overfull \hbox (1.4111pt too wide) has occurred while \output is active
 
 [63
 
-] [64
+]
+Overfull \vbox (1.92169pt too high) detected at line 467
+ []
+
+
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[64
+
+]
+Overfull \vbox (1.92169pt too high) detected at line 467
+ []
+
+
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[65
+
+] [66
 
 ]
 \tf@nav=\write6
@@ -1876,12 +1908,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: CD1B329C039AFE0C28B494730B8E282B;992.
  ) 
 Here is how much of TeX's memory you used:
- 36453 strings out of 478682
- 816619 string characters out of 5849664
- 1869018 words of memory out of 5000000
+ 36451 strings out of 478682
+ 816501 string characters out of 5849664
+ 1870018 words of memory out of 5000000
  55876 multiletter control sequences out of 15000+600000
  563499 words of font info for 96 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  128i,20n,122p,454b,1152s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (64 pages).
+Output written on main.pdf (66 pages).

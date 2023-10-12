@@ -7,5 +7,5 @@
 \beamer@subsectionintoc {2}{3}{间断点概念}{33}{0}{2}
 \beamer@subsectionintoc {2}{4}{连续函数的性质}{39}{0}{2}
 \beamer@subsectionintoc {2}{5}{闭区间上连续函数的性质}{46}{0}{2}
-\beamer@subsubsectionintoc {2}{5}{1}{有界性}{64}{0}{2}
-\beamer@subsubsectionintoc {2}{5}{2}{介值性与零点存在定理}{64}{0}{2}
+\beamer@subsubsectionintoc {2}{5}{1}{有界性}{66}{0}{2}
+\beamer@subsubsectionintoc {2}{5}{2}{介值性与零点存在定理}{66}{0}{2}

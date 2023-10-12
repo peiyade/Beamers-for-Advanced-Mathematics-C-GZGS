@@ -165,7 +165,7 @@ aspectratio=43,
 	\]
 	即
 	\[
-		\frac{v(t_2)-v(t_1)}{t_2-t_1}\approx a\left(\frac{t_2+t_1}{2}\right)(t_2-t_1).
+		\frac{v(t_2)-v(t_1)}{t_2-t_1}\approx a\left(\frac{t_2+t_1}{2}\right).
 	\]
 	因而, 我们会考虑相关的极限问题.
 \end{frame}
@@ -238,8 +238,8 @@ aspectratio=43,
 		\begin{enumerate}
 			\item $f(x)=C$, \pause $f'(x) =0$;\pause
 			\item $f(x)=x^n, (n\in\mathbb{N}^+)$, \pause $f'(x) = n x^{n-1}$;\pause
-			\item $f(x)=\sin(x)$, \pause $f'(x)=\cos(x)$; \,\,\pause $g(x)=\cos(x)$, \pause $g'(x)=\sin(x)$;\pause
-			\item $f(x)=\log_a  x$,\pause $f'(x)=\log a \cdot \displaystyle\frac{1}{x}$
+			\item $f(x)=\sin(x)$, \pause $f'(x)=\cos(x)$; \,\,\pause $g(x)=\cos(x)$, \pause $g'(x)=-\sin(x)$;\pause
+			\item $f(x)=\log_a  x$,\,\pause $f'(x)=\log a \cdot \displaystyle\frac{1}{x}$
 		\end{enumerate}
 	\end{block}
 \end{frame}
@@ -454,6 +454,24 @@ aspectratio=43,
 
 \subsection{隐函数求导法则}
 \begin{frame}{隐函数求导法则}
+	\begin{block}{隐函数求导法则}
+		设函数 $F(x, y) = 0$ 定义了一个隐函数 $y = f(x)$，其中 $F$ 是可微函数。则隐函数的导数可以通过以下公式计算：
+		\[
+			\displaystyle\frac{{dy}}{{dx}} = -\frac{{\frac{{\partial F}}{{\partial x}}}}{{\frac{{\partial F}}{{\partial y}}}}
+		\]
+	\end{block}
+
+	\pause
+
+	\begin{example}
+		考虑方程 $\mathrm{e}^{x+y}=xy$，我们可以将其视为隐函数 $y = f(x)$。通过隐函数求导法则，我们可以计算出导数为：
+		\[
+			\displaystyle\frac{{dy}}{{dx}} = -\displaystyle\frac{{\displaystyle\frac{{\partial (\mathrm{e}^{x+y}-xy)}}{{\partial x}}}}{{\displaystyle\frac{{\partial (\mathrm{e}^{x+y}-xy)}}{{\partial y}}}} = -\frac{{(\mathrm{e}^{x+y}-y)}}{{(\mathrm{e}^{x+y}-x)}}
+		\]
+	\end{example}
+\end{frame}
+
+\begin{frame}{隐函数求导法则}
 	\begin{block}{题目}
 		\begin{itemize}
 			\item 方程 $x^2 + y^2 = 1$ 定义了一个隐函数 $y = f(x)$
@@ -524,24 +542,7 @@ aspectratio=43,
 	\end{proof}
 \end{frame}
 
-\subsection{隐函数求导法则}
-\begin{frame}{隐函数求导法则}
-	\begin{block}{隐函数求导法则}
-		设函数 $F(x, y) = 0$ 定义了一个隐函数 $y = f(x)$，其中 $F$ 是可微函数。则隐函数的导数可以通过以下公式计算：
-		\[
-			\displaystyle\frac{{dy}}{{dx}} = -\frac{{\frac{{\partial F}}{{\partial x}}}}{{\frac{{\partial F}}{{\partial y}}}}
-		\]
-	\end{block}
 
-	\pause
-
-	\begin{example}
-		考虑方程 $\mathrm{e}^{x+y}=xy$，我们可以将其视为隐函数 $y = f(x)$。通过隐函数求导法则，我们可以计算出导数为：
-		\[
-			\displaystyle\frac{{dy}}{{dx}} = -\displaystyle\frac{{\displaystyle\frac{{\partial (\mathrm{e}^{x+y}-xy)}}{{\partial x}}}}{{\displaystyle\frac{{\partial (\mathrm{e}^{x+y}-xy)}}{{\partial y}}}} = -\frac{{(\mathrm{e}^{x+y}-y)}}{{(\mathrm{e}^{x+y}-x)}}
-		\]
-	\end{example}
-\end{frame}
 
 
 \beamertemplateshadingbackground{structure.fg!90}{structure.fg}
@@ -550,7 +551,7 @@ aspectratio=43,
 	\centering
 	{
 		\centering \Huge \color{white} Thank you for your attention!\\[10pt]Questions?\\\bigskip
-		Homework: Page 119: 1, 3, 10; Page 120: 17, 23,26.
+		Homework: Page 119: 1, 3, 10; Page 120: 17, 23, 26.
 	}
 	\vfill
 \end{frame}
