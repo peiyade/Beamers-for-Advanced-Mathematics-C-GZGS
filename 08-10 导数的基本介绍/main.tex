@@ -114,7 +114,6 @@ aspectratio=43,
 \end{frame}
 
 \subsection{速度问题-II} % 匀加速运动的情形
-
 \begin{frame}{变量变化问题}{速度问题-II: 匀加速运动的情形}
 	考虑某物体 $A$ 以初速度 $v_0$, 加速度 $a$ 运动的情形, 记 $t$ 为物体运动的经过时间长度, $v(t)$ 为物体在$t$时刻的速度, $s(t)$ 为物体在 $t$ 时刻运动的路程, 我们有
 	\[
@@ -138,11 +137,11 @@ aspectratio=43,
 	那么有
 	\begin{align*}
 		s(t_2) - s(t_1) & = v_0\cdot (t_2-t_1)+ \frac{1}{2}a\cdot (t_2^2-t_1^2)            \\
-		                & =v_0\cdot(t_2-t_1) + a\cdot(t_2-t_1) \cdot \frac{1}{2}(t_2+t_1), 
+		                & =v_0\cdot(t_2-t_1) + a\cdot(t_2-t_1) \cdot \frac{1}{2}(t_2+t_1),
 	\end{align*}
 	即
 	\begin{align*}
-		\frac{s(t_2) - s(t_1)}{t_2-t_1} = v_0 + a\cdot \frac{1}{2}(t_2+t_1). 
+		\frac{s(t_2) - s(t_1)}{t_2-t_1} = v_0 + a\cdot \frac{1}{2}(t_2+t_1).
 	\end{align*}
 	对比匀速运动的速度定义, 我们可以看到, $t_1\sim t_2$ 期间的平均速度
 	\begin{equation*}
@@ -154,11 +153,11 @@ aspectratio=43,
 \subsection{速度问题-III} % 一般加速运动的情形
 \begin{frame}{变量变化问题}{速度问题-II: 匀加速运动的情形}
 	\begin{exampleblock}{高超声速飞行器速度问题 \color{blue}(\small{\it 郭建国等, {现代防御技术}, 49(6) 2021.12.)}}
-		平飞高超声速飞行器的加速度 $a$ 的简化计算模型为: 
+		平飞高超声速飞行器的加速度 $a$ 的简化计算模型为:
 		\begin{align*}
-			m\cdot a(t)= \frac{1}{2}\rho(s) v(t)^2 S C_T, 
+			m\cdot a(t)= \frac{1}{2}\rho(s) v(t)^2 S C_T,
 		\end{align*}
-		其中, $m$ 是飞行器质量, $v(t)$ 是飞行器速度, $\rho(s)$ 是大气密度, $S$ 是飞行器截面积参考参数, $C_T$ 是油门控制值. 这种问题, 只给出$\rho(s)$, $S$, $C_T$ 和初速度, 如何计算路程和速度?	
+		其中, $m$ 是飞行器质量, $v(t)$ 是飞行器速度, $\rho(s)$ 是大气密度, $S$ 是飞行器截面积参考参数, $C_T$ 是油门控制值. 这种问题, 只给出$\rho(s)$, $S$, $C_T$ 和初速度, 如何计算路程和速度?
 	\end{exampleblock}
 	思路: 极限求 $v(t)$, 逐步求解. 对于 $t_2$, $t_1$ 足够接近的时候,
 	\[
@@ -171,16 +170,14 @@ aspectratio=43,
 	因而, 我们会考虑相关的极限问题.
 \end{frame}
 
-
 \subsection{函数的切线问题-I} % 二次函数的切线问题
 
 \begin{frame}{变量变化问题}{切线问题-II: 二次函数的情形}
 	考虑二次函数
-		
 	\[
-		f(x) = a\cdot x^2 + b\cdot x +c.	
+		f(x) = a\cdot x^2 + b\cdot x +c.
 	\]
-	先序教育中, 给出了一些特殊函数的求导方法, 
+	先序教育中, 给出了一些特殊函数的求导方法,
 	\[
 		k = f'(x0) = 2  a \cdot x0 + b
 	\]
@@ -191,9 +188,7 @@ aspectratio=43,
 	可以看到切线和导数之间具有某种关系.
 \end{frame}
 
-
 \subsection{函数的切线问题-I} % 一般函数的切线问题
-
 \begin{frame}{变量变化问题}{切线问题-II: 一般函数的情形}
 	考虑函数 $f(x)$ 在点 $(x_0,f(x_0))$ 的切线问题,
 	考虑 $x_1<x_0<x_2$, 两点 $(x_1,f(x_1))$, $(x_2,f(x_2))$ 两点的割线斜率是
@@ -204,9 +199,9 @@ aspectratio=43,
 	\[
 		y-f(x_1)=k\cdot(x-x_1).
 	\]
-	
+
 	\begin{center}
-		\includegraphics[scale=0.5]{tangent secant.png}	
+		\includegraphics[scale=0.5]{tangent secant.png}
 	\end{center}
 	同样,用割线逼近切线, $x_1,x_2\to x_0$, $f(x)$ 的割线会慢慢逼近于切线
 \end{frame}
@@ -215,11 +210,11 @@ aspectratio=43,
 \subsection{导数的定义}
 \begin{frame}{导数的定义}
 	\begin{block}{定义:函数导数}
-		设 $f$, $\delta>0$ $(x_0-\delta,x_0+\delta)$, (或 $(x_0-\delta,x_0], [x_0,x_0+\delta)$) 上有定义, 对于 $0<\Delta x<\delta$, 如果极限 
+		设 $f$, $\delta>0$ $(x_0-\delta,x_0+\delta)$, (或 $(x_0-\delta,x_0], [x_0,x_0+\delta)$) 上有定义, 对于 $0<\Delta x<\delta$, 如果极限
 		\begin{equation*}
 			\begin{array}[c]{c}
-				\displaystyle\lim_{\Delta x\to 0 } \frac{f(x_0+\Delta x)-f(x_0)}{\Delta x},\bigskip                                                                          \\
-				\displaystyle\left(\text{或}\,\,\lim_{\Delta x\to0}\frac{f(x)-f(x-\Delta x)}{\Delta x}, \,\, \lim_{\Delta x\to0}\frac{f(x+\Delta x)-f(x)}{\Delta x} \right) 
+				\displaystyle\lim_{\Delta x\to 0 } \frac{f(x_0+\Delta x)-f(x_0)}{\Delta x},\bigskip \\
+				\displaystyle\left(\text{或}\,\,\lim_{\Delta x\to0}\frac{f(x)-f(x-\Delta x)}{\Delta x}, \,\, \lim_{\Delta x\to0}\frac{f(x+\Delta x)-f(x)}{\Delta x} \right)
 			\end{array}
 		\end{equation*}
 		存在, 则称 $f$ 在 $x_0$ 处可导 (或左导数存在, 右导数存在), 则称该极限值为 $f$ 在 $x_0$ 处的导数或微商 (或 左导数, 右导数), 记为 $f'(x_0)$ (或 $f'_-(x_0)$, $f'_+(x_0)$).
@@ -228,26 +223,24 @@ aspectratio=43,
 	若左右导数都存在且相等, 那么导数存在, 并与前两者的值相等.
 \end{frame}
 
-
 \begin{frame}{求导方法}
 	\begin{block}{求导流程}
 		\begin{enumerate}
 			\pause\item 	给出 $\Delta x$; 算出 $\Delta y$; 求增量
-			\pause\item  	求增量比 $\frac{\Delta y}{\Delta x}$; 求差商
-			\pause\item  	求极限.
-		\end{enumerate}		
+			      \pause\item  	求增量比 $\frac{\Delta y}{\Delta x}$; 求差商
+			      \pause\item  	求极限.
+		\end{enumerate}
 	\end{block}
 \end{frame}
-
 
 \begin{frame}{一些例子}
 	\begin{block}{例子}
 		\begin{enumerate}
 			\item $f(x)=C$, \pause $f'(x) =0$;\pause
 			\item $f(x)=x^n, (n\in\mathbb{N}^+)$, \pause $f'(x) = n x^{n-1}$;\pause
-			\item $f(x)=\sin(x)$, \pause $f'(x)=\cos(x)$; \,\,\pause $g(x)=\cos(x)$, \pause $g'(x)=\sin(x)$;\pause 
+			\item $f(x)=\sin(x)$, \pause $f'(x)=\cos(x)$; \,\,\pause $g(x)=\cos(x)$, \pause $g'(x)=\sin(x)$;\pause
 			\item $f(x)=\log_a  x$,\pause $f'(x)=\log a \cdot \displaystyle\frac{1}{x}$
-		\end{enumerate}		
+		\end{enumerate}
 	\end{block}
 \end{frame}
 
@@ -264,7 +257,7 @@ aspectratio=43,
 	\pause
 	\begin{align*}
 		  & \frac{(f(x_0+\Delta x)\pm g(x_0+\Delta x))-(f(x_0)\pm g(x_0))}{\Delta x}                  \\
-		= & \frac{f(x_0+\Delta x)-f(x_0)}{\Delta x}\pm \frac{( g(x_0+\Delta x))-( g(x_0))}{\Delta x}. 
+		= & \frac{f(x_0+\Delta x)-f(x_0)}{\Delta x}\pm \frac{( g(x_0+\Delta x))-( g(x_0))}{\Delta x}.
 	\end{align*}
 \end{frame}
 
@@ -277,9 +270,9 @@ aspectratio=43,
 			\item $h(x) = \cos(x) + \log(x)$,
 		\end{enumerate}
 	\end{block}
-			
+
 	\pause
-			
+
 	\begin{block}{答案}
 		\begin{enumerate}
 			\item $f'(x) = 1$,
@@ -303,13 +296,12 @@ aspectratio=43,
 		  & f(x_0+\Delta x)g(x_0+\Delta x)-f(x_0) g(x_0))                                                 \\\bigskip
 		= & \left(f(x_0+\Delta x)g(x_0+\Delta x)-f(x_0) g(x_0+\Delta x)\right)                            \\\smallskip
 		  & + \left(f(x_0)g(x_0+\Delta x)-f(x_0) g(x_0)\right)                                            \\\bigskip
-		= & \left(f(x_0+\Delta x)-f(x_0)\right)g(x_0+\Delta x)+f(x_0)\left(g(x_0+\Delta x)-g(x_0)\right). 
+		= & \left(f(x_0+\Delta x)-f(x_0)\right)g(x_0+\Delta x)+f(x_0)\left(g(x_0+\Delta x)-g(x_0)\right).
 	\end{align*}
 \end{frame}
 
 \begin{frame}
 	\frametitle{函数乘积的导数}{导数计算题目}
-		
 	\begin{exampleblock}{题目}
 		计算以下函数的导数：
 		\begin{enumerate}
@@ -318,9 +310,9 @@ aspectratio=43,
 			\item $h(x) = \sin(x) \cos(x) \log(x)$,
 		\end{enumerate}
 	\end{exampleblock}
-		
+
 	\pause
-		
+
 	\begin{exampleblock}{答案}
 		\begin{enumerate}
 			\item $f'(x) = \log(x) + 1$,
@@ -328,7 +320,6 @@ aspectratio=43,
 			\item $h'(x) = \cos^2(x) \log(x) - \sin^2(x) \log(x) + \displaystyle\frac{\sin(x)\cos(x)}{x}$,
 		\end{enumerate}
 	\end{exampleblock}
-		
 \end{frame}
 
 \begin{frame}{函数商的导数}
@@ -340,16 +331,15 @@ aspectratio=43,
 	\end{block}
 	Why?
 	\begin{align*}
-		  & \frac{f(x_0+\Delta x)}{g(x_0+\Delta x)}-\frac{f(x_0)}{g(x_0)}                                                \\\bigskip 
+		  & \frac{f(x_0+\Delta x)}{g(x_0+\Delta x)}-\frac{f(x_0)}{g(x_0)}                                                \\\bigskip
 		= & \frac{f(x_0+\Delta x)g(x_0)-f(x_0)g(x_0+\Delta x)}{g(x_0+\Delta x)g(x_0)}                                    \\\bigskip
 		= & \frac{f(x_0+\Delta x)g(x_0)-f(x_0)g(x_0)+f(x_0)g(x_0)-f(x_0)g(x_0+\Delta x)}{g(x_0+\Delta x)g}               \\\bigskip
-		= & \frac{\left(f(x_0+\Delta x)-f(x_0)\right)g(x_0)-f(x_0)\left(g(x_0+\Delta x)-g(x_0)\right)}{g(x_0+\Delta x)g} 
+		= & \frac{\left(f(x_0+\Delta x)-f(x_0)\right)g(x_0)-f(x_0)\left(g(x_0+\Delta x)-g(x_0)\right)}{g(x_0+\Delta x)g}
 	\end{align*}
 \end{frame}
 
 \begin{frame}{函数商的导数}
 	\frametitle{函数商的导数}{导数计算题目}
-		
 	\begin{exampleblock}{题目}
 		计算以下函数的导数：
 		\begin{enumerate}
@@ -358,9 +348,9 @@ aspectratio=43,
 			\item $h(x) = \displaystyle\frac{\cos(x)}{\log(x)}$,
 		\end{enumerate}
 	\end{exampleblock}
-		
+
 	\pause
-		
+
 	\begin{exampleblock}{答案}
 		\begin{enumerate}
 			\item $f'(x) = \sec(x) \tan(x)$,
@@ -368,20 +358,18 @@ aspectratio=43,
 			\item $h'(x) = \displaystyle\frac{-\sin(x)\log(x)-\displaystyle\frac{\cos(x)}{x}}{(\log(x))^2}$,
 		\end{enumerate}
 	\end{exampleblock}
-		
 \end{frame}
 
 \begin{frame}
 	\frametitle{反函数求导定理}
-		
 	\begin{theorem}[定理 4.3.4]
 		若函数 $y=f(x)$ 在 $(a, b)$ 上连续、严格单调、可导并且 $f'(x) \neq 0$，记 $\alpha=\min(f(a+), f(b-))$，$\beta=\max(f(a+), f(b-))$，则它的反函数 $x=f^{-1}(y)$ 在 $(\alpha, \beta)$ 上可导，且有
 		\[
 			\left[f^{-1}(y)\right]' = \frac{1}{f'(x)}.
 		\]
 	\end{theorem}
-	
 \end{frame}
+
 \begin{frame}
 	\frametitle{反函数求导定理}
 	\begin{proof}
@@ -391,7 +379,7 @@ aspectratio=43,
 				\left[f^{-1}(y)\right]' & = \lim_{\Delta y \rightarrow 0} \frac{f^{-1}(y+\Delta y)-f^{-1}(y)}{\Delta y} \\
 				                        & = \lim_{\Delta x \rightarrow 0} \frac{\Delta x}{f(x+\Delta x)-f(x)}           \\
 				                        & = \frac{1}{\lim_{\Delta x \rightarrow 0} \frac{f(x+\Delta x)-f(x)}{\Delta x}} \\
-				                        & = \frac{1}{f'(x)}.                                                            
+				                        & = \frac{1}{f'(x)}.
 			\end{aligned}
 		\]
 	\end{proof}
@@ -399,7 +387,6 @@ aspectratio=43,
 
 \begin{frame}
 	\frametitle{导数计算题目}
-			
 	\begin{exampleblock}{题目}
 		计算以下函数的导数：
 		\begin{enumerate}
@@ -408,9 +395,9 @@ aspectratio=43,
 			\item $h(x) = \arccos(x).$
 		\end{enumerate}
 	\end{exampleblock}
-			
+
 	\pause
-			
+
 	\begin{exampleblock}{答案}
 		\begin{enumerate}
 			\item $f'(x) = e^x$, 令 $y=e^x$, 有 $x=\log y$ 和 $(e^x)'=\displaystyle\frac{1}{(\log y)'}=y=e^x,$
@@ -419,7 +406,7 @@ aspectratio=43,
 		\end{enumerate}
 	\end{exampleblock}
 \end{frame}
-	
+
 
 \subsection{复合函数的求导法则}
 \begin{frame}{复合函数的求导法则}
@@ -431,86 +418,99 @@ aspectratio=43,
 	\end{block}
 	Why? \pause 考虑 $\Delta u = u(x_0+\Delta x) - u(x_0)$, \pause 由连续性, 有$\lim_{\Delta x\to0}\Delta u=0$ \pause
 	\begin{align*}
-		f\left(u_0+\Delta u\right)-f\left(u_0\right)=f^{\prime}\left(u_0\right) \Delta u+\alpha(\Delta u) \Delta u 
+		f\left(u_0+\Delta u\right)-f\left(u_0\right)=f^{\prime}\left(u_0\right) \Delta u+\alpha(\Delta u) \Delta u
 	\end{align*}
-	其中 $\lim_{\Delta x\to0}\alpha(\Delta u)=0$. \pause Why? \pause 
+	其中 $\lim_{\Delta x\to0}\alpha(\Delta u)=0$. \pause Why? \pause
 	\begin{align*}
 		\lim _{\Delta x \rightarrow 0} \frac{f\left(g\left(x_0+\Delta x\right)\right)-f\left(g\left(x_0\right)\right)}{\Delta x}= & f^{\prime}\left(u_0\right) \lim _{\Delta x \rightarrow 0} \frac{\Delta u}{\Delta x}+\lim _{\Delta x \rightarrow 0} \alpha \lim _{\Delta x \rightarrow 0} \frac{\Delta u}{\Delta x} \\
-		=                                                                                                                         & f^{\prime}\left(u_0\right)f^{\prime}\left(x_0\right).                                                                                                                              
+		=& f^{\prime}\left(u_0\right)f^{\prime}\left(x_0\right).
 	\end{align*}
 \end{frame}
 
 
 \begin{frame}
 	\frametitle{导数计算题目}
-	
-	\begin{exampleblock}{题目}
-		计算以下函数的导数：
-		\begin{enumerate}
-			\item $f(x) = x^a,$ Hint: $(log(f(x)))'=f'(x)(f(x))^{-1}$,
-			\item $g(t) = A \sin(3t+2),$
-			\item $h(x) = e^{\sqrt{1+\cos(x)}},$
-			\item $k(x) = \arcsin(e^{-x^2}),$
-		\end{enumerate}
-	\end{exampleblock}
-	
+	\begin{block}{幂指函数的导数计算}
+		假设 $f$, $g$ 在所考虑的区域上可导, 如何形如以下的函数
+		\[
+			h(x)=f(x)^{g(x)}.
+		\]
+	\end{block}
+
 	\pause
-	
-	\begin{exampleblock}{答案}
-		\begin{enumerate}
-			\item $f'(x) = ax^{a-1},$
-			\item $g'(t) = 3A \cos(3t+2),$
-			\item $h'(x) = \displaystyle\frac{\sin(x)}{2\sqrt{1+\cos(x)}}e^{\sqrt{1+\cos(x)}},$
-			\item $k'(x) = -\displaystyle\frac{2x e^{-x^2}}{\sqrt{1-e^{-2x^2}}}.$
-		\end{enumerate}
+
+	\begin{exampleblock}{方法}
+		在等式两边求对数, 有
+		\[
+			\log h(x) = g(x)\log (f(x)),
+		\]
+		因此, 有
+		\begin{align*}
+			\displaystyle\frac{h'(x)}{h(x)} & =(\log h(x))' = (g(x)\log (f(x)))'                                     \\
+			h'(x)                           & =\displaystyle h(x)\left(g'(x)\log(f(x))+g(x)\frac{f'(x)}{f(x)}\right)
+		\end{align*}
 	\end{exampleblock}
-	
 \end{frame}
+
+\subsection{隐函数求导法则}
+\begin{frame}{隐函数求导法则}
+	\begin{block}{题目}
+		\begin{itemize}
+			\item 方程 $x^2 + y^2 = 1$ 定义了一个隐函数 $y = f(x)$
+			\item 方程 $\displaystyle\mathrm{e}^{x+y}=\frac{x}{y}$ 定义了一个隐函数 $y = g(x)$
+			\item 方程 $x^3 + y^3 = 9xy$ 定义了一个隐函数 $y = h(x)$
+		\end{itemize}
+	\end{block}
+
+	\pause
+
+	\begin{exampleblock}{答案}
+		\begin{itemize}
+			\item 隐函数 $y = f(x)$ 的导数为 $\displaystyle\frac{{dy}}{{dx}} = -\frac{{x}}{{y}}$
+			\item 隐函数 $y = g(x)$ 的导数为 $\displaystyle\frac{{dy}}{{dx}} = -\frac{{\mathrm{e}^{x+y}-y}}{{\mathrm{e}^{x+y}-\frac{x}{y}}}$
+			\item 隐函数 $y = h(x)$ 的导数为 $\displaystyle\frac{{dy}}{{dx}} = -\frac{{3x^2 - 3y^2}}{{3y^2 - 3x^2}}$
+		\end{itemize}
+	\end{exampleblock}
+\end{frame}
+
+\subsection{证明算例}
 
 \begin{frame}
 	\frametitle{证明$f(x)=x\sin\left(\frac{1}{x}\right)$在零点不可导}
-		
 	\begin{exampleblock}{习题}
 		证明函数
 		\[
 			f(x) = \begin{cases}
-			x\sin\left(\frac{1}{x}\right), & \text{if } x \neq 0 \\
-			0, & \text{if } x = 0
+				x\sin\left(\frac{1}{x}\right), & \text{if } x \neq 0 \\
+				0,                             & \text{if } x = 0
 			\end{cases}
 		\]
 		在零点不可导。
 	\end{exampleblock}
-	
 \end{frame}
 
 \begin{frame}
 	\frametitle{证明$f(x)=x\sin\left(\frac{1}{x}\right)$在零点不可导}
-			
+
 	\begin{block}{proof.}
 		当 $x\neq0$时, $f'(x)$ 有
 		\[
 			f'(x) = \left(x\right)' \sin\left(\frac{1}{x}\right) + x \left(\sin\left(\frac{1}{x}\right)\right)'
 		\]
-		
 		接下来，我们计算每一项的导数：
-		
 		\[
 			\left(\sin\left(\frac{1}{x}\right)\right)' = \cos\left(\frac{1}{x}\right) \cdot \left(\frac{1}{x}\right)'
 		\]
-		
 		由于$\left(\frac{1}{x}\right)' = -\frac{1}{x^2}$，我们可以将上式简化为：
-		
 		\[
 			\left(\sin\left(\frac{1}{x}\right)\right)' = \cos\left(\frac{1}{x}\right) \cdot \left(-\frac{1}{x^2}\right) = -\frac{\cos\left(\frac{1}{x}\right)}{x^2}
 		\]
-		
 	\end{block}
-		
 \end{frame}
-	
+
 \begin{frame}
 	\frametitle{证明$f(x)=x\sin\left(\frac{1}{x}\right)$在零点不可导}
-				
+
 	\begin{proof}
 		当 $x\neq0$时, 将以上结果代入乘积法则的公式中，我们得到
 		\[
@@ -522,9 +522,26 @@ aspectratio=43,
 		\]
 		可以看到左右导数在 $x=0$ 点不相等, 因此该函数在 $x=0$ 点不可导.
 	\end{proof}
-			
 \end{frame}
-	
+
+\subsection{隐函数求导法则}
+\begin{frame}{隐函数求导法则}
+	\begin{block}{隐函数求导法则}
+		设函数 $F(x, y) = 0$ 定义了一个隐函数 $y = f(x)$，其中 $F$ 是可微函数。则隐函数的导数可以通过以下公式计算：
+		\[
+			\displaystyle\frac{{dy}}{{dx}} = -\frac{{\frac{{\partial F}}{{\partial x}}}}{{\frac{{\partial F}}{{\partial y}}}}
+		\]
+	\end{block}
+
+	\pause
+
+	\begin{example}
+		考虑方程 $\mathrm{e}^{x+y}=xy$，我们可以将其视为隐函数 $y = f(x)$。通过隐函数求导法则，我们可以计算出导数为：
+		\[
+			\displaystyle\frac{{dy}}{{dx}} = -\displaystyle\frac{{\displaystyle\frac{{\partial (\mathrm{e}^{x+y}-xy)}}{{\partial x}}}}{{\displaystyle\frac{{\partial (\mathrm{e}^{x+y}-xy)}}{{\partial y}}}} = -\frac{{(\mathrm{e}^{x+y}-y)}}{{(\mathrm{e}^{x+y}-x)}}
+		\]
+	\end{example}
+\end{frame}
 
 
 \beamertemplateshadingbackground{structure.fg!90}{structure.fg}
