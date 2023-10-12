@@ -1,0 +1,9 @@
+\beamer@sectionintoc {1}{极限的运算法则}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{回顾: 数列极限, 函数极限, 无穷小量, 无穷大量}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{回顾: 极限的基本运算}{8}{0}{1}
+\beamer@subsectionintoc {1}{3}{算例}{14}{0}{1}
+\beamer@subsectionintoc {1}{4}{复合函数极限}{18}{0}{1}
+\beamer@subsectionintoc {1}{5}{三明治法则和单调有界法则}{21}{0}{1}
+\beamer@sectionintoc {2}{两个重要极限}{25}{0}{2}
+\beamer@subsectionintoc {2}{1}{$\lim _{x\to 0}\frac {\sin (x)}{x}$}{26}{0}{2}
+\beamer@subsectionintoc {2}{2}{$\lim _{n\to \infty }\left (1+\frac 1x\right )^x$}{28}{0}{2}

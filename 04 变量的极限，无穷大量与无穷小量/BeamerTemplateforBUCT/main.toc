@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{变量的极限}{2}{0}{1}
+\beamer@sectionintoc {2}{无穷小与无穷大}{6}{0}{2}
+\beamer@subsectionintoc {2}{1}{无穷小与无穷大的概念}{7}{0}{2}
+\beamer@subsectionintoc {2}{2}{无穷小的性质}{26}{0}{2}
+\beamer@subsectionintoc {2}{3}{无穷小的比较}{31}{0}{2}

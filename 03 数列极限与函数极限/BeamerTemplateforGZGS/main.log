@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Arch Linux) (preloaded format=xelatex 2023.10.11)  12 OCT 2023 08:13
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Arch Linux) (preloaded format=xelatex 2023.10.11)  12 OCT 2023 15:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1103,6 +1103,9 @@ Overfull \hbox (1.4111pt too wide) has occurred while \output is active
 [3
 
 ]
+File: 割圆术.png Graphic file (type bmp)
+<割圆术.png>
+
 Overfull \hbox (28.1877pt too wide) has occurred while \output is active
 []| []  \T1/lmss/m/n/6 ([])  
  []
@@ -1139,6 +1142,16 @@ Overfull \hbox (1.4111pt too wide) has occurred while \output is active
 [6
 
 ]
+File: prime.png Graphic file (type bmp)
+<prime.png>
+
+Overfull \hbox (11.50066pt too wide) detected at line 181
+[][]
+ []
+
+File: fibonacci.png Graphic file (type bmp)
+<fibonacci.png>
+
 Overfull \hbox (28.1877pt too wide) has occurred while \output is active
 []| []  \T1/lmss/m/n/6 ([])  
  []
@@ -1150,7 +1163,7 @@ Overfull \hbox (1.4111pt too wide) has occurred while \output is active
 
 [7
 
-] (./main.toc)
+]
 Overfull \hbox (28.1877pt too wide) has occurred while \output is active
 []| []  \T1/lmss/m/n/6 ([])  
  []
@@ -1163,13 +1176,15 @@ Overfull \hbox (1.4111pt too wide) has occurred while \output is active
 [8
 
 ]
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <9> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 164.
+File: Chat酱-1696676606183.png Graphic file (type bmp)
+<Chat酱-1696676606183.png>
 
+Overfull \hbox (31.86661pt too wide) in paragraph at lines 214--214
+ [] 
+ []
 
-LaTeX Font Warning: Font shape `TU/FandolHei-Regular(0)/m/it' undefined
-(Font)              using `TU/FandolHei-Regular(0)/m/n' instead on input line 164.
-
+File: n^4 Exp[-n].png Graphic file (type bmp)
+<n^4 Exp[-n].png>
 
 Overfull \hbox (28.1877pt too wide) has occurred while \output is active
 []| []  \T1/lmss/m/n/6 ([])  
@@ -1182,7 +1197,7 @@ Overfull \hbox (1.4111pt too wide) has occurred while \output is active
 
 [9
 
-] (./main.toc)
+]
 Overfull \hbox (28.1877pt too wide) has occurred while \output is active
 []| []  \T1/lmss/m/n/6 ([])  
  []
@@ -1194,7 +1209,7 @@ Overfull \hbox (1.4111pt too wide) has occurred while \output is active
 
 [10
 
-] (./main.toc)
+]
 Overfull \hbox (28.1877pt too wide) has occurred while \output is active
 []| []  \T1/lmss/m/n/6 ([])  
  []
@@ -1206,7 +1221,7 @@ Overfull \hbox (1.4111pt too wide) has occurred while \output is active
 
 [11
 
-] (./main.toc)
+]
 Overfull \hbox (28.1877pt too wide) has occurred while \output is active
 []| []  \T1/lmss/m/n/6 ([])  
  []
@@ -1218,7 +1233,7 @@ Overfull \hbox (1.4111pt too wide) has occurred while \output is active
 
 [12
 
-] (./main.toc)
+]
 Overfull \hbox (28.1877pt too wide) has occurred while \output is active
 []| []  \T1/lmss/m/n/6 ([])  
  []
@@ -1230,7 +1245,7 @@ Overfull \hbox (1.4111pt too wide) has occurred while \output is active
 
 [13
 
-] (./main.toc)
+]
 Overfull \hbox (28.1877pt too wide) has occurred while \output is active
 []| []  \T1/lmss/m/n/6 ([])  
  []
@@ -1254,7 +1269,7 @@ Overfull \hbox (1.4111pt too wide) has occurred while \output is active
 
 [15
 
-] (./main.toc)
+]
 Overfull \hbox (28.1877pt too wide) has occurred while \output is active
 []| []  \T1/lmss/m/n/6 ([])  
  []
@@ -1338,7 +1353,7 @@ Overfull \hbox (1.4111pt too wide) has occurred while \output is active
 
 [22
 
-] (./main.toc)
+]
 Overfull \hbox (28.1877pt too wide) has occurred while \output is active
 []| []  \T1/lmss/m/n/6 ([])  
  []
@@ -1363,9 +1378,6 @@ Overfull \hbox (1.4111pt too wide) has occurred while \output is active
 [24
 
 ]
-File: logo.png Graphic file (type bmp)
-<logo.png>
-
 Overfull \hbox (28.1877pt too wide) has occurred while \output is active
 []| []  \T1/lmss/m/n/6 ([])  
  []
@@ -1402,55 +1414,6 @@ Overfull \hbox (1.4111pt too wide) has occurred while \output is active
 [27
 
 ]
-File: logo.png Graphic file (type bmp)
-<logo.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 273--273
-[]\T1/lmss/m/n/8 (a)
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 273--273
-\TU/FandolHei-Regular(0)/m/n/8 校
- []
-
-File: logo.png Graphic file (type bmp)
-<logo.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 273--273
-[]\T1/lmss/m/n/8 (b)
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 273--273
-\TU/FandolHei-Regular(0)/m/n/8 校
- []
-
-File: logo.png Graphic file (type bmp)
-<logo.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 273--273
-[]\T1/lmss/m/n/8 (c)
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 273--273
-\TU/FandolHei-Regular(0)/m/n/8 校
- []
-
-File: logo.png Graphic file (type bmp)
-<logo.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 273--273
-[]\T1/lmss/m/n/8 (d)
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 273--273
-\TU/FandolHei-Regular(0)/m/n/8 校
- []
-
-
 Overfull \hbox (28.1877pt too wide) has occurred while \output is active
 []| []  \T1/lmss/m/n/6 ([])  
  []
@@ -1462,7 +1425,7 @@ Overfull \hbox (1.4111pt too wide) has occurred while \output is active
 
 [28
 
-] (./main.toc)
+]
 Overfull \hbox (28.1877pt too wide) has occurred while \output is active
 []| []  \T1/lmss/m/n/6 ([])  
  []
@@ -1486,7 +1449,7 @@ Overfull \hbox (1.4111pt too wide) has occurred while \output is active
 
 [30
 
-] (./main.toc)
+]
 Overfull \hbox (28.1877pt too wide) has occurred while \output is active
 []| []  \T1/lmss/m/n/6 ([])  
  []
@@ -1498,11 +1461,7 @@ Overfull \hbox (1.4111pt too wide) has occurred while \output is active
 
 [31
 
-]
-
-LaTeX Warning: Citation `9492070' on page 32 undefined on input line 284.
-
-
+] (./main.toc)
 Overfull \hbox (28.1877pt too wide) has occurred while \output is active
 []| []  \T1/lmss/m/n/6 ([])  
  []
@@ -1514,9 +1473,7 @@ Overfull \hbox (1.4111pt too wide) has occurred while \output is active
 
 [32
 
-]
-No file main.bbl.
-
+] (./main.toc)
 Overfull \hbox (28.1877pt too wide) has occurred while \output is active
 []| []  \T1/lmss/m/n/6 ([])  
  []
@@ -1528,7 +1485,574 @@ Overfull \hbox (1.4111pt too wide) has occurred while \output is active
 
 [33
 
-] [34
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[34
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[35
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[36
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[37
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[38
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[39
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[40
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[41
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[42
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[43
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[44
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[45
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[46
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[47
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[48
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[49
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[50
+
+]
+File: sin1x.png Graphic file (type bmp)
+<sin1x.png>
+
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[51
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[52
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[53
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[54
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[55
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[56
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[57
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[58
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[59
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[60
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[61
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[62
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[63
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[64
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[65
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[66
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[67
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[68
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[69
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[70
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[71
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[72
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[73
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[74
+
+] (./main.toc)
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[75
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[76
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[77
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[78
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[79
+
+]
+Overfull \hbox (28.1877pt too wide) has occurred while \output is active
+[]| []  \T1/lmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (1.4111pt too wide) has occurred while \output is active
+[][]  [] 
+ []
+
+[80
+
+] [81
 
 ]
 \tf@nav=\write6
@@ -1541,22 +2065,16 @@ Overfull \hbox (1.4111pt too wide) has occurred while \output is active
 \openout8 = `main.snm'.
 
  (./main.aux)
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: DF42E923CD21E47C46722CF6028FE5A8;1518.
+(rerunfilecheck)             Checksum: EDFEDB7E7A1FC0256FFD985319A162FB;726.
  ) 
 Here is how much of TeX's memory you used:
- 36036 strings out of 478682
- 798671 string characters out of 5849664
- 1867018 words of memory out of 5000000
- 55453 multiletter control sequences out of 15000+600000
- 566609 words of font info for 94 fonts, out of 8000000 for 9000
+ 36375 strings out of 478682
+ 810277 string characters out of 5849664
+ 1869018 words of memory out of 5000000
+ 55782 multiletter control sequences out of 15000+600000
+ 570912 words of font info for 123 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 128i,16n,122p,454b,1152s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,16n,122p,456b,1152s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (34 pages).
+Output written on main.pdf (81 pages).

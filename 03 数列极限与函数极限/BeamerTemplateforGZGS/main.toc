@@ -1,0 +1,10 @@
+\beamer@sectionintoc {1}{数列极限}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{割圆术与圆的周长求解}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{数列极限}{5}{0}{1}
+\beamer@subsubsectionintoc {1}{2}{1}{数列的定义}{6}{0}{1}
+\beamer@subsubsectionintoc {1}{2}{2}{直观感受数列}{7}{0}{1}
+\beamer@subsubsectionintoc {1}{2}{3}{数列极限的定义}{10}{0}{1}
+\beamer@subsectionintoc {1}{3}{数列极限的性质}{26}{0}{1}
+\beamer@sectionintoc {2}{函数的极限}{32}{0}{2}
+\beamer@subsectionintoc {2}{1}{函数极限的定义}{33}{0}{2}
+\beamer@subsectionintoc {2}{2}{函数极限的性质}{75}{0}{2}
