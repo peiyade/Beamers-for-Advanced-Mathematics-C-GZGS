@@ -96,16 +96,77 @@ aspectratio=43,
 % ----------- FRAME ------------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{数列极限}
-\subsection{割圆术与圆的周长求解}
-\subsection{数列极限的定义}
-\subsection{数列极限的性质}
+\section{变量变化问题}
+\subsection{速度问题-I} % 匀速运动的情形
+\begin{frame}{变量变化问题}{速度问题-I: 匀速运动的情形}
+	考虑某物体 $A$ 以速度 $v$ 运动的情形, 记 $t$ 为物体运动的经过时间长度, $s$ 为物体在 $t$ 时刻运动的路程, 我们有
+	\[
+		s(t) = v\cdot t.
+	\]
+	对于时刻 $t_1$, $t_2$ 来说, 我们有
+	\[
+		s(t_2) = v\cdot t_2 = v\cdot t_1 + v\cdot (t_2-t_1) = s(t_1) + v \cdot (t_2-t_1).
+	\]
+	也就是说
+	\[
+		s(t_2) - s(t_1) = v \cdot (t_2-t_1), \quad v=\frac{s(t_2)-s(t_1)}{t_2-t_1}.
+	\]
+\end{frame}
+
+\subsection{速度问题-II} % 匀加速运动的情形
+
+\begin{frame}{变量变化问题}{速度问题-II: 匀加速运动的情形}
+	考虑某物体 $A$ 以初速度 $v_0$, 加速度 $a$ 运动的情形, 记 $t$ 为物体运动的经过时间长度, $v(t)$ 为物体在$t$时刻的速度, $s(t)$ 为物体在 $t$ 时刻运动的路程, 我们有
+	\[
+		v(t) = v_0+a\cdot t.
+	\]
+	对于时刻 $t_1$, $t_2$ 来说, 我们有
+	\[
+		v(t_2) = a\cdot t_2 = a\cdot t_1 + a\cdot (t_2-t_1) = v(t_1) + a \cdot (t_2-t_1).
+	\]
+	也就是说
+	\[
+		v(t_2) - v(t_1) = a \cdot (t_2-t_1), \quad a=\frac{v(t_2)-v(t_1)}{t_2-t_1}.
+	\]
+\end{frame}
+
+\begin{frame}{变量变化问题}{速度问题-II: 匀加速运动的情形}
+	在前序知识中, 我们知道下式子以及相关的变形,
+	\[
+		s(t) = v_0\cdot t+ \frac{1}{2}a\cdot t^2
+	\]
+	那么有
+	\begin{align*}
+		s(t_2) - s(t_1) &= v_0\cdot (t_2-t_1)+ \frac{1}{2}a\cdot (t_2^2-t_1^2)\\
+		&=v_0\cdot(t_2-t_1) + a\cdot(t_2-t_1) \cdot \frac{1}{2}(t_2+t_1),
+	\end{align*}
+	即
+	\begin{align*}
+		\frac{s(t_2) - s(t_1)}{t_2-t_1} = v_0 + a\cdot \frac{1}{2}(t_2+t_1).
+	\end{align*}
+	对比匀速运动的速度定义, 我们可以看到, $t_1\sim t_2$ 期间的平均速度
+	\begin{equation*}
+		\tilde{v}=\frac{s(t_2) - s(t_1)}{t_2-t_1} = v_0 + a\cdot \frac{1}{2}(t_2+t_1).
+	\end{equation*}
+	我们考虑速度 $t_2$, $t_1$ 足够接近的情况, $\lim_{(t_2-t_1)\to 0}\tilde{v}=v_0+a\cdot t_1$, 一致?
+\end{frame}
+
+\subsection{速度问题-III} % 一般加速运动的情形
+\begin{frame}{变量变化问题}{速度问题-II: 匀加速运动的情形}
+	\begin{exampleblock}{高超声速飞行器速度问题 \color{blue}(\small{\it 郭建国等, {现代防御技术}, 49(6) 2021.12.)}}
+		平飞高超声速飞行器的加速度 $a$ 的简化计算模型为: 
+		\begin{align*}
+			m\cdot a(t)= \frac{1}{2}\rho(s) v(t)^2 S C_T,
+		\end{align*}
+		其中, $m$ 是飞行器质量, $v(t)$ 是飞行器速度, $\rho(s)$ 是大气密度, $S$ 是飞行器截面积参考参数, $C_T$ 是油门控制值. 这种问题, 只给出$\rho(s)$, $S$, $C_T$ 和初速度, 如何计算路程和速度?	
+	\end{exampleblock}
+	思路: 极限, 逐步求解.
+\end{frame}
 
 
-
-\section{函数的极限}
-\subsection{函数极限的定义}
-\subsection{函数极限的性质}
+\subsection{函数的切线问题-I} % 二次函数的切线问题
+\subsection{函数的切线问题-II} % 一般函数的切线问题
+\subsection{抽象-一般变量变化问题}
 
 
 \section{Basics}

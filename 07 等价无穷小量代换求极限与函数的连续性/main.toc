@@ -1,0 +1,11 @@
+\beamer@sectionintoc {1}{数列极限}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{回顾: 等价无穷小}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{常用的等价无穷小}{11}{0}{1}
+\beamer@sectionintoc {2}{函数的连续性}{19}{0}{2}
+\beamer@subsectionintoc {2}{1}{增量与差分}{20}{0}{2}
+\beamer@subsectionintoc {2}{2}{分段函数的连续性}{26}{0}{2}
+\beamer@subsectionintoc {2}{3}{间断点概念}{33}{0}{2}
+\beamer@subsectionintoc {2}{4}{连续函数的性质}{39}{0}{2}
+\beamer@subsectionintoc {2}{5}{闭区间上连续函数的性质}{46}{0}{2}
+\beamer@subsubsectionintoc {2}{5}{1}{有界性}{64}{0}{2}
+\beamer@subsubsectionintoc {2}{5}{2}{介值性与零点存在定理}{64}{0}{2}
