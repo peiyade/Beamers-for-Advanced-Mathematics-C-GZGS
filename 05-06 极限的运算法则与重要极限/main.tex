@@ -339,27 +339,59 @@ aspectratio=43,
 	
 \end{frame}
 
-\subsection{$\lim_{n\to\infty}\left(1+\frac1x\right)^x$}
+\subsection{$\lim_{n\to\infty}\left(1+\frac1n\right)^n$}
 
 \begin{frame}
-	\frametitle{$\lim_{n\to\infty}\left(1+\frac1x\right)^x$}
+	\frametitle{$\lim_{n\to\infty}\left(1+\frac1n\right)^n$}
 	\begin{block}{结论}
 		$$
-		\lim _{x \rightarrow \infty}\left(1+\frac{1}{x}\right)^x=e.
+		\lim _{n \rightarrow \infty}\left(1+\frac{1}{n}\right)^n=e.
 		$$
 	\end{block}
 	原因: 考虑自然对数的增长率问题: 
 	\begin{equation*}
 		\begin{aligned}
-			\lim _{h \rightarrow 0} \frac{\log _a(x+h)-\log _a(x)}{h} & =\lim _{h \rightarrow 0} \frac{\log _a(1+h / x)}{x \cdot h / x}             \\
-			                                                          & =\frac{1}{x} \log _a\left(\lim _{u \rightarrow 0}(1+u)^{\frac{1}{u}}\right) \\
-			                                                          & =\frac{1}{x} \log _a e,                                                     
+			\lim _{h \rightarrow 0} \frac{\log _a(x+h)-\log _a(x)}{h} & =\lim _{h \rightarrow 0} \frac{\log _a(1+h / x)}{x \cdot h / x} \quad (\text{let } u=\frac{h}{x})             \\
+			& =\frac{1}{x} \log _a\left(\lim _{u \rightarrow \infty}(1+u)^{\frac{1}{u}}\right) \\
+			& =\frac{1}{x}\log_ae.                                                     
 		\end{aligned}
 	\end{equation*}
 \end{frame}
 
 \begin{frame}
-	\frametitle{$\lim_{n\to\infty}\left(1+\frac1x\right)^x$}
+	\frametitle{$\lim_{n\to\infty}\left(1+\frac1n\right)^n$}
+	\begin{block}{proof.}
+		考虑 $a_n=\left(1+\frac{1}{n}\right)^n$, 那么有 $a_n$ 单调, 因为
+		\begin{equation*}
+			\begin{aligned}
+			a_n= & \left(1+\frac{1}{n}\right)^n=\sum_{k=0}^n C_n^k \frac{1}{n^k}=\sum_{k=0}^n \frac{n!}{(n-k)!k!} \frac{1}{n^k} \\
+			= & 1+\sum_{k=1}^n \frac{n(n-1) \cdots(n-k+1)}{k !} \frac{1}{n^k} \\
+			= & 1+1+\frac{1}{2 !}\left(1-\frac{1}{n}\right)+\cdots+\frac{1}{n !}\left(1-\frac{1}{n}\right) \cdots\left(1-\frac{n-1}{n}\right) \\
+			< & 1+1+\frac{1}{2 !}\left(1-\frac{1}{n+1}\right)+\cdots+\frac{1}{n !}\left(1-\frac{1}{n+1}\right) \cdots\left(1-\frac{n-1}{n+1}\right) \\
+			& +\frac{1}{(n+1) !}\left(1-\frac{1}{n+1}\right) \cdots\left(1-\frac{n}{n+1}\right) \\
+			= & a_{n+1}.
+			\end{aligned}
+			\end{equation*}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{$\lim_{n\to\infty}\left(1+\frac1n\right)^n$}
+	\begin{proof}
+		考虑 $a_n=\left(1+\frac{1}{n}\right)^n$, 那么有 $a_n$ 有界, 根据单点有界收敛定理, $a_n$ 具有极限, 记为 $e$. 因为
+		\begin{equation*}
+			\begin{aligned}
+			0<a_n & =  \left(1+\frac{1}{n}\right)^n=\sum_{k=0}^n C_n^k \frac{1}{n^k}=\sum_{k=0}^n \frac{n!}{(n-k)!k!} \frac{1}{n^k} \\
+			&<1+1+\sum_{k=2}^n \frac{1}{k !} \\
+			& <2+\sum_{k=2}^n \frac{1}{(k-1) k} \\
+			& =2+\sum_{k=2}^n\left(\frac{1}{k-1}-\frac{1}{k}\right)=3-\frac{1}{n}<3 .
+			\end{aligned}
+			\end{equation*}
+	\end{proof}
+\end{frame}
+
+\begin{frame}
+	\frametitle{$\lim_{n\to\infty}\left(1+\frac1n\right)^n$}
 	\begin{exampleblock}{例子}
 		求: $$
 		\lim _{x \rightarrow \infty}\left(1+\frac{4}{x}\right)^x,   \lim _{x \rightarrow 0}\left(1-\frac{2}{x}\right)^x.
@@ -379,6 +411,8 @@ aspectratio=43,
 		\end{aligned}
 	\end{equation*}
 \end{frame}
+
+
 
 % Thank you page
 \beamertemplateshadingbackground{structure.fg!90}{structure.fg}
