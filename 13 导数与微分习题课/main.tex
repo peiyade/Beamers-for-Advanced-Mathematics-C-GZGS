@@ -1,0 +1,437 @@
+% !TEX encoding = UTF-8 Unicode.
+
+% Based on https://github.com/Miracle0565/BUCT-Beamer-Theme
+
+\documentclass[
+10pt,
+aspectratio=43,
+]{beamer}
+\setbeamercovered{transparent=10}
+\usetheme[
+%  showheader,
+%  red,
+  purple,
+%  gray,
+%  graytitle,
+  colorblocks,
+%  noframetitlerule,
+]{Verona}
+
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Mac上使用如下命令声明隶书字体, windows也有相关方式, 大家可自行修改
+\providecommand{\lishu}{\CJKfamily{zhli}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz}
+\usetikzlibrary{fadings}
+%
+%\setbeamertemplate{sections/subsections in toc}[ball]
+\usepackage{xeCJK}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{subfigure}
+\usefonttheme{professionalfonts}
+\def\mathfamilydefault{\rmdefault}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{bm}
+\setbeamertemplate{section in toc}{\hspace*{1em}\inserttocsectionnumber.~\inserttocsection\par}
+\setbeamertemplate{subsection in toc}{\hspace*{2em}\inserttocsectionnumber.\inserttocsubsectionnumber.~\inserttocsubsection\par}
+\setbeamerfont{subsection in toc}{size=\small}
+\AtBeginSection[]{%
+	\begin{frame}%
+		\frametitle{Outline}%
+		\textbf{\tableofcontents[currentsection]} %
+	\end{frame}%
+}
+
+\AtBeginSubsection[]{%
+	\begin{frame}%
+		\frametitle{Outline}%
+		\textbf{\tableofcontents[currentsection, currentsubsection]} %
+	\end{frame}%
+}
+
+\title{高等数学C}
+%\subtitle{A Simple while elegant template}
+\author[P.Yu]{余沛}
+\mail{peiy\_gzgs@qq.com}
+\institute[Guangzhou College of Technology and Business]{Guangzhou College of Technology and Business \\
+  广州工商学院}
+\date{\today}
+\titlegraphic[width=4cm]{logo.png}{}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ----------- 标题页 ------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+
+\maketitle
+
+%%% define code
+\defverbatim[colored]\lstI{
+	\begin{lstlisting}[language=C++,basicstyle=\ttfamily,keywordstyle=\color{red}]
+	int main() {
+	// Define variables at the beginning
+	// of the block, as in C:
+	CStash intStash, stringStash;
+	int i;
+	char* cp;
+	ifstream in;
+	string line;
+	[...]
+	\end{lstlisting}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ----------- FRAME ------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{导数的概念与求导法}
+
+\subsection{导数的定义与微分定义}
+\begin{frame}{导数的定义}
+	\begin{block}{定义:函数导数}
+		设 $f$, $\delta>0$ $(x_0-\delta,x_0+\delta)$, (或 $(x_0-\delta,x_0], [x_0,x_0+\delta)$) 上有定义, 对于 $0<\Delta x<\delta$, 如果极限
+		\begin{equation*}
+			\begin{array}[c]{c}
+				\displaystyle\lim_{\Delta x\to 0 } \frac{f(x_0+\Delta x)-f(x_0)}{\Delta x},\bigskip \\
+				\displaystyle\left(\text{或}\,\,\lim_{\Delta x\to0}\frac{f(x)-f(x-\Delta x)}{\Delta x}, \,\, \lim_{\Delta x\to0}\frac{f(x+\Delta x)-f(x)}{\Delta x} \right)
+			\end{array}
+		\end{equation*}
+		存在, 则称 $f$ 在 $x_0$ 处可导 (或左导数存在, 右导数存在), 则称该极限值为 $f$ 在 $x_0$ 处的导数或微商 (或 左导数, 右导数), 记为 $f'(x_0)$ (或 $f'_-(x_0)$, $f'_+(x_0)$).
+	\end{block}
+	若左右导数都存在且相等, 那么导数存在, 并与前两者的值相等.
+\end{frame}
+
+\begin{frame}{求导流程与微分概念}
+	\begin{block}{求导流程: 差分 $\Delta y$, $\Delta x$ 的比较}
+		\begin{enumerate}
+			\item 	给出 $\Delta x$; 算出 $\Delta y$; 求增量,
+			\item  	求增量比 $\frac{\Delta y}{\Delta x}$; 求差商,
+			\item  	求极限.
+		\end{enumerate}
+	\end{block}
+
+	\begin{block}{微分概念: 差分运算的形式化表示}
+		设函数 $y=f(x)$, 在 $x_0$ 的某个邻域内有定义, 自变量在 $x_0$ 处取得增量 $\Delta x$, 因变量在 $f(x_0)$ 处取得增量 $\Delta y=f\left(x_0+\Delta x\right)-f\left(x_0\right)$,
+		$$
+			\Delta y=A \Delta x+o(\Delta x),
+		$$
+		其中 $\mathrm{A}$ 是与 $x_0$ 有关而与 $\Delta x$ 无关的常数, $o(\Delta x)$ 是比 $\Delta x$ 高阶的无穷小量. 那么称函数 $y=f(x)$ 在点 $x_0$ {\bf 可微}, $A \Delta x$ 称为微分, 即 $\mathrm{d} y=A \Delta x$, 由于 $\Delta x = \Delta x$, 记为
+		$$
+			\mathrm{d}y = A \mathrm{d}x.
+		$$
+	\end{block}
+\end{frame}
+
+\subsection{求导计算法则与微分计算法则}
+
+\begin{frame}
+	\frametitle{导数四则运算法则和微分计算法则}
+
+	\begin{columns}[t]
+		\column{0.5\textwidth}
+		\begin{exampleblock}{微分四则运算法则}
+			\begin{itemize}
+				\item $\mathrm{d}(u \pm v) = \mathrm{d}u \pm \mathrm{d}v$,
+				\item $\mathrm{d}(Cu) = C \mathrm{d}u$,
+				\item $\mathrm{d}(uv) = v \mathrm{d}u + u \mathrm{d}v$,
+				\item $\displaystyle \mathrm{d}\left(\frac{u}{v}\right) = \frac{v \mathrm{d}u - u \mathrm{d}v}{v^2}$ ($v \neq 0$).
+			\end{itemize}
+		\end{exampleblock}
+		\begin{exampleblock}{反函数求导法则}
+			设 $y = f(x)$ 是一个可导函数, 且 $f'(x) \neq 0$, 则有
+			\[
+				\left(f^{-1}(y)\right)' = \frac{1}{f'(f^{-1}(y))}=\frac{1}{f'(x)}.
+			\]
+		\end{exampleblock}
+		\column{0.5\textwidth}
+		\begin{exampleblock}{导数计算法则}
+			\begin{itemize}
+				\item $(f \pm g)' = f' \pm g'$,
+				\item $(Cf)' = Cf'$,
+				\item $(fg)' = f'g + fg'$,
+				\item $\displaystyle \left(\frac{f}{g}\right)' = \frac{f'g - fg'}{g^2}$ ($g \neq 0$).
+			\end{itemize}
+		\end{exampleblock}
+		\begin{exampleblock}{链式法则}
+			设 $y = f(g(x))$, 其中 $f(u)$ 和 $g(x)$ 都是可导函数, 则有
+			\[
+				\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{\mathrm{d}y}{\mathrm{d}u} \cdot \frac{du}{dx} = f'(g(x)) \cdot g'(x).
+			\]
+		\end{exampleblock}
+
+	\end{columns}
+
+\end{frame}
+\begin{frame}{算例}
+	提供一些常见导数的算例:
+	\begin{block}{}
+		{\small 基本结果:
+			\begin{enumerate}
+				\item $f(x)=C$,  $f'(x) =0$;
+				\item $f(x)=x^n, (n\in\mathbb{N}^+)$,  $f'(x) = n x^{n-1}$;
+				\item $f(x)=\sin(x)$,  $f'(x)=\cos(x)$; \,\, $g(x)=\cos(x)$,  $g'(x)=-\sin(x)$;
+				\item $f(x)=\log_a  x$,\, $f'(x)= \displaystyle\frac{1}{\log a \cdot x}$;
+			\end{enumerate}
+			利用反函数和复合函数法则后:
+			\begin{enumerate}
+				\item $f(x) = e^x$, $f'(x) = e^x$; $f(x)=a^x(a>0)$, $f'(x)=\log a \cdot a^x$
+				\item $f(x) = \arcsin(x)$, $f'(x) = \displaystyle\frac{1}{\sqrt{1-x^2}}$;
+				\item $f(x) = \arccos(x)$, $f'(x) = \displaystyle-\frac{1}{\sqrt{1-x^2}}$;
+				\item $f(x) = x^a,\,\,(a\neq0)$, $\frac{f'(x)}{f(x)}=\left(\log(f(x))\right)'=a\cdot \frac 1x$, $f'(x)=a\cdot\frac1x\cdot f(x)=ax^{a-1}$.
+			\end{enumerate}
+		}
+	\end{block}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{计算三角函数的导数}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\centering
+		计算以下函数的导数：
+		\begin{align*}
+			f(x) & = \tan x, \\
+			g(x) & = \cot x, \\
+			h(x) & = \sec x, \\
+			k(x) & = \csc x.
+		\end{align*}
+		\pause
+		使用导数的定义，我们有：
+		\begin{align*}
+			f'(x) & = \sec^2 x,       \\
+			g'(x) & = -\csc^2 x,      \\
+			h'(x) & = \sec x \tan x,  \\
+			k'(x) & = -\csc x \cot x.
+		\end{align*}
+
+		\column{0.5\textwidth}
+		\centering
+		\pause
+		计算以下函数的导数：
+		\begin{align*}
+			p(x) & = \arcsin x,       \\
+			q(x) & = \arccos x,       \\
+			r(x) & = \arctan x,       \\
+			s(x) & = \text{arccot} x.
+		\end{align*}
+		\pause
+		使用导数的定义，我们有：
+		\begin{align*}
+			p'(x) & = \frac{1}{\sqrt{1-x^2}},  \\
+			q'(x) & = -\frac{1}{\sqrt{1-x^2}}, \\
+			r'(x) & = \frac{1}{1+x^2},         \\
+			s'(x) & = -\frac{1}{1+x^2}.
+		\end{align*}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{计算复合函数的导数}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\centering
+		计算以下函数的导数：
+		\begin{align*}
+			f(x) & = \sin x + x^2,                  \\
+			g(x) & = x^3 - \cos x + \ln x + \sin 5, \\
+			h(x) & = \sin 2x.
+		\end{align*}
+
+		\pause
+		使用导数的链式法则，我们有：
+		\begin{align*}
+			f'(x) & = \cos x + 2x,                 \\
+			g'(x) & = 3x^2 + \sin x + \frac{1}{x}, \\
+			h'(x) & = 2\cos 2x.
+		\end{align*}
+
+		\column{0.5\textwidth}
+		\centering
+		计算以下函数的导数：
+		\begin{align*}
+			p(x) & = (x^2 + 1)(\sin x - 1),             \\
+			q(x) & = \frac{x+1}{x-1},                   \\
+			r(x) & = 3x^5 + x\tan x + \frac{\cos x}{x}.
+		\end{align*}
+
+		\pause
+		使用导数的乘积法则和商法则，我们有：
+		\begin{align*}
+			p'(x) & = (2x)(\sin x - 1) + (x^2 + 1)(\cos x),           \\
+			q'(x) & = -\frac{2}{(x-1)^2},                             \\
+			r'(x) & = 15x^4 + \tan x + x\sec^2 x - \frac{\sin x}{x^2} \\
+			      & \,\,\,\,\,\,\,-\frac{\cos (x)}{x^2}.
+		\end{align*}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{计算函数的导数}
+	\begin{block}{题目}
+		\begin{itemize}
+			\item $f(x)=(1-2 x)^7,$
+			\item $g(x)=\sin ^2 x,$
+			\item $h(x)=\sqrt{\cot \frac{x}{2}},$
+			\item $i(x)=\ln \sin \mathrm{e}^x.$
+		\end{itemize}
+	\end{block}
+
+	\pause
+
+	\begin{exampleblock}{答案}
+		\begin{align*}
+			f'(x) & = -14(1-2x)^6,                                             \\
+			g'(x) & = 2\sin x \cos x,                                          \\
+			h'(x) & = -\frac{1}{4}\sqrt{\cot \frac{x}{2}} \csc^2 \frac{x}{2},  \\
+			i'(x) & = \mathrm{e}^x\frac{\cos \mathrm{e}^x}{\sin \mathrm{e}^x}.
+		\end{align*}
+	\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{计算变量的导数}
+
+	\begin{block}{题目}
+		\begin{itemize}
+			\item $y = \log \left(x+\sqrt{x^2+1}\right)$,
+			\item $y = \log |x|$,
+			\item $y = f(\sin x)$.
+		\end{itemize}
+	\end{block}
+
+	\pause
+
+	\begin{exampleblock}{答案}
+		{\small
+			\begin{itemize}
+				\item $y = \log \left(x+\sqrt{x^2+1}\right)$,
+				      \[
+					      \frac{dy}{dx} = \frac{1}{\sqrt{x^2+1}},
+				      \]
+				\item $y = \log |x|$,
+				      \[
+					      \frac{dy}{dx} = \frac{1}{x},
+				      \]
+				\item $y = f(\sin x)$,
+				      \[
+					      \frac{dy}{dx} = f'(\sin x) \cdot \cos x.
+				      \]
+			\end{itemize}
+		}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\frametitle{计算函数的导数}
+
+	\begin{block}{题目}
+		\begin{itemize}
+			\item $\displaystyle\frac{x}{2} \sqrt{a^2-x^2}+\frac{a^2}{2} \arcsin \frac{x}{a}$,
+			\item $\displaystyle\frac{\sqrt{x+1}-\sqrt{x-1}}{\sqrt{x+1}+\sqrt{x-1}}$,
+			\item $x^{a^a}+a^{x^a}+a^{a^x}$.
+		\end{itemize}
+	\end{block}
+
+	\pause
+
+	\begin{exampleblock}{答案}
+		\begin{align*}
+			 & \frac{d}{dx}\left(\frac{x}{2} \sqrt{a^2-x^2}+\frac{a^2}{2} \arcsin \frac{x}{a}\right) = \sqrt{a^2-x^2},                       \\
+			 & \frac{d}{dx}\left(\frac{\sqrt{x+1}-\sqrt{x-1}}{\sqrt{x+1}+\sqrt{x-1}}\right) = 1-\frac{x}{\sqrt{x^2-1}},                      \\
+			 & \frac{d}{dx}\left(x^{a^a}+a^{x^a}+a^{a^x}\right) = a^a x^{a^a-1}+a^{x^a} \ln a \cdot a x^{a-1}+a^{a^x} \ln a \cdot a^x \ln a.
+		\end{align*}
+	\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{计算函数的导数}
+
+	\begin{block}{题目}
+		\begin{itemize}
+			\item $y=x^{\sin x},$
+			\item $\displaystyle y=\sqrt{\frac{(x-1)(x-2)}{(x-3)(x-4)}}$.
+		\end{itemize}
+	\end{block}
+
+	\pause
+
+	\begin{exampleblock}{答案}
+		\begin{align*}
+			\frac{dy}{dx} & = x^{\sin x}\left(\cos x \log x + \frac{\sin x}{x}\right),                                                              \\
+			\frac{dy}{dx} & = \frac{1}{2} \sqrt{\frac{(x-1)(x-2)}{(x-3)(x-4)}\left[\frac{1}{x-1}+\frac{1}{x-2}-\frac{1}{x-3}-\frac{1}{x-4}\right]}.
+		\end{align*}
+	\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{计算抽象函数的导数}
+
+	\begin{block}{题目}
+		设 $f(x)=\varphi(a+b x)-\varphi(a-b x)$, 其中的 $\varphi(x)$ 在 $x=a$ 处可导, 求 $f^{\prime}(0)$.
+	\end{block}
+
+	\pause
+
+	\begin{exampleblock}{答案}
+		根据链式法则, 我们有
+		\[
+			f^{\prime}(x) = \varphi^{\prime}(a+b x) \cdot (b) - \varphi^{\prime}(a-b x) \cdot (-b) = b(\varphi^{\prime}(a+b x) + \varphi^{\prime}(a-b x)).
+		\]
+		因此, $f^{\prime}(0) = b(\varphi^{\prime}(a) + \varphi^{\prime}(a)) = 2b\varphi^{\prime}(a)$.
+	\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{计算抽象函数的导数}
+
+	\begin{block}{题目}
+		设 $f(x)$ 在 $(0,+\infty)$ 的上有定义，且 $f^{\prime}(1)=a(\neq 0)$，又 $\forall x, y \in(0,+\infty)$，有 $f(x y)=f(x)+f(y)$，求 $f(x)$。
+	\end{block}
+
+	\pause
+
+	\begin{exampleblock}{}
+		首先, 有 \[
+			f(x)=f(x)+f(1),\,\,\,\, f(1)=0.
+		\]
+		然后 按照导数的定义, $f(x)=f'(1)\log x$, 因为
+		\begin{align*}
+			f'(x) & =\lim_{\Delta x\to0}\frac{f(x+\Delta x)-f(x)}{\Delta x}                                    \\
+			      & =\lim_{\Delta x\to0}\frac{f\left[x\left(1+\frac{\Delta x}{x}\right)\right]-f(x)}{\Delta x} \\
+			      & =\lim_{\Delta x\to0}\frac{f(x)+f\left[1+\frac{\Delta x}{x}\right]-f(x)}{\Delta x}          \\
+			      & =f'(1)\cdot \frac{1}{x}.
+		\end{align*}
+	\end{exampleblock}
+\end{frame}
+
+% Thank you page
+\beamertemplateshadingbackground{structure.fg!90}{structure.fg}
+\begin{frame}[plain]
+	\vfill
+	\centering
+	{
+	\centering \Huge \color{white} Thank you for your attention!\\[10pt]Questions?\\ [10pt] Homework: Page123: 46, 47, 57.
+	}
+	\vfill
+\end{frame}
+
+
+\end{document}
+
+
