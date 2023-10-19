@@ -636,7 +636,7 @@ aspectratio=43,
 	其中 $\lim_{\Delta x\to0}\alpha(\Delta u)=0$. \pause Why? \pause
 	\begin{align*}
 		\lim _{\Delta x \rightarrow 0} \frac{f\left(g\left(x_0+\Delta x\right)\right)-f\left(g\left(x_0\right)\right)}{\Delta x}= & f^{\prime}\left(u_0\right) \lim _{\Delta x \rightarrow 0} \frac{\Delta u}{\Delta x}+\lim _{\Delta x \rightarrow 0} \alpha \lim _{\Delta x \rightarrow 0} \frac{\Delta u}{\Delta x} \\
-		=                                                                                                                         & f^{\prime}\left(u_0\right)f^{\prime}\left(x_0\right).
+		=                                                                                                                         & f^{\prime}\left(u_0\right)\varphi^{\prime}\left(x_0\right).
 	\end{align*}
 \end{frame}
 
@@ -716,8 +716,8 @@ aspectratio=43,
 			\end{enumerate}
 			利用反函数和复合函数法则后:
 			\begin{enumerate}
-				\item $f(x) = e^x$, $f'(x) = e^x$; $f(x)=a^x(a>0)$, $f'(x)=\log a \cdot a^x$
-				\item $f(x) = \arcsin(x)$, $f'(x) = \displaystyle\frac{1}{\sqrt{1-x^2}}$, $g(x) = \arccos(x)$, $g'(x) = \displaystyle-\frac{1}{\sqrt{1-x^2}}$;
+				\item $f(x) = e^x$, $f'(x) = e^x$; $f(x)=a^x(a>0)$, $f'(x)=\log a \cdot a^x$;
+				\item $f(x) = \arcsin(x)$, $f'(x) = \displaystyle\frac{1}{\sqrt{1-x^2}}$; $g(x) = \arccos(x)$, $g'(x) = \displaystyle-\frac{1}{\sqrt{1-x^2}}$;
 				\item $f(x) = \arctan(x)$, $f'(x) = \displaystyle\frac{1}{1-x^2}$;
 				\item $f(x) = x^a,\,\,(a\neq0)$, $\displaystyle\frac{f'(x)}{f(x)}=\left(\log(f(x))\right)'=a\cdot \frac 1x$, $\displaystyle f'(x)=a\cdot\frac1x\cdot f(x)=ax^{a-1}$.
 			\end{enumerate}
