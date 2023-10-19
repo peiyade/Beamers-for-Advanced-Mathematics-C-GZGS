@@ -128,14 +128,14 @@ aspectratio=43,
 	\frametitle{等价无穷小替换定理与常用的等价无穷小}
 	
 	\begin{block}{定理（无穷小等价替换定理）}
-		如果 $\alpha_{1 \hookleftarrow} \beta_1, \alpha_{2 \hookleftarrow} \beta_2$ 且极限 $\lim \frac{\beta_1}{\beta_2}$ 存在, 则
+		如果 $\alpha_{1 }\sim \beta_1, \alpha_{2 }\sim \beta_2$ 且极限 $\lim \frac{\beta_1}{\beta_2}$ 存在, 则
 		$$
 		\lim \frac{\alpha_1}{\alpha_2}=\lim \frac{\beta_1}{\beta_2}
 		$$
 	\end{block}
 	\pause
-	\begin{proof}
-		$\quad \lim \frac{\alpha_1}{\alpha_2}=\lim \frac{\alpha_1}{\beta_1} \cdot \frac{\beta_2}{\alpha_2} \cdot \frac{\beta_1}{\beta_2}=\lim \frac{\beta_1}{\beta_2}$.
+	\begin{proof} 
+		$\quad\displaystyle \lim \frac{\alpha_1}{\alpha_2}=\lim \frac{\alpha_1}{\beta_1} \cdot \frac{\beta_2}{\alpha_2} \cdot \frac{\beta_1}{\beta_2}=\lim \frac{\beta_1}{\beta_2}$.
 		
 	\end{proof}
 	\pause
@@ -400,12 +400,12 @@ aspectratio=43,
 				
 				\begin{frame}{连续函数的性质}{初等函数的连续性}
 					\begin{block}{基本初等函数的连续性}
-						$x^n (x>0,n>1)$, $\sin(x)$, $\log x$ 是连续的.
+						$x^n (x>0,n\in \mathbb{N}^+)$, $\sin(x)$, $\log x$ 是连续的.
 					\end{block}
 					Why?
 					\pause
 					\begin{exampleblock}{反函数连续性扩张定义}
-						$x^n (x>0,n>0)$, $\arcsin(x)$, $e^{x}$, 在其定义域上是连续的.
+						$x^{\frac{1}{n}} (x>0,n\in \mathbb{N}^+)$, $\arcsin(x)$, $e^{x}$, 在其定义域上是连续的.
 					\end{exampleblock}
 					\pause
 					\begin{exampleblock}{加点四则运算和复合运算}
