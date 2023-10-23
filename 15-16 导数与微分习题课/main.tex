@@ -238,7 +238,7 @@ aspectratio=43,
 \end{frame}
 
 \begin{frame}
-	\frametitle{计算复合函数的导数}
+	\frametitle{计算函数的导数}
 	\begin{columns}
 		\column{0.5\textwidth}
 		\centering
@@ -278,7 +278,7 @@ aspectratio=43,
 \end{frame}
 
 \begin{frame}
-	\frametitle{计算函数的导数}
+	\frametitle{计算复合函数的导数}
 	\begin{block}{题目}
 		\begin{itemize}
 			\item $f(x)=(1-2 x)^7,$
@@ -294,7 +294,7 @@ aspectratio=43,
 		\begin{align*}
 			f'(x) & = -14(1-2x)^6,                                             \\
 			g'(x) & = 2\sin x \cos x,                                          \\
-			h'(x) & = -\frac{1}{4}\sqrt{\cot \frac{x}{2}} \csc^2 \frac{x}{2},  \\
+			h'(x) & = -\frac{1}{4}\left(\cot \frac{x}{2}\right)^{-\frac12} \csc^2 \frac{x}{2},  \\
 			i'(x) & = \mathrm{e}^x\frac{\cos \mathrm{e}^x}{\sin \mathrm{e}^x}.
 		\end{align*}
 	\end{exampleblock}
@@ -306,9 +306,9 @@ aspectratio=43,
 
 	\begin{block}{题目}
 		\begin{itemize}
+  			\item $y = f(\sin x)$,
 			\item $y = \log \left(x+\sqrt{x^2+1}\right)$,
-			\item $y = \log |x|$,
-			\item $y = f(\sin x)$.
+			\item $y = \log |x|$.
 		\end{itemize}
 	\end{block}
 
@@ -317,18 +317,9 @@ aspectratio=43,
 	\begin{exampleblock}{答案}
 		{\small
 			\begin{itemize}
-				\item $y = \log \left(x+\sqrt{x^2+1}\right)$,
-				      \[
-					      \frac{dy}{dx} = \frac{1}{\sqrt{x^2+1}},
-				      \]
-				\item $y = \log |x|$,
-				      \[
-					      \frac{dy}{dx} = \frac{1}{x},
-				      \]
-				\item $y = f(\sin x)$,
-				      \[
-					      \frac{dy}{dx} = f'(\sin x) \cdot \cos x.
-				      \]
+				\item   $\displaystyle\frac{dy}{dx} = f'(\sin x) \cdot \cos x,$
+                \item   $\displaystyle\frac{dy}{dx} = \frac{1}{\sqrt{x^2+1}},$
+				\item   $\displaystyle\frac{dy}{dx} = \frac{1}{x}.$
 			\end{itemize}
 		}
 	\end{exampleblock}
@@ -348,11 +339,11 @@ aspectratio=43,
 	\pause
 
 	\begin{exampleblock}{答案}
-		\begin{align*}
-			 & \frac{d}{dx}\left(\frac{x}{2} \sqrt{a^2-x^2}+\frac{a^2}{2} \arcsin \frac{x}{a}\right) = \sqrt{a^2-x^2},                       \\
-			 & \frac{d}{dx}\left(\frac{\sqrt{x+1}-\sqrt{x-1}}{\sqrt{x+1}+\sqrt{x-1}}\right) = 1-\frac{x}{\sqrt{x^2-1}},                      \\
-			 & \frac{d}{dx}\left(x^{a^a}+a^{x^a}+a^{a^x}\right) = a^a x^{a^a-1}+a^{x^a} \ln a \cdot a x^{a-1}+a^{a^x} \ln a \cdot a^x \ln a.
-		\end{align*}
+		\begin{itemize}
+			 \item $\displaystyle \sqrt{a^2-x^2},$
+			 \item $\displaystyle1-\frac{x}{\sqrt{x^2-1}},$
+			 \item $\displaystyle a^a x^{a^a-1}+\ln a \cdot aa^{x^a}  x^{a-1}+a^{a^x+x}\ln^2 a.$
+		\end{itemize}
 	\end{exampleblock}
 
 \end{frame}
@@ -370,10 +361,10 @@ aspectratio=43,
 	\pause
 
 	\begin{exampleblock}{答案}
-		\begin{align*}
-			\frac{dy}{dx} & = x^{\sin x}\left(\cos x \log x + \frac{\sin x}{x}\right),                                                              \\
-			\frac{dy}{dx} & = \frac{1}{2} \sqrt{\frac{(x-1)(x-2)}{(x-3)(x-4)}\left[\frac{1}{x-1}+\frac{1}{x-2}-\frac{1}{x-3}-\frac{1}{x-4}\right]}.
-		\end{align*}
+		\begin{itemize}
+			\item $\displaystyle x^{\sin x}\left(\cos x \log x + \frac{\sin x}{x}\right),$
+			\item $\displaystyle  \frac{1}{2} \sqrt{\frac{(x-1)(x-2)}{(x-3)(x-4)}\left[\frac{1}{x-1}+\frac{1}{x-2}-\frac{1}{x-3}-\frac{1}{x-4}\right]}.$
+		\end{itemize}
 	\end{exampleblock}
 
 \end{frame}

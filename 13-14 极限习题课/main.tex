@@ -156,7 +156,7 @@ aspectratio=43,
 		      \pause
 		\item 7. $\left\{n-\frac{1}{n}\right\}$：这是一个发散数列.
 		      \pause
-		\item 8. $\left\{\left[(-1)^n+1\right] \frac{n+1}{n}\right\}$：这是一个收敛数列, 极限为2.
+		\item 8. $\left\{\left[(-1)^n+1\right] \frac{n+1}{n}\right\}$：这是一个发散数列.
 	\end{itemize}
 \end{frame}
 
@@ -418,6 +418,53 @@ aspectratio=43,
 	\end{exampleblock}
 \end{frame}
 
+\begin{frame}
+	\frametitle{利用等价无穷小计算分式的极限}
+	\begin{block}{题目 $(\text{如果没有特别提及, 考虑 }\,\,x\to0)$}
+		\begin{columns}[onlytextwidth]
+			\begin{column}{0.5\textwidth}
+				\begin{enumerate}
+					\item $\lim\limits_{x \to 0} \frac{\tan(x)}{x}$;
+					\item $\lim\limits_{x \to 0} \frac{\sin(5x) - \sin(3x)}{\sin(x)}$
+					\item $\lim\limits_{x \to 0} \frac{2 \sin^2(x) + \sin(x) - 1}{2 \sin^2(x) - 3 \sin(x) + 1}$;
+				\end{enumerate}
+			\end{column}
+			\begin{column}{0.5\textwidth}
+				\begin{enumerate}
+					\setcounter{enumi}{3}
+					\item $\lim\limits_{x \to \frac{\pi}{6}} \frac{2 \sin^2(x) + \sin(x) - 1}{2 \sin^2(x) - 3 \sin(x) + 1}$;
+					\item $\lim\limits_{x \to 0} \frac{\cos(x) - \cos(3x)}{x^2}$;
+					\item $\lim\limits_{x \to 0} \frac{\sqrt{\cos(x)} - \sqrt[3]{\cos(x)}}{\sin^2(x)}$.
+				\end{enumerate}
+			\end{column}
+		\end{columns}
+	\end{block}
+	\begin{exampleblock}{答案}
+		\begin{columns}[onlytextwidth]
+			\begin{column}{0.5\textwidth}
+				\begin{enumerate}
+					\item $1$;
+					      \pause
+					\item $\frac12$;
+					      \pause
+					\item $-1$;
+				\end{enumerate}
+			\end{column}
+			\begin{column}{0.5\textwidth}
+				\begin{enumerate}
+					\setcounter{enumi}{3}
+					\pause
+					\item $8$,
+					      \pause
+					\item $\frac52$;
+					      \pause
+					\item $-\frac12$;
+				\end{enumerate}
+			\end{column}
+		\end{columns}
+	\end{exampleblock}
+\end{frame}
+
 \begin{frame}{连续函数性质相关的习题}
 	\begin{exampleblock}{间断点分类: 名称}
 		\begin{equation*}
@@ -468,15 +515,13 @@ aspectratio=43,
 					\item $\displaystyle \lim _{x \rightarrow \infty} e^{\frac{1}{x}}$, \pause\,\, $1$;\pause
 					\item $\displaystyle \lim _{x \rightarrow 0} \ln \frac{\sin x}{x}$, \pause\,\, $0$;\pause
 					\item $\displaystyle \lim _{x \rightarrow \infty}\left(1+\frac{1}{x}\right)^{\frac{x}{2}}$,\pause  \,\,$e^\frac{1}{2}$;\pause
-					\item $\displaystyle \lim _{x \rightarrow 0}\left(1+3 \tan ^2 x\right)^{\cot x}$,\pause\,\,$e^3$;\pause
 				\end{enumerate}
 			\end{column}
 			\begin{column}{0.55\textwidth}
 				\begin{enumerate}
-					\setcounter{enumi}{4}
+					\setcounter{enumi}{3}
 					\item $\displaystyle \lim _{x \rightarrow \infty}\left(\frac{3+x}{6+x}\right)^{\frac{x-1}{2}}$,\,\,\pause $e^{-\frac{3}{2}}$;\pause
 					\item $\displaystyle \lim _{x \rightarrow 0} \frac{\sqrt{1+\tan x}-\sqrt{1+\sin x}}{x \sqrt{1+\sin ^2 x}-x}$,\,\,\pause $\displaystyle\frac{1}{2}$;\pause
-					\item $\displaystyle \lim _{x \rightarrow e} \frac{\ln x-1}{x-e}$,\,\,\pause $e^{-1}$;\pause
 					\item $\displaystyle \lim _{x \rightarrow 0} \frac{e^{3 x}-e^{2 x}-e^x+1}{\sqrt[3]{(1-x)(1+x)}-1}$,\,\,\pause $-6$.
 				\end{enumerate}
 			\end{column}
