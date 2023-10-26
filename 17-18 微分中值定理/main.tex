@@ -247,8 +247,8 @@ aspectratio=43,
 	\end{example}
 \end{frame}
 
-\begin{frame}[t]{Lagrange中值定理的证明} \begin{columns}[onlytextwidth] \begin{column}{0.6\textwidth} \begin{proof} 证 作辅助函数 
-	$$ \varphi(x)=f(x)-f(a)-\frac{f(b)-f(a)}{b-a}(x-a), $$
+\begin{frame}[t]{Lagrange中值定理的证明} \begin{columns}[onlytextwidth] \begin{column}{0.6\textwidth} \begin{proof} 证 作辅助函数
+				$$ \varphi(x)=f(x)-f(a)-\frac{f(b)-f(a)}{b-a}(x-a), $$
 
 				由于函数 $f(x)$ 的性质, 函数 $\varphi(x)$ 也在闭区间 $[a, b]$ 上连续,在开区间 $(a, b)$ 上可导,并且有
 				$$
@@ -276,7 +276,7 @@ aspectratio=43,
 	\begin{theorem}[一阶导数与单调性的关系]
 		设函数 $f(x)$ 在区间 $I$ 上可导, 则 $f(x)$ 在 $I$ 上单调增加的充分必要条件是: 对于任意 $x \in I$ 有 $f^{\prime}(x) \geqslant 0$;特别地, 若对于任意 $x \in I$ 有 $f^{\prime}(x)>0$, 则 $f(x)$ 在 $I$ 上严格单调增加.
 	\end{theorem}
-
+	Why? 试着从函数单调性定义进行分析.
 \end{frame}
 
 \begin{frame}{Lagrange 中值定理的应用}
@@ -349,6 +349,7 @@ aspectratio=43,
 \end{frame}
 
 \section{L'Hôpital 法则 (洛必达法则)}
+\subsection{{L'Hôpital法则 (洛必达法则)}的证明}
 \begin{frame}{L'Hôpital法则 (洛必达法则)}
 	\begin{theorem}[L'Hôpital法则]
 		设函数 $f(x)$ 和 $g(x)$ 在 $(a, a+d]$ 上可导 $(d$ 是某个正常数), 且 $g^{\prime}(x) \neq 0$. 若此时有
@@ -365,6 +366,7 @@ aspectratio=43,
 		$$
 			\lim _{x \rightarrow a^{+}} \frac{f(x)}{g(x)}=\lim _{x \rightarrow a^{+}} \frac{f^{\prime}(x)}{g^{\prime}(x)} .
 		$$
+		同理, 对$x\to a^-,\,\,x\to a,\,\,x\to\infty,\,\,x\to -\infty$ 有类似结果.
 	\end{theorem}
 
 \end{frame}
@@ -388,42 +390,76 @@ aspectratio=43,
 	\end{exampleblock}
 \end{frame}
 
-\begin{frame}[fragile]{求极限} 
+\begin{frame}[fragile]{求极限}
 	\begin{block}{问题}
 		\begin{columns}[onlytextwidth]
-		\column{0.5\textwidth} 
-		\begin{enumerate} 
-			\item $\displaystyle\lim _{x \rightarrow 0} \frac{e^x-e^{-x}}{\sin x}$; 
-			\item $\displaystyle\lim _{x \rightarrow \pi } \frac{\sin 3 x}{\tan 5 x}$; 
-			\item $\displaystyle\lim _{x \rightarrow \frac{\pi}{2}} \frac{\ln (\sin x)}{(\pi-2 x)^2}$; 
-		\end{enumerate} 
+			\column{0.5\textwidth}
+			\begin{enumerate}
+				\item $\displaystyle\lim _{x \rightarrow 0} \frac{e^x-e^{-x}}{\sin x}$;
+				\item $\displaystyle\lim _{x \rightarrow \pi } \frac{\sin 3 x}{\tan 5 x}$;
+				\item $\displaystyle\lim _{x \rightarrow \frac{\pi}{2}} \frac{\ln (\sin x)}{(\pi-2 x)^2}$;
+			\end{enumerate}
 			\column{0.5\textwidth}
 			\begin{enumerate} \setcounter{enumi}{3}
-			\item $\displaystyle\lim _{x \rightarrow a} \frac{x^m-a^m}{x^n-a^n}$; 
-			\item $\displaystyle\lim _{x \rightarrow 0+} \frac{\ln (\tan 7 x)}{\ln (\tan 2 x)}$; 
-			\item $\displaystyle\lim _{x \rightarrow \frac{\pi}{2}} \frac{\tan 3 x}{\tan x}$. 
-		\end{enumerate} 
-	\end{columns}
-		\end{block}
+				\item $\displaystyle\lim _{x \rightarrow a} \frac{x^m-a^m}{x^n-a^n}$;
+				\item $\displaystyle\lim _{x \rightarrow 0+} \frac{\ln (\tan 7 x)}{\ln (\tan 2 x)}$;
+				\item $\displaystyle\lim _{x \rightarrow \frac{\pi}{2}} \frac{\tan 3 x}{\tan x}$.
+			\end{enumerate}
+		\end{columns}
+	\end{block}
 
 	\pause
-	
-	\begin{exampleblock}{答案} 
+
+	\begin{exampleblock}{答案}
 		\begin{columns}[onlytextwidth]
-			\column{0.5\textwidth} 
-		\begin{enumerate} 
-			\item $\displaystyle\lim _{x \rightarrow 0} \frac{e^x-e^{-x}}{\sin x} = 2$; \pause 
-			\item $\displaystyle\lim _{x \rightarrow \pi } \frac{\sin 3 x}{\tan 5 x} = \frac{3}{5}$; \pause 
-			\item $\displaystyle\lim _{x \rightarrow \frac{\pi}{2}} \frac{\ln (\sin x)}{(\pi-2 x)^2} = \frac{-1}{\pi^2}$; \pause 
-		\end{enumerate} 
-		\column{0.5\textwidth}
-		\begin{enumerate} \setcounter{enumi}{3}
-			\item $\displaystyle\lim _{x \rightarrow a} \frac{x^m-a^m}{x^n-a^n} = \frac{m a^{m-1}}{n a^{n-1}}$; \pause 
-			\item $\displaystyle\lim _{x \rightarrow 0+} \frac{\ln (\tan 7 x)}{\ln (\tan 2 x)} = \frac{7}{2}$; \pause 
-			\item $\displaystyle\lim _{x \rightarrow \frac{\pi}{2}} \frac{\tan 3 x}{\tan x} = 3.$ 
-		\end{enumerate} 
-	\end{columns}
+			\column{0.5\textwidth}
+			\begin{enumerate}
+				\item $\displaystyle\lim _{x \rightarrow 0} \frac{e^x-e^{-x}}{\sin x} = 2$; \pause
+				\item $\displaystyle\lim _{x \rightarrow \pi } \frac{\sin 3 x}{\tan 5 x} = \frac{3}{5}$; \pause
+				\item $\displaystyle\lim _{x \rightarrow \frac{\pi}{2}} \frac{\ln (\sin x)}{(\pi-2 x)^2} = \frac{-1}{\pi^2}$; \pause
+			\end{enumerate}
+			\column{0.5\textwidth}
+			\begin{enumerate} \setcounter{enumi}{3}
+				\item $\displaystyle\lim _{x \rightarrow a} \frac{x^m-a^m}{x^n-a^n} = \frac{m a^{m-1}}{n a^{n-1}}$; \pause
+				\item $\displaystyle\lim _{x \rightarrow 0+} \frac{\ln (\tan 7 x)}{\ln (\tan 2 x)} = 1$; \pause
+				\item $\displaystyle\lim _{x \rightarrow \frac{\pi}{2}} \frac{\tan 3 x}{\tan x} = 3.$
+			\end{enumerate}
+		\end{columns}
 	\end{exampleblock}
+\end{frame}
+
+\subsection{更进一步的求极限方法}
+\begin{frame} \frametitle{欲求的极限和变换方法}
+
+	\everymath{\displaystyle}
+
+	\begin{block}{$0\cdot\infty$型} 
+		若 $\lim _{x \rightarrow c} f(x)=0, \lim _{x \rightarrow c} g(x)=\infty$, \\
+		可计算
+		$$\lim _{x \rightarrow c} f(x) g(x)=\lim _{x \rightarrow c} \frac{f(x)}{1 / g(x)}$$ 或 $$\lim _{x \rightarrow c} \frac{g(x)}{1 / f(x)}$$
+	\end{block}
+\pause
+	\begin{block}{$\infty-\infty$ 型}
+		若$\lim _{x \rightarrow c} f(x)=\infty, \lim _{x \rightarrow c} g(x)=\infty$, \\
+		可计算$$\lim _{x \rightarrow c}(f(x)-g(x))=\lim _{x \rightarrow c} \frac{1 / g(x)-1 / f(x)}{1 /(f(x) g(x))}.$$
+	\end{block}
+
+\end{frame}
+
+\begin{frame} \frametitle{欲求的极限和变换方法}
+
+	\everymath{\displaystyle}
+
+	\begin{block}{$(0^+)^0$ 型与$\infty^0$ 型} 
+		若$\lim _{x \rightarrow c} f(x)=0^{+}, \lim _{x \rightarrow c} g(x)=0$ 或 $\lim _{x \rightarrow c} f(x)=\infty, \lim _{x \rightarrow c} g(x)=0$, \\
+		可计算$$\lim _{x \rightarrow c} f(x)^{g(x)}=\exp \lim _{x \rightarrow c} \frac{g(x)}{1 / \ln f(x)}.$$
+	\end{block}
+\pause
+	\begin{block}{$1^\infty$ 型} 
+		若$\lim _{x \rightarrow c} f(x)=1, \lim _{x \rightarrow c} g(x)=\infty$, 可计算 \\
+		$$\lim _{x \rightarrow c} f(x)^{g(x)}=\exp \lim _{x \rightarrow c} \frac{\ln f(x)}{1 / g(x)}.$$
+	\end{block}
+
 \end{frame}
 
 

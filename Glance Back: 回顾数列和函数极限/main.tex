@@ -1,0 +1,199 @@
+% !TEX encoding = UTF-8 Unicode.
+
+% Based on https://github.com/Miracle0565/BUCT-Beamer-Theme
+
+\documentclass[
+10pt,
+aspectratio=43,
+]{beamer}
+\setbeamercovered{transparent=10}
+\usetheme[
+%  showheader,
+%  red,
+  purple,
+%  gray,
+%  graytitle,
+  colorblocks,
+%  noframetitlerule,
+]{Verona}
+
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Mac上使用如下命令声明隶书字体, windows也有相关方式, 大家可自行修改
+\providecommand{\lishu}{\CJKfamily{zhli}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz}
+\usetikzlibrary{fadings}
+%
+%\setbeamertemplate{sections/subsections in toc}[ball]
+\usepackage{xeCJK}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{subfigure}
+\usefonttheme{professionalfonts}
+\def\mathfamilydefault{\rmdefault}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{bm}
+\setbeamertemplate{section in toc}{\hspace*{1em}\inserttocsectionnumber.~\inserttocsection\par}
+\setbeamertemplate{subsection in toc}{\hspace*{2em}\inserttocsectionnumber.\inserttocsubsectionnumber.~\inserttocsubsection\par}
+\setbeamerfont{subsection in toc}{size=\small}
+\AtBeginSection[]{%
+	\begin{frame}%
+		\frametitle{Outline}%
+		\textbf{\tableofcontents[currentsection]} %
+	\end{frame}%
+}
+
+\AtBeginSubsection[]{%
+	\begin{frame}%
+		\frametitle{Outline}%
+		\textbf{\tableofcontents[currentsection, currentsubsection]} %
+	\end{frame}%
+}
+
+\title{高等数学C}
+%\subtitle{A Simple while elegant template}
+\author[P.Yu]{余沛}
+\mail{peiy\_gzgs@qq.com}
+\institute[Guangzhou College of Technology and Business]{Guangzhou College of Technology and Business \\
+  广州工商学院}
+\date{\today}
+\titlegraphic[width=4cm]{logo.png}{}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ----------- 标题页 ------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+
+\maketitle
+
+%%% define code
+\defverbatim[colored]\lstI{
+	\begin{lstlisting}[language=C++,basicstyle=\ttfamily,keywordstyle=\color{red}]
+	int main() {
+	// Define variables at the beginning
+	// of the block, as in C:
+	CStash intStash, stringStash;
+	int i;
+	char* cp;
+	ifstream in;
+	string line;
+	[...]
+	\end{lstlisting}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ----------- FRAME ------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{回顾: 简要回顾微分学}
+\begin{frame}{牛顿: 函数值变化的分析}
+	\begin{block}{}
+		\begin{enumerate}
+			\item   考虑函数 $y=f(x)$;
+			\item 	对于自变量 $x_0$, 计算对应的因变量 $f(x_0)$;
+			\item 	对于任意增量 $\Delta x$, 可以考察自变量 $x_0+\Delta x$, 并计算对应的因变量 $f(x_0+\Delta x)$;
+			\item  	考察自变量增量和因变量增量之间的比值关系:
+			      \begin{itemize}
+				      \item 自变量的增量为 $\Delta x = x+\Delta x -x$;
+				      \item 因变量的增量为 $\Delta y = f(x+\Delta x) -f(x)$;
+				      \item 因变量的增量和自变量的增量之比为
+				            $$\frac{\Delta y}{\Delta x} = \frac{f(x+\Delta x) -f(x)}{\Delta x};$$
+			      \end{itemize}
+			\item  考察该比值在 $\Delta x$ 趋于零的情况.
+		\end{enumerate}
+	\end{block}
+	{\small	《自然哲学的数学原理》(Sir Issac Newton 著, 赵振江译) 这么解释 :
+	\begin{quote}
+		"那些最终比, 随着它们量的消失, 实际上不是最终量的比, 而是无线减小的量的比持续靠近的极限, 他们能比任意给定的差更接近. 但在量被减小以至无穷之前, 既不能超过, 也不能到达此极限."
+	\end{quote}
+	}
+\end{frame}
+
+
+\begin{frame}{牛顿: 为什么我们要讨论"极限"过程}
+	\begin{block}{}
+		\begin{enumerate}{}
+			\item  	考察自变量增量和因变量增量之间的比值关系:
+			      \begin{itemize}
+				      \item 因变量的增量和自变量的增量之比为
+				            $$\frac{\Delta y}{\Delta x} = \frac{f(x+\Delta x) -f(x)}{\Delta x};$$
+			      \end{itemize}
+			\item  考察该比值在 $\Delta x$ 趋于零的情况.
+		\end{enumerate}
+	\end{block}
+	\begin{quote}
+	\end{quote}
+	{\small	《自然哲学的数学原理》(Sir Issac Newton (1642 – 1726) 著, 赵振江译) 原文解释到 :
+	\begin{quote}
+		"那些最终比, 随着它们量的消失, 实际上不是最终量的比, 而是无限减小的量的比持续靠近的极限, 他们能比任意给定的差更接近. 但在量被减小以至无穷之前, 既不能超过, 也不能到达此极限."
+	\end{quote}
+	}
+	\begin{center}
+		{\color{red}{这里本身蕴含一组"动态-静态"关系.}}
+	\end{center}
+
+	\pause
+
+	这个来处理动静之间的关系工作由 Karl Weierstrass (1815 – 1897) 给出.
+\end{frame}
+
+\begin{frame}{魏尔斯特拉斯: 在讨论"极限"时, 我们在讨论什么}
+	\begin{block}{}
+		\begin{enumerate}{}
+			\item  	考察自变量增量和因变量增量之间的比值关系:
+			      \begin{itemize}
+				      \item 因变量的增量和自变量的增量之比为
+				            $$\frac{\Delta y}{\Delta x} = \frac{f(x+\Delta x) -f(x)}{\Delta x};$$
+			      \end{itemize}
+			\item  考察该比值在 $\Delta x$ 趋于零的情况.
+		\end{enumerate}
+	\end{block}
+	魏尔斯特拉斯的讨论角度:
+	\begin{enumerate}
+		\item 更一般的情况: 自变量可以不趋于零的情况.
+		\item 最简单的情况: 自变量的变化平稳有序, 仅仅考虑因变量的变化趋势.
+		\item 先讨论数列极限的问题.
+	\end{enumerate}
+\end{frame}
+
+\section{回顾: 数列极限}
+\begin{frame}{魏尔斯特拉斯: 在讨论"极限"时, 我们在讨论什么}
+	数列的极限定义及其来源:
+	\begin{block}{定义: 数列极限与收敛数列}
+		对于数列 $\{x_n\}$ 和常数 $a$, 如果有: 对于任意的 $\epsilon>0$, 都存在正整数 $N$, 使得对于任意满足 $n>N$ 的 $n$, 不等式
+		$$|x_n-a|<\epsilon$$
+		都成立, 
+		那么称常数 $a$ 是数列 $\{x_n\}$ 的极限, 或者数列 $\{x_n\}$ 收敛, 并且收敛于 $a$, 记为
+		\begin{equation*}
+			\lim_{n\to\infty}x_n=a,  \quad \text{或} \quad x_n\to a (n\to\infty).
+		\end{equation*}
+	\end{block}
+\end{frame}
+\section{回顾: 函数极限}
+
+
+% Thank you page
+\beamertemplateshadingbackground{structure.fg!90}{structure.fg}
+\begin{frame}[plain]
+	\vfill
+	\centering
+	{
+	\centering \Huge \color{white} Thank you for your attention!\\[10pt]Questions?\\ [10pt]
+	}
+	\vfill
+\end{frame}
+
+
+\end{document}
+
+
