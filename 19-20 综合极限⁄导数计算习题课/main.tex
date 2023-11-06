@@ -391,6 +391,34 @@ aspectratio=43,
 \end{frame}
 
 \subsection{求极限:$\displaystyle\infty-\infty$型}
+\begin{frame} \frametitle{欲求的极限和变换方法}
+	\everymath{\displaystyle}
+	\begin{block}{$0\cdot\infty$型} 
+		若 $\lim _{x \rightarrow c} f(x)=0, \lim _{x \rightarrow c} g(x)=\infty$, \\
+		可计算
+		$$\lim _{x \rightarrow c} f(x) g(x)=\lim _{x \rightarrow c} \frac{f(x)}{1 / g(x)}$$ 或 $$\lim _{x \rightarrow c} \frac{g(x)}{1 / f(x)}$$
+	\end{block}
+\pause
+	\begin{block}{$\infty-\infty$ 型}
+		若$\lim _{x \rightarrow c} f(x)=\infty, \lim _{x \rightarrow c} g(x)=\infty$, \\
+		可计算$$\lim _{x \rightarrow c}(f(x)-g(x))=\lim _{x \rightarrow c} \frac{1 / g(x)-1 / f(x)}{1 /(f(x) g(x))}.$$
+	\end{block}
+
+\end{frame}
+
+\begin{frame} \frametitle{欲求的极限和变换方法}
+	\everymath{\displaystyle}
+	\begin{block}{$(0^+)^0$ 型与$\infty^0$ 型} 
+		若$\lim _{x \rightarrow c} f(x)=0^{+}, \lim _{x \rightarrow c} g(x)=0$ 或 $\lim _{x \rightarrow c} f(x)=\infty, \lim _{x \rightarrow c} g(x)=0$, \\
+		可计算$$\lim _{x \rightarrow c} f(x)^{g(x)}=\exp \lim _{x \rightarrow c} \frac{g(x)}{1 / \ln f(x)}.$$
+	\end{block}
+\pause
+	\begin{block}{$1^\infty$ 型} 
+		若$\lim _{x \rightarrow c} f(x)=1, \lim _{x \rightarrow c} g(x)=\infty$, 可计算 \\
+		$$\lim _{x \rightarrow c} f(x)^{g(x)}=\exp \lim _{x \rightarrow c} \frac{\ln f(x)}{1 / g(x)}.$$
+	\end{block}
+\end{frame}
+
 \begin{frame}
 	\frametitle{求极限:$\displaystyle\infty-\infty$型}
 	\everymath{\displaystyle}
@@ -438,13 +466,13 @@ aspectratio=43,
 			\column{0.5\textwidth}
 			\begin{enumerate}
 				\item $\lim _{x \rightarrow 1} x^{\frac{1}{1-x}}$;
-				\item $\lim _{x \rightarrow 1}(2-x)^{\tan \frac{x x}{2}}$;
+				\item $\lim _{x \rightarrow 1}(2-x)^{\tan \frac{\pi x}{2}}$;
 			\end{enumerate}
 			\column{0.5\textwidth}
 			\begin{enumerate}
 				\setcounter{enumi}{2}
 				\item $\lim _{x \rightarrow \frac{\pi}{4}}(\tan x)^{\tan 2 x}$;
-				\item $\lim _{x \rightarrow 0}(\cot x)^{\sin x}$.
+				\item $\lim _{x \rightarrow+\infty}\left(\frac{2}{\pi} \arctan x\right)^x$.
 			\end{enumerate}
 		\end{columns}
 	\end{block}
@@ -455,14 +483,14 @@ aspectratio=43,
 			\begin{enumerate}
 				\pause
 				\item $e^{-1}$;
-				\item $e^{\frac{\pi}{2}}$;
+				\item $e^{\frac{2}{\pi}}$;
 			\end{enumerate}
 			\column{0.5\textwidth}
 			\begin{enumerate}
 				\setcounter{enumi}{2}
 				\pause
 				\item $e^{-1}$;
-				\item $1$.
+				\item $e^{\frac{2}{\pi}}$.
 			\end{enumerate}
 		\end{columns}
 	\end{exampleblock}
@@ -561,7 +589,7 @@ aspectratio=43,
 	\vfill
 	\centering
 	{
-		\centering \Huge \color{white} Thank you for your attention!\\[10pt]Questions?
+		\centering \Huge \color{white} Thank you for your attention!\\[10pt]Questions?\\Homework: Page: 120: 17、23、26\\\vspace{0.4cm}Page: 123:  46、47、57
 	}
 	\vfill
 \end{frame}
