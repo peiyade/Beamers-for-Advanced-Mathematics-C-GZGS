@@ -253,25 +253,26 @@ aspectratio=43,
 	\end{block}
 \end{frame}
 
+
+
 \begin{frame}
-	\frametitle{求最大容积}
-	\everymath{\displaystyle}
-	\begin{block}{问题}
-		将边长为 $a$ 的正方形铁皮, 四角各截去相同的小正方形, 折成一个无盖方盒, 问如何截, 使方盒的容积最大？最大值为多少？
-	\end{block}
-	\pause
-	\begin{block}{}
-		设小正方形的边长为 $x$, 则方盒的容积为
-		\[ V = x(a-2x)^2, \quad x \in \left(0, \frac{a}{2}\right) \]
-	\end{block}
-	\pause
-	\begin{block}{}
-		求导得 $V' = (a-2x)(a-6x)$, 得唯一驻点 $x = \frac{a}{6}$. 导数在驻点左侧为正, 右侧为负, 所以 $x = \frac{a}{6}$ 为极大值点, 即为最大值点.
-	\end{block}
-	\pause
-	\begin{block}{}
-		当 $x = \frac{a}{6}$ 时, $V$ 有最大值 $V\left(\frac{a}{6}\right) = \frac{2}{27}a^3$.
-	\end{block}
+	\frametitle{求函数 $f(x)=\sqrt[3]{\left(2 x-x^2\right)^2}$ 在 $[-1,4]$ 上的最值}
+	函数 $f(x)$ 的定义域为 $(-\infty,+\infty)$ . 由
+	$$
+		f^{\prime}(x)=\frac{4}{3}\left(2 x-x^2\right)^{-\frac{1}{3}}(1-x),
+	$$
+
+	知 $f(x)$ 的驻点为 $x=1$, 使得 $f^{\prime}(x)$ 不存在的点为 $x=0$ 和 $x=2$ .
+	\begin{itemize}
+		\item 当 $-\infty<x<0$ 时, $f^{\prime}(x)<0$;
+		\item 当 $0<x<1$ 时, $f^{\prime}(x)>0$;
+		\item 当 $1<x<2$ 时, $f^{\prime}(x)<0$;
+		\item 当 $2<x<+\infty$ 时, $f^{\prime}(x)>0$,
+	\end{itemize}
+	由极值判定定理知 $f(0)=0$ 是极小值, $f(1)=1$ 是极大值, $f(2)=0$是极小值.\\ \vspace{0.2cm}
+	极大值点: $x=1$, $f(1)=1$;极小值点: $x=0$和$x=2$, $f(0)=f(2)=0$; 端点: $f(-1)=\sqrt[3]{9}$, $f(4)=4$;\\
+	\vspace{0.4cm}
+	经过比较, 最大值点为 $x=4$, $f(4)=4$; 最小值点为 $x=0$和$x=2$, $f(0)=f(2)=0$.
 \end{frame}
 
 \section{凹凸性与拐点}
@@ -354,22 +355,175 @@ aspectratio=43,
 
 \begin{frame}
 	\frametitle{函数图形的作法}
-\begin{block}{函数图形的作法流程}
-	\begin{enumerate}
-		\item 确定定义域(必须);
-		\pause
-		\item 确定对称性(降低工作量);
-		\pause
-		\item 确定函数的增减性, 极值(确定连线趋势);
-		\pause
-		\item 确定函数的凹凸性, 拐点(确定凹凸性);
-		\pause
-		\item 确定函数渐近线(确定渐近行为);
-		\pause
-		\item 重要点坐标确定(标的点).
-	\end{enumerate}
-\end{block}
+	\begin{block}{函数图形的作法流程}
+		\begin{enumerate}
+			\item 确定定义域(必须);
+			      \pause
+			\item 确定对称性(降低工作量);
+			      \pause
+			\item 求导数确定函数的增减性, 极值(确定连线趋势);
+			      \pause
+			\item 求二阶导数确定函数的凹凸性, 拐点(确定凹凸性);
+			      \pause
+			\item 列表确定性质 (基本确定函数行为性质)
+			      \pause
+			\item 确定函数渐近线(确定渐近行为);
+			      \pause
+			\item 重要点坐标确定(标点).
+		\end{enumerate}
+	\end{block}
 \end{frame}
+
+\begin{frame}
+	\frametitle{作出函数 $y=\frac{1}{\sqrt{2 \pi}} \mathrm{e}^{-\frac{x^2}{2}}$ 的图像}
+	{\small
+	\begin{block}{确定定义域}
+		定义于整个实数域上.
+	\end{block}
+	\pause
+	\begin{block}{确定对称性}
+		偶函数.
+	\end{block}
+	\pause
+	\begin{block}{求导数确定函数的增减性, 极值}
+		$$
+			f^{\prime}(x)=-\frac{1}{\sqrt{2 \pi}} x \mathrm{e}^{-\frac{x^2}{2}}
+		$$
+		可知, $x<0$ 时 $f'(x)>0$, $x>0$ 时 $f'(x)<0$, $x=0$ 时 $f'(x)=0$.
+	\end{block}
+	\pause
+	\begin{block}{求二阶导数确定函数的凹凸性, 拐点}
+		$$
+			f^{\prime \prime}(x)=\frac{1}{\sqrt{2 \pi}} \mathrm{e}^{-\frac{x^2}{2}}\left(x^2-1\right)
+		$$
+		可知, $x\in(-\infty,1)\cup(1,\infty)$时, $f'(x)''>0$, $x\in(-1,1)$ 时, $f'(x)''<0$, $x=\pm1$ 时 $f''(x)=0$.
+	\end{block}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{作出函数 $y=\frac{1}{\sqrt{2 \pi}} \mathrm{e}^{-\frac{x^2}{2}}$ 的图像}
+	\begin{block}{列表确定性质}
+		$$
+			\begin{array}{|c|c|c|c|c|}
+				\hline x                    & 0                      & (0,1)     & 1                                                 & (1,+\infty) \\
+				\hline f^{\prime}(x)        & 0                      & -         & -                                                 & -           \\
+				\hline f^{\prime \prime}(x) & -                      & -         & 0                                                 & +           \\
+				\hline                      & \text { 极大值 }          &           & \text { 拐点 }                                      &             \\
+				f(x)                        & \frac{1}{\sqrt{2 \pi}} & \text{下凹} & \left(1, \frac{1}{\sqrt{2 \pi \mathrm{e}}}\right) & \text{上凹}   \\
+				\hline
+			\end{array}
+		$$
+	\end{block}
+	\pause
+	\begin{center}
+		\begin{tikzpicture}
+			\draw[->] (-3,0) -- (3,0) node[right] {$x$};
+			\draw[->] (0,-0.5) -- (0,1.5) node[above] {$y$};
+
+			\draw[domain=-3:3,smooth,variable=\x,blue] plot ({\x},{1/sqrt(2*pi) * exp(-\x*\x/2)});
+
+			\draw[dashed] (-1,0) node[below] {$-1$} -- (-1,{1/sqrt(2*pi) * exp(-1*1/2)});
+			\draw[dashed] (1,0) node[below] {$1$} -- (1,{1/sqrt(2*pi) * exp(-1*1/2)});
+
+			\draw (-1,0.1) -- (-1,-0.1) node[below] {};
+			\draw (1,0.1) -- (1,-0.1) node[below] {};
+
+			\draw (0.1,{1/sqrt(2*pi)}) -- (-0.1,{1/sqrt(2*pi)}) node[left] {$\frac{1}{\sqrt{2 \pi}}$};
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{作出函数 $y=\frac{(x-1)^2}{3(x+1)}$ 的图像}
+	\begin{block}{确定定义域}
+		定义域为 $(-\infty,-1) \cup(-1,+\infty)$.
+	\end{block}
+	\pause
+	\begin{block}{确定对称性}
+		无对称.
+	\end{block}
+	\pause
+	\begin{block}{求导数确定函数的增减性, 极值}
+		$$
+			f^{\prime}(x)=\frac{(2 x-2)(x+1)-(x-1)^2}{3(x+1)^2}=\frac{(x+3)(x-1)}{3(x+1)^2}
+		$$
+		可知, $f^{\prime}(x)$ 有零点 $x=1$ 和 $x=-3$ . 由于 $f^{\prime}(x)$ 在 $x=-3$ 的右侧和左侧的符号分别为负和正, 而在 $x=1$ 的右侧和左侧的符号分别为正和负, 所以 $x=-3$ 是 $f(x)$ 的极大值点, $x=1$ 是 $f(x)$ 的极小值点. 
+	\end{block}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{作出函数 $y=\frac{1}{\sqrt{2 \pi}} \mathrm{e}^{-\frac{x^2}{2}}$ 的图像}
+	\begin{block}{求二阶导数确定函数的凹凸性, 拐点}
+		$$
+			f^{\prime \prime}(x)=\frac{8}{3(x+1)^3}.
+		$$
+		因为 $f^{\prime \prime}(x)$ 在定义域中没有零点, 所以曲线上没有拐点. 
+	\end{block}
+	\pause
+	{\small
+	\begin{block}{列表确定性质}
+		$$
+			\begin{array}{|c|c|c|c|}
+				\hline x                    & (-\infty,-3) & -3               & (-3,-1) \\
+				\hline f^{\prime}(x)        & +            & 0                & -       \\
+				\hline f^{\prime \prime}(x) & -            & -                & -       \\
+				\hline f(x)                 & \text{下凹}    & \begin{array}{c}
+					                                             \text { 极大值 } \\
+					                                             -\frac{8}{3}
+				                                             \end{array} & \text{下凹}    \\
+				\hline
+			\end{array}
+		$$
+		$$
+			\begin{array}{|c|c|c|c|c|}
+				\hline x                    & -1            & (-1,1)    & 1                & (1,+\infty) \\
+				\hline f^{\prime}(x)        & \text { 无定义 } & -         & 0                & +           \\
+				\hline f^{\prime \prime}(x) & \text { 无定义 } & +         & +                & +           \\
+				\hline f(x)                 & \text { 无定义 } & \text{上凹} & \begin{array}{c}
+					                                                          \text { 极小值 } \\
+					                                                          0
+				                                                          \end{array} & \text{上凹}        \\
+				\hline
+			\end{array}
+		$$
+	\end{block}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{作出函数 $y=\frac{(x-1)^2}{3(x+1)}$ 的图像}
+	\begin{block}{渐近线}
+		$$
+			\begin{aligned}
+				a & =\lim _{x \rightarrow \infty} \frac{y}{x}=\lim _{x \rightarrow \infty} \frac{(x-1)^2}{3 x(x+1)}=\frac{1}{3},                                       \\
+				b & =\lim _{x \rightarrow \infty}\left[\frac{(x-1)^2}{3(x+1)}-a x\right]=\lim _{x \rightarrow \infty}\left[\frac{(x-1)^2}{3(x+1)}-\frac{1}{3} x\right] \\
+				  & =\frac{1}{3} \lim _{x \rightarrow \infty} \frac{-3 x+1}{x+1}=-1,
+			\end{aligned}
+		$$
+		因此 $y=\frac{x}{3}-1$ 为曲线 $y=\frac{(x-1)^2}{3(x+1)}$ 的斜浙近线. 又因为
+		$$
+			\lim _{2-1} \frac{(x-1)^2}{3(x+1)}=+\infty, \quad \lim _{x \rightarrow-1} \frac{(x-1)^2}{3(x+1)}=-\infty
+		$$
+
+		可知 $x=-1$ 是曲线 $y=\frac{(x-1)^2}{3(x+1)}$ 的垂直渐近线. 
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{作出函数 $y=\frac{(x-1)^2}{3(x+1)}$ 的图像}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.8\textwidth]{frac{(x-1)^2}{3(x+1)}.png}
+		\caption{函数 $y=\frac{(x-1)^2}{3(x+1)}$ 的图像}
+	  \end{figure}
+\end{frame}
+
+%\begin{frame}
+%	\frametitle{扩展阅读:分形几何与处处连续处处不可导的曲线}
+%\end{frame}
 
 % Thank you page
 \beamertemplateshadingbackground{structure.fg!90}{structure.fg}
@@ -377,7 +531,12 @@ aspectratio=43,
 	\vfill
 	\centering
 	{
-		\centering \Huge \color{white} Thank you for your attention!\\[10pt]Questions?\\ Homework: Pages 167: 1, 2, 3, 9, 10\\Pages 168: 14, 17, 18\\Pages 169: 21、22、25、32
+	\centering \Huge \color{white} Thank you for your attention!\\[10pt]Questions?\\ Homework: \\\vspace{0.2cm}Pages 169: 19、20\\\vspace{0.2cm}绘制图像:
+	{
+	$$
+		e^{\frac{1}{|x-1|^2}},\,\,\ln{1+sin{e^{\frac{1}{|x|}}}},\,\,\sqrt{x^2+1}.
+	$$
+	}
 	}
 	\vfill
 \end{frame}
