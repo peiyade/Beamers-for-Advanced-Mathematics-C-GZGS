@@ -163,6 +163,72 @@ aspectratio=43,
 	也就是说, 当罐头的高为底面直径的 2 倍时用料最省。\qed
 \end{frame}
 
+\begin{frame}
+	\frametitle{应用题: 如何开车}
+	\begin{block}{}
+		设一辆汽车在平原上的行驶速度为 $v_1$, 在草原上的行驶速度为 $v_2$, 现要求它以最短的时间从平原上的 $A$ 点到达草原上的 $B$ 点，问应该怎么走?
+	\end{block}
+	\begin{columns}
+		\begin{column}{0.7\textwidth}
+			假设 $T(x)$为开车的时间, 那么
+			$$
+				\begin{gathered}
+					T(x)=\frac{\sqrt{h_1^2+x^2}}{v_1}+\frac{\sqrt{h_2^2+(l-x)^2}}{v_2},\\
+					T^{\prime}(x)=\frac{x}{v_1 \sqrt{h_1^2+x^2}}-\frac{l-x}{v_2 \sqrt{h_2^2+(l-x)^2}},\\
+				\end{gathered}
+			$$
+			可以看到, $T^{\prime}(0)<0,\,\, T^{\prime}(l)>0$. 由 零点存在定理, 在 $(0,l)$ 之间存在驻点, 记为$x_0$. 又因为
+			$$
+				T^{\prime \prime}(x)=\frac{h_1^2}{v_1\left(h_1^2+x^2\right)^{3 / 2}}+\frac{h_2^2}{v_2\left(h_2^2+(l-x)^2\right)^{3 / 2}}
+			$$
+			恒为正, 知驻点唯一. {\small($\displaystyle\frac{\sin\theta_1}{v_1}=\frac{\sin\theta_2}{v_2}$)}
+		\end{column}
+		\begin{column}{0.4\textwidth}
+			\begin{figure}
+				\includegraphics[width=0.8\textwidth]{light.png}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{基本计量经济学}
+
+	\begin{block}{基本函数}
+		1. 成本函数: 总成本函数 $C=C(Q)=C_0+C_1(Q)$, 其中 $Q$为产量, $C_0$ 为固定成本, $C_1(Q)$为变动成本; 平均成本函数 $\bar{C}=\frac{C(Q)}{Q}$.
+
+		2. 需求函数 $Q=f(P)$, 其中 $P$ 为价格; 它的反函数 $\bar{P}=g(\bar{Q})$ 有时称为价格函数。
+
+		3. 收益函数总收益函数 $R=R(P)=P \cdot Q=P \cdot f(P)$或 $\quad R=R(Q)=P \cdot Q=Q \cdot g(Q)$平均收益函数 $\bar{R}=\frac{R}{Q}$.
+
+		4. 利润函数总利润函数 $L(Q)=R(Q)-C(Q)$.
+	\end{block}
+	\begin{block}{成本边际}
+		边际成本: 成本函数 $C(Q)$ 的导数 $C^{\prime}(Q)$
+
+		边际平均成本:平均成本 $\bar{C}(Q)$ 的导数
+		$$
+			\bar{C}^{\prime}(Q)=\left[\frac{C(Q)}{Q}\right]^{\prime}=\frac{Q C^{\prime}(Q)-C(Q)}{Q^2}
+		$$
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{基本计量经济学}
+	\everymath{\displaystyle}
+	\begin{block}{收益边际}
+		边际收益: 收益函数 $R(Q)$ 的导数 $R^{\prime}(Q)$\\
+
+		边际利润: 总利润函数 $L(Q)$ 的导数 $L^{\prime}(Q)=R^{\prime}(Q)-C^{\prime}(Q)$\\
+
+		边际需求:  $f^{\prime}(P)=\frac{1}{\left[f^{-1}(Q)\right]^{\prime}}$
+	\end{block}
+
+	\begin{block}{弹性}
+		一般的, 若函数 $y=f(x)$ 在区间内 $(a, b)$ 可导, 且 $f(x) \neq 0$, 则称 $\frac{E y}{E x}=\lim _{\Delta x \rightarrow 0} \frac{\Delta y / y}{\Delta x / x}=\lim _{\Delta x \rightarrow 0} \frac{\Delta y}{\Delta x} \cdot \frac{x}{y}=y^{\prime} \cdot \frac{x}{y}$ 为函数 $y=f(x)$ 在区间 $(a, b)$ 内的点弹性函数, 简称弹性函数.
+	\end{block}
+\end{frame}
+
 % Thank you page
 \beamertemplateshadingbackground{structure.fg!90}{structure.fg}
 \begin{frame}[plain]
