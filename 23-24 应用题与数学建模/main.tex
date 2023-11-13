@@ -122,14 +122,17 @@ aspectratio=43,
 	\begin{block}{应用题}
 		用铝合金制造容积固定的圆柱形罐头,罐身 (侧面和底部) 用整块材料拉制而成, 顶盖是另装上去的, 设顶盖的厚度是罐身厚度的三倍. 问如何确定它的底面半径和高才能使得用料最省?
 	\end{block}
-	解: 设罐身的厚度为 $\delta$, 则顶盖的厚度是 $3 \delta$, 记罐头的容积为 $V$, 底面半径为 $r$, 则高为 $h=\frac{V}{\pi r^2}$. 于是, 罐身的用料为
+	\pause
+	解: 设罐身的厚度为 $\delta$, 则顶盖的厚度是 $3 \delta$, 记罐头的容积为 $V$, 底面半径为 $r$, 则高为 $h=\frac{V}{\pi r^2}$.\pause 于是, 罐身的用料为
 	$$
 		U_1(r)=\delta\left(\pi r^2+2 \pi r h\right)=\delta\left(\pi r^2+2 \frac{V}{r}\right),
 	$$
+	\pause
 	顶盖的用料为
 	$$
-		U_2(r)=3 \delta \pi r^2
+		U_2(r)=3 \delta \pi r^2.
 	$$
+	\pause
 	因此问题化为求函数
 	$$
 		U(r)=U_1(r)+U_2(r)=\delta\left(4 \pi r^2+2 \frac{V}{r}\right), \quad r \in(0,+\infty)
@@ -144,22 +147,23 @@ aspectratio=43,
 		U(r)=U_1(r)+U_2(r)=\delta\left(4 \pi r^2+2 \frac{V}{r}\right), \quad r \in(0,+\infty)
 	$$
 	的最小值.
+	\pause
 	对 $U(r)$ 求导,
 	$$
 		U^{\prime}(r)=2 \delta\left(4 \pi r-\frac{V}{r^2}\right)
 	$$
-
+	\pause
 	因此 $U^{\prime}(r)$ 只有惟一的零点 $r_0=\sqrt[3]{\frac{V}{4 \pi}}$ 。由于
 	$$
 		U^{\prime \prime}(r)=4 \delta\left(2 \pi+\frac{V}{r^3}\right)>0, \quad r \in(0,+\infty),
 	$$
-
+	\pause
 	所以 $r_0$ 是 $U(r)$ 的最小值点。
 	这时, 相应的高为
 	$$
 		h_0=\frac{V}{\pi r_0^2}=\frac{4 \pi r_0^3}{\pi r_0^2}=4 r_0 。
 	$$
-
+	\pause
 	也就是说, 当罐头的高为底面直径的 2 倍时用料最省。\qed
 \end{frame}
 
@@ -168,6 +172,7 @@ aspectratio=43,
 	\begin{block}{}
 		设一辆汽车在平原上的行驶速度为 $v_1$, 在草原上的行驶速度为 $v_2$, 现要求它以最短的时间从平原上的 $A$ 点到达草原上的 $B$ 点，问应该怎么走?
 	\end{block}
+	\pause
 	\begin{columns}
 		\begin{column}{0.7\textwidth}
 			假设 $T(x)$为开车的时间, 那么
@@ -177,11 +182,12 @@ aspectratio=43,
 					T^{\prime}(x)=\frac{x}{v_1 \sqrt{h_1^2+x^2}}-\frac{l-x}{v_2 \sqrt{h_2^2+(l-x)^2}},\\
 				\end{gathered}
 			$$
-			可以看到, $T^{\prime}(0)<0,\,\, T^{\prime}(l)>0$. 由 零点存在定理, 在 $(0,l)$ 之间存在驻点, 记为$x_0$. 又因为
+			\pause
+			可以看到, $T^{\prime}(0)<0,\,\, T^{\prime}(l)>0$. \pause 由 零点存在定理, 在 $(0,l)$ 之间存在驻点, 记为$x_0$. 又因为
 			$$
 				T^{\prime \prime}(x)=\frac{h_1^2}{v_1\left(h_1^2+x^2\right)^{3 / 2}}+\frac{h_2^2}{v_2\left(h_2^2+(l-x)^2\right)^{3 / 2}}
 			$$
-			恒为正, 知驻点唯一. {\small($\displaystyle\frac{\sin\theta_1}{v_1}=\frac{\sin\theta_2}{v_2}$)}
+			恒为正, 知驻点唯一.\pause {\small($\displaystyle\frac{\sin\theta_1}{v_1}=\frac{\sin\theta_2}{v_2}$)}
 		\end{column}
 		\begin{column}{0.4\textwidth}
 			\begin{figure}
@@ -196,16 +202,17 @@ aspectratio=43,
 
 	\begin{block}{基本函数}
 		1. 成本函数: 总成本函数 $C=C(Q)=C_0+C_1(Q)$, 其中 $Q$为产量, $C_0$ 为固定成本, $C_1(Q)$为变动成本; 平均成本函数 $\bar{C}=\frac{C(Q)}{Q}$.
-
-		2. 需求函数 $Q=f(P)$, 其中 $P$ 为价格; 它的反函数 $\bar{P}=g(\bar{Q})$ 有时称为价格函数。
-
+		\pause
+		2. 需求函数 $Q=f(P)$, 其中 $P$ 为价格; 它的反函数 $\bar{P}=g(\bar{Q})$ 有时称为价格函数.
+		\pause
 		3. 收益函数总收益函数 $R=R(P)=P \cdot Q=P \cdot f(P)$或 $\quad R=R(Q)=P \cdot Q=Q \cdot g(Q)$平均收益函数 $\bar{R}=\frac{R}{Q}$.
-
+		\pause
 		4. 利润函数总利润函数 $L(Q)=R(Q)-C(Q)$.
 	\end{block}
+	\pause
 	\begin{block}{成本边际}
 		边际成本: 成本函数 $C(Q)$ 的导数 $C^{\prime}(Q)$
-
+		\pause
 		边际平均成本:平均成本 $\bar{C}(Q)$ 的导数
 		$$
 			\bar{C}^{\prime}(Q)=\left[\frac{C(Q)}{Q}\right]^{\prime}=\frac{Q C^{\prime}(Q)-C(Q)}{Q^2}
@@ -218,9 +225,9 @@ aspectratio=43,
 	\everymath{\displaystyle}
 	\begin{block}{收益边际}
 		边际收益: 收益函数 $R(Q)$ 的导数 $R^{\prime}(Q)$\\
-
+		\pause
 		边际利润: 总利润函数 $L(Q)$ 的导数 $L^{\prime}(Q)=R^{\prime}(Q)-C^{\prime}(Q)$\\
-
+		\pause
 		边际需求:  $f^{\prime}(P)=\frac{1}{\left[f^{-1}(Q)\right]^{\prime}}$
 	\end{block}
 
@@ -235,7 +242,7 @@ aspectratio=43,
 	\vfill
 	\centering
 	{
-		\centering \Huge \color{white} Thank you for your attention!\\[10pt]Questions?
+		\centering \Huge \color{white} Thank you for your attention!\\[10pt]Questions?\\ Homework: \\\vspace{0.2cm}Pages 169: 22, 25.
 	}
 	\vfill
 \end{frame}
