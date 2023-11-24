@@ -240,14 +240,14 @@ aspectratio=43,
 	\everymath{\displaystyle}
 	最最标准的求不定积分的方法是直接找到对应的原函数.
 	{\small
-	\begin{exampleblock}{证明: $\int x^5 \mathrm{d} x=\frac{1}{6} x^6+C$}
+	\begin{exampleblock}{证明: $\color{black}\int x^5 \mathrm{d} x=\frac{1}{6} x^6+C$}
 		\pause
 		$
 			\left(\frac{1}{6} x^6\right)^{\prime}=x^5 \pause \Rightarrow \int x^5 d x=\frac{1}{6} x^6+C.
 		$
 	\end{exampleblock}
 	\pause
-	\begin{exampleblock}{证明: $\int \frac1x \mathrm{d} x=\ln |x|+C$}
+	\begin{exampleblock}{证明: $\color{black}\int \frac1x \mathrm{d} x=\ln |x|+C$}
 		\pause
 		对于 $x>0$ 的情况, 有
 		$
@@ -261,7 +261,7 @@ aspectratio=43,
 		$
 	\end{exampleblock}
 
-	\begin{exampleblock}{证明: $\int \frac{\mathrm{d} x}{\cos ^2 x}=\tan x+C$}
+	\begin{exampleblock}{证明: $\color{black}\int \frac{\mathrm{d} x}{\cos ^2 x}=\tan x+C$}
 		\pause
 		$
 			\int \frac{\mathrm{d} x}{\cos ^2 x}=\pause\int \sec ^2 x \mathrm{d} x=\pause\int \mathrm{d} \tan x=\pause\tan x+ C.
@@ -312,7 +312,7 @@ aspectratio=43,
 				            $$
 				      \item \pause 不定积分的和差法则:
 				            $$
-					            \int(ku'+lv')\mathrm{d}x=\int\mathrm{d}(ku\pm lv) = \int k\mathrm{d}u + l\mathrm{d}v=k\int u'\mathrm{d}x+l\int v'\mathrm{d}x.
+					            \int(ku'+lv')\mathrm{d}x=\int\mathrm{d}(ku+ lv) = \int k\mathrm{d}u + l\mathrm{d}v=k\int u'\mathrm{d}x+l\int v'\mathrm{d}x.
 				            $$
 			      \end{itemize}
 			      \pause
@@ -368,19 +368,19 @@ aspectratio=43,
 	\frametitle{熟悉直接积分法}
 	\everymath{\displaystyle}
 	{\small
-		\begin{exampleblock}{$\int \sqrt{x}\left(x^2-5\right) \mathrm{d} x$}
+		\begin{exampleblock}{$\color{black}\int \sqrt{x}\left(x^2-5\right) \mathrm{d} x$}
 			$
-				\int \sqrt{x}\left(x^2-5\right) \mathrm{d}x= \pause \int x^{\frac{5}{2}}\mathrm{d}x-\int 5x^{\frac{1}{2}} \mathrm{d}x \pause =\frac{7}{2}x^{\frac{2}{7}}-\frac{10}{3}x^{\frac{3}{2}}+C.
-			$
-		\end{exampleblock}
-		\pause
-		\begin{exampleblock}{$\int \frac{(x-1)^3}{x^2} \mathrm{d} x$}
-			$
-				\int \frac{(x-1)^3}{x^2} \mathrm{d} x= \pause \int x-3+3\frac{1}{x}-\frac{1}{x^2} \mathrm{d}x= \pause \frac{1}{2}x^2+3x+3\log|x|+\frac{1}{x}+C.
+				\int \sqrt{x}\left(x^2-5\right) \mathrm{d}x= \pause \int x^{\frac{5}{2}}\mathrm{d}x-\int 5x^{\frac{1}{2}} \mathrm{d}x \pause =\frac{7}{2}x^{\frac{7}{2}}-\frac{10}{3}x^{\frac{3}{2}}+C.
 			$
 		\end{exampleblock}
 		\pause
-		\begin{exampleblock}{$\int\left(e^x-3 \cos x\right) \mathrm{d} x$}
+		\begin{exampleblock}{$\color{black}\int \frac{(x-1)^3}{x^2} \mathrm{d} x$}
+			$
+				\int \frac{(x-1)^3}{x^2} \mathrm{d} x= \pause \int x-3+3\frac{1}{x}-\frac{1}{x^2} \mathrm{d}x= \pause \frac{1}{2}x^2-3x+3\log|x|+\frac{1}{x}+C.
+			$
+		\end{exampleblock}
+		\pause
+		\begin{exampleblock}{$\color{black}\int\left(e^x-3 \cos x\right) \mathrm{d} x$}
 			$
 				\int\left(e^x-3 \cos x\right) \mathrm{d} x=\pause\int e^x\mathrm{d} x-3 \int\cos x \mathrm{d} x=\pause e^x-3\sin x+C.
 			$
@@ -392,7 +392,7 @@ aspectratio=43,
 	\frametitle{熟悉直接积分法}
 	\everymath{\displaystyle}
 	{\small
-		\begin{exampleblock}{$\int \frac{2 x^4+x^2+3}{x^2+1} \mathrm{d} x$}
+		\begin{exampleblock}{$\color{black}\int \frac{2 x^4+x^2+3}{x^2+1} \mathrm{d} x$}
 			$
 				\int \frac{2 x^4+x^2+3}{x^2+1} \mathrm{d} x =\pause \int \frac{2 x^4+2x^2}{x^2+1}+\frac{-x^2+3}{x^2+1} \mathrm{d} x =\pause \int 2x^2-1+4 \frac{1}{x^2+1}\mathrm{d} x,
 			$
@@ -401,13 +401,14 @@ aspectratio=43,
 				\int \frac{2 x^4+x^2+3}{x^2+1} \mathrm{d} x = \pause\frac{2}{3}x^3-x+4\arctan x+ C.
 			$
 		\end{exampleblock}
-		\begin{exampleblock}{$\int \tan^2 x \mathrm{d} x$}
+		\pause
+		\begin{exampleblock}{$\color{black}\int \tan^2 x \mathrm{d} x$}
 			$
 				\int \tan^2 x \mathrm{d} x =\pause \int \frac{\sin^2 x}{\cos^2}\mathrm{d} x =\pause \int \frac{1}{\cos^2 x}-1\mathrm{d} x=\tan x-x+C.
 			$
 		\end{exampleblock}
-
-		\begin{exampleblock}{$\int \frac{1}{\sin ^2 \frac{x}{2} \cos ^2 \frac{x}{2}} \mathrm{d} x$}
+		\pause
+		\begin{exampleblock}{$\color{black}\int \frac{1}{\sin ^2 \frac{x}{2} \cos ^2 \frac{x}{2}} \mathrm{d} x$}
 			$
 				\int \frac{1}{\sin ^2 \frac{x}{2} \cos ^2 \frac{x}{2}} \mathrm{d} x =\pause \int \frac{1}{(\frac{1}{2}\sin x)^2} \mathrm{d} x =\pause \int \frac{4}{\sin^2 x}\mathrm{d} x=\pause-4\cot x+C.
 			$
@@ -415,11 +416,37 @@ aspectratio=43,
 	}
 \end{frame}
 
+\begin{frame}
+	\frametitle{熟悉直接积分法}
+	\everymath{\displaystyle}
+	{\small
+		\begin{exampleblock}{$\color{black}\int \frac{\mathrm{d} x}{1-x^2}$}
+			$
+				\int \frac{\mathrm{d} x}{1-x^2}= \int \frac{1}{(1-x)(1+x)}\mathrm{d} x=\frac{1}{2}\int \left(\frac{1}{1-x}+\frac{1}{1+x}\right)\mathrm{d} x,
+			$
+			\\
+			$
+				\int \frac{\mathrm{d} x}{1-x^2}=\frac{1}{2}(\log|1+x|-\log|1-x|)+C=\frac{1}{2}\log\left|\frac{1+x}{1-x}\right|+C.
+			$
+		\end{exampleblock}
+		\pause
+		\begin{alertblock}{$\color{black}\int \frac{\mathrm{d} x}{\sqrt{x^2 \pm 1}}$}
+			$
+				x>0\,\,\text{case:}\,\, \left(\ln|x+\sqrt{x^2\pm1}|\right)'=\frac{1}{x+\sqrt{x^2\pm1}}\cdot\left(1+\frac{x}{\sqrt{x^2\pm1}}\right)=\frac{1}{\sqrt{x^2\pm1}}.
+			$
+			\\\vspace{0.2cm}
+			$
+				x<0\,\,\text{case:}\,\, \left(\ln(-x+\sqrt{x^2-1})\right)'=\frac{1}{-x+\sqrt{x^2-1}}\cdot\left(-1+\frac{x}{\sqrt{x^2-1}}\right)=\frac{1}{\sqrt{x^2-1}}.
+			$
+		\end{alertblock}
+	}
+\end{frame}
+
 \section{基本积分法}
 
 \subsection{变量代换方法一: 凑微分法}
 
- 
+
 \begin{frame}
 	\frametitle{凑微分法}
 	\everymath{\displaystyle}
@@ -427,18 +454,18 @@ aspectratio=43,
 	$$
 		\int f'(g(x))g'(x)\mathrm{d}x=\int f'(g(x))\mathrm{d}g(x)=\int \mathrm{d}f(g(x))= f(g(x))+C.
 	$$
-	\pause 
+	\pause
 	用这种办法, 如果能用函数凑出因子 $g'(x)$, 而 $g(x)$ 作为变量时, 能简化计算...这种方法就称为凑微分法.
 	\vspace{0.3cm}
 
 	来看一个例子:
-	\pause 
+	\pause
 	\vspace{0.1cm}
-	\begin{exampleblock}{$\int(2 x+1)^6 \mathrm{d} x$}
+	\begin{exampleblock}{$\color{black}\int(2 x+1)^6 \mathrm{d} x$}
 		$$
 			\begin{aligned}
 				\int(2 x+1)^6 \mathrm{d} x & \pause=  \int(2 x+1)^6 \frac{1}{2}\cdot 2 \mathrm{d} x \\
-				                           & \pause=  \frac{1}{2}\int(2 x+1)^6 \mathrm{d} (2x+1)         \\
+				                           & \pause=  \frac{1}{2}\int(2 x+1)^6 \mathrm{d} (2x+1)    \\
 				                           & \pause= \frac{1}{14}(2x+1)^7+C.
 			\end{aligned}
 		$$
@@ -449,7 +476,7 @@ aspectratio=43,
 \begin{frame}
 	\frametitle{凑微分法}
 	\everymath{\displaystyle}
-	\begin{exampleblock}{$\int x \sqrt{1-x^2} \mathrm{d} x$}
+	\begin{exampleblock}{$\color{black}\int x \sqrt{1-x^2} \mathrm{d} x$}
 		$$
 			\begin{aligned}
 				\int x \sqrt{1-x^2} \mathrm{d} x & \pause= -\frac{1}{2} \int \sqrt{1-x^2} \mathrm{d}\left(1-x^2\right)       \\
@@ -458,12 +485,12 @@ aspectratio=43,
 		$$
 	\end{exampleblock}
 	\pause
-	\begin{exampleblock}{$\int (3x+2)^{100} \mathrm{d}x$}
+	\begin{exampleblock}{$\color{black}\int (3x+2)^{100} \mathrm{d}x$}
 		$$
 			\begin{aligned}
-				\int (3x+2)^{100} \mathrm{d}x & \pause= \frac{1}{3} \int (3x+2)^{100} \mathrm{d}(3x+2)         \\
-				\pause\underline{\text{let }u=3x+2} & \pause=  \frac{1}{3} \int u^{100} \mathrm{d}u                  \\
-				                              & \pause= \frac{1}{303} u^{101}+C \pause = \frac{1}{303}(3x+2)^{101}+C.
+				\int (3x+2)^{100} \mathrm{d}x       & \pause= \frac{1}{3} \int (3x+2)^{100} \mathrm{d}(3x+2)                \\
+				\pause\underline{\text{let }u=3x+2} & \pause=  \frac{1}{3} \int u^{100} \mathrm{d}u                         \\
+				                                    & \pause= \frac{1}{303} u^{101}+C \pause = \frac{1}{303}(3x+2)^{101}+C.
 			\end{aligned}
 		$$
 	\end{exampleblock}
@@ -473,22 +500,22 @@ aspectratio=43,
 	\frametitle{凑微分法}
 	\everymath{\displaystyle}
 	{\small
-		\begin{exampleblock}{$\int x e^{x^2} \mathrm{d}x$}
+		\begin{exampleblock}{$\color{black}\int x e^{x^2} \mathrm{d}x$}
 			$$
 				\begin{aligned}
-					\int x e^{x^2} \mathrm{d}x   & \pause= \frac{1}{2} \int e^{x^2} \mathrm{d}(x^2)   \\
-					\pause\underline{\text{let }u=x^2} & \pause=  \frac{1}{2} \int e^u \mathrm{d}u          \\
-					                             & \pause= \frac{1}{2} e^u+C \pause= \frac{1}{2} e^{x^2}+C.
+					\int x e^{x^2} \mathrm{d}x         & \pause= \frac{1}{2} \int e^{x^2} \mathrm{d}(x^2)         \\
+					\pause\underline{\text{let }u=x^2} & \pause=  \frac{1}{2} \int e^u \mathrm{d}u                \\
+					                                   & \pause= \frac{1}{2} e^u+C \pause= \frac{1}{2} e^{x^2}+C.
 				\end{aligned}
 			$$
 		\end{exampleblock}
 		\pause
-		\begin{exampleblock}{$\int x^4 \cos x^5 \mathrm{d}x$}
+		\begin{exampleblock}{$\color{black}\int x^4 \cos x^5 \mathrm{d}x$}
 			$$
 				\begin{aligned}
-					\int x^4 \cos x^5 \mathrm{d}x &\pause = \frac{1}{5} \int \cos x^5 \mathrm{d}(x^5)      \\
-					\pause\underline{\text{let }u=x^5}  &\pause =  \frac{1}{5} \int \cos u \mathrm{d}u           \\
-					                              &\pause = \frac{1}{5} \sin u+C =\pause \frac{1}{5} \sin x^5+C.
+					\int x^4 \cos x^5 \mathrm{d}x      & \pause = \frac{1}{5} \int \cos x^5 \mathrm{d}(x^5)            \\
+					\pause\underline{\text{let }u=x^5} & \pause =  \frac{1}{5} \int \cos u \mathrm{d}u                 \\
+					                                   & \pause = \frac{1}{5} \sin u+C =\pause \frac{1}{5} \sin x^5+C.
 				\end{aligned}
 			$$
 		\end{exampleblock}
@@ -500,22 +527,22 @@ aspectratio=43,
 	\frametitle{凑微分法}
 	\everymath{\displaystyle}
 	{\small
-		\begin{exampleblock}{$\int \frac{x}{\sqrt{1-x^4}} \mathrm{d}x$}
+		\begin{exampleblock}{$\color{black}\int \frac{x}{\sqrt{1-x^4}} \mathrm{d}x$}
 			$$
 				\begin{aligned}
-					\int \frac{x}{\sqrt{1-x^4}} \mathrm{d}x & \pause= \frac{1}{2} \int \frac{\mathrm{d}(x^2)}{\sqrt{1-x^4}} \\
-					\pause\underline{\text{let }u=x^2}            & \pause=  \frac{1}{2} \int \frac{\mathrm{d}u}{\sqrt{1-u^2}}    \\
+					\int \frac{x}{\sqrt{1-x^4}} \mathrm{d}x & \pause= \frac{1}{2} \int \frac{\mathrm{d}(x^2)}{\sqrt{1-x^4}}      \\
+					\pause\underline{\text{let }u=x^2}      & \pause=  \frac{1}{2} \int \frac{\mathrm{d}u}{\sqrt{1-u^2}}         \\
 					                                        & \pause= \frac{1}{2} \arcsin u+C \pause= \frac{1}{2} \arcsin x^2+C.
 				\end{aligned}
 			$$
 		\end{exampleblock}
 		\pause
-		\begin{exampleblock}{$\int \frac{\mathrm{d}x}{x(1+2 \ln x)}$}
+		\begin{exampleblock}{$\color{black}\int \frac{\mathrm{d}x}{x(1+2 \ln x)}$}
 			$$
 				\begin{aligned}
-					\int \frac{\mathrm{d}x}{x(1+2 \ln x)} & \pause= \int \frac{1}{1+2 \ln x} \mathrm{d}(\ln x)                  \\
-					\pause\underline{\text{let }u=1+2 \ln x}    & \pause=  \frac{1}{2} \int \frac{1}{1+2 \ln x} \mathrm{d}(1+2 \ln x) \\
-					                                      & \pause= \frac{1}{2} \ln |1+2 \ln x|+C.
+					\int \frac{\mathrm{d}x}{x(1+2 \ln x)}    & \pause= \int \frac{1}{1+2 \ln x} \mathrm{d}(\ln x)                  \\
+					\pause\underline{\text{let }u=1+2 \ln x} & \pause=  \frac{1}{2} \int \frac{1}{1+2 \ln x} \mathrm{d}(1+2 \ln x) \\
+					                                         & \pause= \frac{1}{2} \ln |1+2 \ln x|+C.
 				\end{aligned}
 			$$
 		\end{exampleblock}
@@ -527,25 +554,25 @@ aspectratio=43,
 	\frametitle{凑微分法}
 	\everymath{\displaystyle}
 	{\small
-	\begin{exampleblock}{$\int \frac{1}{a^2+x^2} \mathrm{d}x\,\,(a>0)$}
-		$$
-		\begin{aligned}
-			\int \frac{1}{a^2+x^2} \mathrm{d}x   & \pause = \frac{1}{a^2} \int \frac{1}{1+\frac{x^2}{a^2}} \mathrm{d}x   \\
-			\pause\underline{\text{let }u=\frac{x}{a}} & \pause =  \frac{1}{a} \int \frac{1}{1+u^2} \mathrm{d}u          \\
-												 & \pause = \frac{1}{a} \arctan u+C \pause = \frac{1}{a} \arctan\left(\frac{x}{a}\right)+C.
-		\end{aligned}
-		$$
-	\end{exampleblock}
-	\pause
-	\begin{exampleblock}{$\int \frac{1}{\sqrt{a^2-x^2}} \mathrm{d}x$}
-		$$
-		\begin{aligned}
-			\int \frac{1}{\sqrt{a^2-x^2}} \mathrm{d}x   & \pause = \frac{1}{a} \int \frac{a}{\sqrt{1-\left(\frac{x}{a}\right)^2}} \mathrm{d}\left(\frac{x}{a}\right)   \\
-			\pause\underline{\text{let }u=\frac{x}{a}} & \pause =  \frac{1}{a} \int \frac{1}{\sqrt{1-u^2}} \mathrm{d}u          \\
-												 & \pause = \arcsin(u)+C \pause = \arcsin\left(\frac{x}{a}\right)+C.
-		\end{aligned}
-		$$
-	\end{exampleblock}
+		\begin{exampleblock}{$\color{black}\int \frac{1}{a^2+x^2} \mathrm{d}x\,\,(a>0)$}
+			$$
+				\begin{aligned}
+					\int \frac{1}{a^2+x^2} \mathrm{d}x         & \pause = \frac{1}{a^2} \int \frac{1}{1+\frac{x^2}{a^2}} \mathrm{d}x                      \\
+					\pause\underline{\text{let }u=\frac{x}{a}} & \pause =  \frac{1}{a} \int \frac{1}{1+u^2} \mathrm{d}u                                   \\
+					                                           & \pause = \frac{1}{a} \arctan u+C \pause = \frac{1}{a} \arctan\left(\frac{x}{a}\right)+C.
+				\end{aligned}
+			$$
+		\end{exampleblock}
+		\pause
+		\begin{exampleblock}{$\color{black}\int \frac{1}{\sqrt{a^2-x^2}} \mathrm{d}x$}
+			$$
+				\begin{aligned}
+					\int \frac{1}{\sqrt{a^2-x^2}} \mathrm{d}x  & \pause = \frac{1}{a} \int \frac{a}{\sqrt{1-\left(\frac{x}{a}\right)^2}} \mathrm{d}\left(\frac{x}{a}\right) \\
+					\pause\underline{\text{let }u=\frac{x}{a}} & \pause =  \frac{1}{a} \int \frac{1}{\sqrt{1-u^2}} \mathrm{d}u                                              \\
+					                                           & \pause = \arcsin(u)+C \pause = \arcsin\left(\frac{x}{a}\right)+C.
+				\end{aligned}
+			$$
+		\end{exampleblock}
 	}
 \end{frame}
 
@@ -553,23 +580,75 @@ aspectratio=43,
 \begin{frame}
 	\frametitle{凑微分法}
 	\everymath{\displaystyle}
-	\begin{exampleblock}{$\int \frac{1}{x^2-a^2} \mathrm{d}x$}
+	\begin{exampleblock}{$\color{black}\int \frac{1}{x^2-a^2} \mathrm{d}x$}
 		$$
-		\begin{aligned}
-			\int \frac{1}{x^2-a^2} \mathrm{d}x   & \pause  = \frac{1}{2a} \int \left(\frac{1}{x-a}-\frac{1}{x+a}\right) \mathrm{d}x   \\
-			& \pause = \frac{1}{2a}(\ln |x-a|-\ln |x+a|)+C \\
-			& \pause  = \frac{1}{2a} \ln \left|\frac{x-a}{x+a}\right|+C.
-		\end{aligned}
+			\begin{aligned}
+				\int \frac{1}{x^2-a^2} \mathrm{d}x & \pause  = \frac{1}{2a} \int \left(\frac{1}{x-a}-\frac{1}{x+a}\right) \mathrm{d}x \\
+				                                   & \pause = \frac{1}{2a}(\ln |x-a|-\ln |x+a|)+C                                     \\
+				                                   & \pause  = \frac{1}{2a} \ln \left|\frac{x-a}{x+a}\right|+C.
+			\end{aligned}
 		$$
 	\end{exampleblock}
-	\pause 
-	\begin{exampleblock}{$\int \sec x \mathrm{d}x$}
+	\pause
+	\begin{exampleblock}{$\color{black}\int \sec x \mathrm{d}x$}
 		$$
-		\begin{aligned}
-			\int \sec x \mathrm{d}x   & \pause  = \int \frac{1}{\cos x} \mathrm{d}x \pause  = \int \frac{\cos x}{\cos^2 x} \mathrm{d}x   \\
-			& \pause = \int \frac{\mathrm{d}\sin x}{1-\sin^2 x} \pause  = \frac{1}{2} \ln \left|\frac{1+\sin x}{1-\sin x}\right|+C.
-		\end{aligned}
+			\begin{aligned}
+				\int \sec x \mathrm{d}x & \pause  = \int \frac{1}{\cos x} \mathrm{d}x \pause  = \int \frac{\cos x}{\cos^2 x} \mathrm{d}x                        \\
+				                        & \pause = \int \frac{\mathrm{d}\sin x}{1-\sin^2 x} \pause  = \frac{1}{2} \ln \left|\frac{1+\sin x}{1-\sin x}\right|+C.
+			\end{aligned}
 		$$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\frametitle{练习题}
+	\everymath{\displaystyle}
+	\begin{block}{}
+		\begin{columns}[onlytextwidth]
+			\begin{column}{0.5\textwidth}
+				\begin{enumerate}
+					\item $\int \frac{\mathrm{d} x}{2+3 x^2}$
+					\item $\int \frac{\mathrm{d} x}{\sqrt{3 x^2-2}}$
+					\item $\int \frac{\mathrm{d} x}{\sqrt{2-3 x^2}}$
+				\end{enumerate}
+			\end{column}
+			\begin{column}{0.5\textwidth}
+				\begin{enumerate}
+					\setcounter{enumi}{4}
+					\item $\int \frac{\mathrm{d} x}{1+\cos x}$
+					\item $\int \frac{\mathrm{d} x}{1-\cos x}$
+					\item $\int \frac{\mathrm{d} x}{1+\sin x}$
+				\end{enumerate}
+			\end{column}
+		\end{columns}
+	\end{block}
+	\begin{exampleblock}{答案}
+		\begin{columns}[onlytextwidth]
+			\begin{column}{0.5\textwidth}
+				\begin{enumerate}
+					\item $\frac{\sqrt{6}}{6}\arctan\left(\frac{\sqrt{6}}{2}x\right)+C$;
+					      \pause
+					\item $(1-\cos x)^2=o(\sin^2 x)$;
+					      \pause
+					\item $1-x \sim \frac{1}{2}(1-x^2)$, 与 $1-x^3$ 同阶;
+					      \pause
+					\item 同阶;
+				\end{enumerate}
+			\end{column}
+			\begin{column}{0.5\textwidth}
+				\begin{enumerate}
+					\setcounter{enumi}{4}
+					\pause
+					\item $\displaystyle\sqrt[n]{1+x}-1\sim\displaystyle\frac{x}{n}$,
+					      \pause
+					\item $\arctan x\sim x$;
+					      \pause
+					\item $\sec x-1\sim\displaystyle\frac{x^2}{2}$;
+					      \pause
+					\item 同阶.
+				\end{enumerate}
+			\end{column}
+		\end{columns}
 	\end{exampleblock}
 \end{frame}
 
@@ -578,7 +657,7 @@ aspectratio=43,
 \begin{frame}
 	\frametitle{变量代换法}
 	\everymath{\displaystyle}
-	如果凑不出 $g'(x)$ 使得积分好计算. 
+	如果凑不出 $g'(x)$ 使得积分好计算.
 	面对问题
 	$$
 		\int f(x)\mathrm{d}x
@@ -591,13 +670,13 @@ aspectratio=43,
 	$$
 	将问题演变成
 	$$
-		\int f(x)\mathrm{d}x=\int f(\phi(t))\phi'(t)\mathrm{d}t 
+		\int f(x)\mathrm{d}x=\int f(\phi(t))\phi'(t)\mathrm{d}t
 	$$
 	如果演变后的问题方便计算, 假如最后计算出的结果为 $F(t)+C$, 那么再经过逆变换
 	$$
 		t=\phi^{-1}(x),
 	$$
-	后可以得到结果 $F(\phi^{-1}x)+C$.
+	后可以得到结 果 $F(\phi^{-1}x)+C$.
 \end{frame}
 
 \subsection{一些基本思路: 根式代换}
