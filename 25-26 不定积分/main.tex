@@ -240,6 +240,7 @@ aspectratio=43,
 	\everymath{\displaystyle}
 	最最标准的求不定积分的方法是直接找到对应的原函数.
 	{\small
+	\pause
 	\begin{exampleblock}{证明: $\color{black}\int x^5 \mathrm{~d} x=\frac{1}{6} x^6+C$}
 		\pause
 		$
@@ -260,7 +261,7 @@ aspectratio=43,
 			(\ln (-x))'=\frac{1}{-x}(-x)^{\prime}=\frac{1}{x} \Rightarrow \int \frac{1}{x} \mathrm{~d} x=\ln -x+C.
 		$
 	\end{exampleblock}
-
+	\pause
 	\begin{exampleblock}{证明: $\color{black}\int \frac{\mathrm{~d} x}{\cos ^2 x}=\tan x+C$}
 		\pause
 		$
@@ -312,7 +313,7 @@ aspectratio=43,
 				            $$
 				      \item \pause 不定积分的和差法则:
 				            $$
-					            \int(ku'+lv')\mathrm{~d}x=\int\mathrm{~d}(ku+ lv) = \int k\mathrm{~d}u + l\mathrm{~d}v=k\int u'\mathrm{~d}x+l\int v'\mathrm{~d}x.
+					            \int(ku'+lv')\mathrm{d}x=\int\mathrm{d}(ku+ lv) = \int k\mathrm{d}u + l\mathrm{d}v=k\int u'\mathrm{~d}x+l\int v'\mathrm{~d}x.
 				            $$
 			      \end{itemize}
 			      \pause
@@ -322,9 +323,9 @@ aspectratio=43,
 				            $$
 					            u\mathrm{~d}v+v\mathrm{~d}u =\mathrm{~d}(uv).
 				            $$
-				      \item \pause 不定积分的和差法则:
+				      \item \pause 不定积分的乘积法则:
 				            $$
-					            \int u\mathrm{~d}v+\int v\mathrm{~d}u=\int\mathrm{~d}(uv) = uv + C.
+					            \int u\mathrm{~d}v+\int v\mathrm{~d}u=\int\mathrm{~d}(uv) = uv.
 				            $$
 				            \pause 最后这一条经常被称为分部积分公式.
 			      \end{itemize}
@@ -336,25 +337,25 @@ aspectratio=43,
 	\frametitle{从微分计算法则到不定积分计算法则}
 	\begin{block}{}
 		\begin{enumerate}\setcounter{enumi}{2}
-			\pause \item 商法则:
+			 \item 商法则:
 			      \begin{itemize}
-				      \pause \item 微分的商法则
+				       \item 微分的商法则
 				            $$
 					            \mathrm{~d}\left(\frac{u}{v}\right)=\frac{u\mathrm{~d}v-v\mathrm{~d}u}{v^2}.
 				            $$
-				            \pause \item 不定积分的商法则 \pause (基本不会用到这个法则)
+				             \item 不定积分的商法则  (基本不会用到这个法则)
 				            $$
 					            \frac{u}{v}=\int \frac{u}{v^2}\mathrm{~d}v-\int\frac{1}{v}\mathrm{~d}u.
 				            $$
 
 			      \end{itemize}
-			      \pause \item 复合函数微分法则:
+			       \item 复合函数微分法则:
 			      \begin{itemize}
-				      \pause\item 微分的复合函数求导法则, 设$f(x)$ 和 $g(x)$ 是可导函数,记 $h(x) = f(g(x))$
+				      \item 微分的复合函数求导法则, 设$f(x)$ 和 $g(x)$ 是可导函数,记 $h(x) = f(g(x))$
 				            $$
 					            f'(g(x))g'(x)\mathrm{~d}x=f'(g(x))\mathrm{~d}g(x)=\mathrm{~d}h(x).
 				            $$
-				      \item \pause 不定积分的和差法则
+				      \item  不定积分的和差法则
 				            $$
 					            \int f'(g(x))g'(x)\mathrm{~d}x=\int f'(g(x))\mathrm{~d}g(x)=\int \mathrm{~d}h(x)= h(x)+C.
 				            $$
@@ -1061,15 +1062,55 @@ aspectratio=43,
 \begin{frame}
 	\frametitle{练习题}
 	\everymath{\displaystyle}
-		\begin{block}{}
-			$\int x^2(x+1)^n \mathrm{~d} x$
-			$\int \frac{\mathrm{d} x}{x \sqrt{1+x^2}}$
-			$\int \sqrt{\frac{x-a}{x+a}} \mathrm{~d} x$
-			$\int \frac{\mathrm{d} x}{1+\sqrt{2 x}}$
-		\end{block}
+	\begin{block}{}
+		\begin{columns}[onlytextwidth]
+			\begin{column}{0.5\textwidth}
+				\begin{enumerate}
+					\item $\int x^2(x+1)^n \mathrm{~d} x$
+					\item $\int \frac{\mathrm{d} x}{x \sqrt{1+x^2}}$
+				\end{enumerate}
+			\end{column}
+			\begin{column}{0.5\textwidth}
+				\begin{enumerate}
+					\setcounter{enumi}{2}
+					\item $\int \frac{\ln x \mathrm{~d} x}{x \sqrt{1+\ln x}}$
+					\item $\int \frac{\sin ^2 x}{\cos ^6 x} \mathrm{~d} x$
+				\end{enumerate}
+			\end{column}
+		\end{columns}
+	\end{block}
+	\begin{exampleblock}{}
+				\begin{enumerate}
+					\pause \item $\left(\frac{1}{n+1}-\frac{2(x+1)}{n+2}+\frac{(x+1)^2}{n+3}\right)(x+1)^{n+1}+C$;
+					\pause \item $\ln\left|\frac{\sqrt{1+x^2}-1}{x}\right|+C$;
+					\pause \item $\frac{2}{3}(\ln x-2) \sqrt{1+\ln x}+C$;
+					\pause \item $\frac{1}{5} \tan ^5 x+\frac{1}{3} \tan ^3 x+C$,
+				\end{enumerate}
+	\end{exampleblock}
 \end{frame}
 
 \section{分部积分}
+
+\begin{frame}
+	\frametitle{从微分计算法则到不定积分计算法则}
+	回顾不定积分的乘积运算法则:\pause
+	\begin{block}{}
+		\begin{enumerate}
+			\item 乘积法则:
+			      \begin{itemize}
+				      \item \pause 微分的乘积法则:
+				            $$
+					            u\mathrm{~d}v+v\mathrm{~d}u =\mathrm{~d}(uv).
+				            $$
+				      \item \pause 不定积分的乘积法则:
+				            $$
+					            \int u\mathrm{~d}v+\int v\mathrm{~d}u=\int\mathrm{~d}(uv) = uv.
+				            $$
+				            \pause 最后这一条经常被称为分部积分公式.
+			      \end{itemize}
+		\end{enumerate}
+	\end{block}
+\end{frame}
 
 % Thank you page
 \beamertemplateshadingbackground{structure.fg!90}{structure.fg}
