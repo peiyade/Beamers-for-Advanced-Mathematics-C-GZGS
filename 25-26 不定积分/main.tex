@@ -450,7 +450,7 @@ aspectratio=43,
 \begin{frame}
 	\frametitle{凑微分法}
 	\everymath{\displaystyle}
-	回顾不定积分的和差法则
+	回顾不定积分的复合运算法则
 	$$
 		\int f'(g(x))g'(x)\mathrm{~d}x=\int f'(g(x))\mathrm{~d}g(x)=\int \mathrm{~d}f(g(x))= f(g(x))+C.
 	$$
@@ -830,7 +830,7 @@ aspectratio=43,
 					\end{figure}
 				\end{column}
 			\end{columns}
-			\pause 
+			\pause
 			\vspace{0.1cm}
 			因此,
 			$$
@@ -862,7 +862,7 @@ aspectratio=43,
 						\int \frac{\mathrm{~d} x}{\sqrt{x^2+a^2}}=\int \sec t \mathrm{~d} t.
 					$$
 				\end{column}
-				\pause 
+				\pause
 				\begin{column}{0.5\textwidth}
 					% 右边的图片
 					\begin{figure}
@@ -883,7 +883,7 @@ aspectratio=43,
 				\end{column}
 			\end{columns}
 			\vspace{0.1cm}
-			\pause 
+			\pause
 			因此,
 			$$
 				\int \sec t \mathrm{~d} t= \ln |\sec t+\tan t|+C=\ln \left(x+\sqrt{x^2+a^2}\right)+C
@@ -910,8 +910,8 @@ aspectratio=43,
 			$$
 				\begin{aligned}
 					\int \frac{(\tan t+1)^3}{\sec ^4 t} \cdot \sec ^2 t \mathrm{~d} t & =\int\left(\sin ^3 t \cos ^{-1} t+3 \sin ^2 t+3 \sin t \cos t+\cos ^2 t\right) \mathrm{d} t \\
-					\pause & =\int\left(\sin ^2 t \cos ^{-1} t+3 \cos t\right) \sin t \mathrm{~d} t                      \\
-					\pause & \quad +\int\left(3 \sin ^2 t+\cos ^2 t\right) \mathrm{d} t
+					\pause                                                            & =\int\left(\sin ^2 t \cos ^{-1} t+3 \cos t\right) \sin t \mathrm{~d} t                      \\
+					\pause                                                            & \quad +\int\left(3 \sin ^2 t+\cos ^2 t\right) \mathrm{d} t
 				\end{aligned}
 			$$
 		\end{exampleblock}
@@ -949,11 +949,124 @@ aspectratio=43,
 		$$
 			\cos t=\frac{1}{\sqrt{x^2-2 x+2}}, \sin t=\frac{x-1}{\sqrt{x^2-2 x+2}},
 		$$
-		\pause 
+		\pause
 		{\small $\color{black}\int \frac{x^3}{\left(x^2-2 x+2\right)^2} \mathrm{~d} x=\frac{1}{2} \ln \left(x^2-2 x+2\right)+2 \arctan (x-1)-\frac{x}{x^2-2 x+2}+C.$}
 
 		\qed
 	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\frametitle{练习题}
+	\everymath{\displaystyle}
+	\begin{exampleblock}{$\color{black}\int \frac{1}{x+\sqrt{1-x^2}} \mathrm{~d} x=\frac{1}{2} \arcsin (x)+\frac{1}{2} \ln \left|x+\sqrt{1-x^2}\right|+C$}
+		令
+		$
+			\sin t =x,\,\,\mathrm{~d}x=\cos t\mathrm{d}t,
+		$
+		那么
+		$$
+			\int \frac{1}{x+\sqrt{1-x^2}} \mathrm{~d} x=\int \frac{\cos t}{\sin t+\cos t}\mathrm{~d}t.
+		$$\\
+		因此
+		\begin{align*}
+			\int \frac{\cos t}{\sin t+\cos t}\mathrm{~d}t & =\int \frac{\frac{1}{2}(\cos t + \sin t)+ \frac{1}{2}(\cos t - \sin t)}{\sin t+\cos t}\mathrm{~d}t \\
+			                                              & =\int \frac{1}{2}\mathrm{~d}t+ \frac{1}{2}\int \frac{\mathrm{d}(\sin t+\cos t)}{\sin t+\cos t}     \\
+			                                              & =\frac{1}{2}t+\frac{1}{2}\ln\left|\sin t + \cos t\right|+C.
+		\end{align*}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\frametitle{练习题}
+
+	\begin{exampleblock}{}
+		建立辅助三角形:
+		\begin{figure}
+			\centering
+			\begin{tikzpicture}[scale=0.65]
+				% 绘制直角三角形
+				\draw (0,0) -- (4,0) -- (0,3) -- cycle;
+				% 标记直角符号
+				\draw (0.3,0) -- (0.3,0.3) -- (0,0.3);
+				% 标记角度
+				\draw (3.6,0.2) arc (2:atan(3/4):0) node[midway,left] {$t$};
+				% 标记边长
+				\draw (2,0) node[below] {$\sqrt{1-x^2}$};
+				\draw (0,1.5) node[left] {$x$};
+				\draw (2,1.5) node[right] {$1$};
+			\end{tikzpicture}
+		\end{figure}
+		可以得到:
+		$$
+			t=\arcsin x,\,\,\sin t = x,\,\,\cos t = \sqrt{1-x^2}.
+		$$
+		因此, 可以得到
+		$$
+			\begin{aligned}
+				\int \frac{1}{x+\sqrt{1-x^2}} \mathrm{~d} x & = \frac{1}{2}t+\frac{1}{2}\ln\left|\sin t + \cos t\right|+C                 \\
+				                                            & =\frac{1}{2} \arcsin (x)+\frac{1}{2} \ln \left|x+\sqrt{1-x^2}\right|+C.\qed
+			\end{aligned}
+		$$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\frametitle{练习题}
+	\everymath{\displaystyle}
+	{\small
+		\begin{exampleblock}{$\color{black}\int \frac{\mathrm{d} x}{x \sqrt{x^2-1}}$}
+			建立辅助三角形:
+			\begin{figure}
+				\centering
+				\begin{tikzpicture}[scale=0.65]
+					% 绘制直角三角形
+					\draw (0,0) -- (4,0) -- (0,3) -- cycle;
+					% 标记直角符号
+					\draw (0.3,0) -- (0.3,0.3) -- (0,0.3);
+					% 标记角度
+					\draw (3.6,0.2) arc (2:atan(3/4):0) node[midway,left] {$t$};
+					% 标记边长
+					\draw (2,0) node[below] {$1$};
+					\draw (0,1.5) node[left] {$\sqrt{x^2-1}$};
+					\draw (2,1.5) node[right] {$x$};
+				\end{tikzpicture}
+			\end{figure}
+			建立变换
+			$$
+				\frac{1}{x}=\sec t,\,\,\frac{1}{\sqrt{x^2-1}}=\cot t,\,\,\mathrm{~d}x=\tan t\sec t \mathrm{~d}t.
+			$$
+			因此,\\
+			$$
+				\int \frac{\mathrm{d} x}{x \sqrt{x^2-1}}=\int \cos t\cot t\cdot \sec t\tan t\mathrm{d}t=t+C=\arctan (\sqrt{x^2-1})+C.
+			$$
+		\end{exampleblock}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{练习题}
+	\everymath{\displaystyle}
+		\begin{exampleblock}{$\color{black}\int x(2 x-1)^{100} \mathrm{~d} x=\frac{(2 x-1)^{101}}{4}\left(\frac{2 x-1}{102}+\frac{1}{101}\right)+C$}
+			令 $2 x-1=t$ 即 $x=\frac{t+1}{2}$, 则 $\mathrm{d} x=\frac{1}{2} \mathrm{~d} t$, 于是
+			$$
+				\begin{aligned}
+					\int x(2 x-1)^{100} \mathrm{~d} x & =\frac{1}{4} \int(t+1) t^{100} \mathrm{~d} t=\frac{1}{4}\left(\frac{t^{102}}{102}+\frac{t^{101}}{101}\right)+C \\
+					                                  & =\frac{(2 x-1)^{101}}{4}\left(\frac{2 x-1}{102}+\frac{1}{101}\right)+C
+				\end{aligned}
+			$$
+		\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\frametitle{练习题}
+	\everymath{\displaystyle}
+		\begin{block}{}
+			$\int x^2(x+1)^n \mathrm{~d} x$
+			$\int \frac{\mathrm{d} x}{x \sqrt{1+x^2}}$
+			$\int \sqrt{\frac{x-a}{x+a}} \mathrm{~d} x$
+			$\int \frac{\mathrm{d} x}{1+\sqrt{2 x}}$
+		\end{block}
 \end{frame}
 
 \section{分部积分}
