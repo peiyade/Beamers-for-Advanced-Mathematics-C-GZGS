@@ -313,7 +313,7 @@ aspectratio=43,
 				            $$
 				      \item \pause 不定积分的和差法则:
 				            $$
-					            \int(ku'+lv')\mathrm{d}x=\int\mathrm{d}(ku+ lv) = \int k\mathrm{d}u + l\mathrm{d}v=k\int u'\mathrm{~d}x+l\int v'\mathrm{~d}x.
+					            \int(ku'+lv')\mathrm{~d}x=\int\mathrm{~d}(ku+ lv) = \int k\mathrm{~d}u + l\mathrm{~d}v=k\int u'\mathrm{~d}x+l\int v'\mathrm{~d}x.
 				            $$
 			      \end{itemize}
 			      \pause
@@ -337,19 +337,19 @@ aspectratio=43,
 	\frametitle{从微分计算法则到不定积分计算法则}
 	\begin{block}{}
 		\begin{enumerate}\setcounter{enumi}{2}
-			 \item 商法则:
+			\item 商法则:
 			      \begin{itemize}
-				       \item 微分的商法则
+				      \item 微分的商法则
 				            $$
 					            \mathrm{~d}\left(\frac{u}{v}\right)=\frac{u\mathrm{~d}v-v\mathrm{~d}u}{v^2}.
 				            $$
-				             \item 不定积分的商法则  (基本不会用到这个法则)
+				      \item 不定积分的商法则  (基本不会用到这个法则)
 				            $$
 					            \frac{u}{v}=\int \frac{u}{v^2}\mathrm{~d}v-\int\frac{1}{v}\mathrm{~d}u.
 				            $$
 
 			      \end{itemize}
-			       \item 复合函数微分法则:
+			\item 复合函数微分法则:
 			      \begin{itemize}
 				      \item 微分的复合函数求导法则, 设$f(x)$ 和 $g(x)$ 是可导函数,记 $h(x) = f(g(x))$
 				            $$
@@ -593,7 +593,7 @@ aspectratio=43,
 	\pause
 	\begin{exampleblock}{$\color{black}\int \csc x \mathrm{~d}x$}
 		$
-			\int \sec x \mathrm{~d}x   = \int \csc x \mathrm{~d} x=\int \frac{\mathrm{d} x}{\sin x}=\int \frac{\mathrm{d} x}{2 \sin \frac{x}{2} \cos \frac{x}{2}}=\int \frac{\mathrm{d}\left(\frac{x}{2}\right)}{\tan \frac{x}{2} \cos ^2 \frac{x}{2}},
+			\int \sec x \mathrm{~d}x   = \int \csc x \mathrm{~d} x=\int \frac{\mathrm{~d} x}{\sin x}=\int \frac{\mathrm{~d} x}{2 \sin \frac{x}{2} \cos \frac{x}{2}}=\int \frac{\mathrm{~d}\left(\frac{x}{2}\right)}{\tan \frac{x}{2} \cos ^2 \frac{x}{2}},
 		$\\
 		$
 			\int \sec x \mathrm{~d}x =\ln \left|\tan \frac{x}{2}\right|+C  =\ln |\csc x-\cot x|+C
@@ -608,17 +608,17 @@ aspectratio=43,
 		\begin{columns}[onlytextwidth]
 			\begin{column}{0.5\textwidth}
 				\begin{enumerate}
-					\item $\int \frac{\mathrm{~d} x}{x(1+2 \ln x)}$
-					\item $\int \frac{e^{3 \sqrt{x}}}{\sqrt{x}} \mathrm{~d} x$
-					\item $\int \sec ^6 x d x$
+					\item $\int \frac{\mathrm{~d} x}{x(1+2 \ln x)}$;
+					\item $\int \frac{e^{3 \sqrt{x}}}{\sqrt{x}} \mathrm{~d} x$;
+					\item $\int \sec ^6 x d x$;
 				\end{enumerate}
 			\end{column}
 			\begin{column}{0.5\textwidth}
 				\begin{enumerate}
 					\setcounter{enumi}{3}
-					\item $\int \sin ^3 x \mathrm{~d} x$
-					\item $\int \sin ^2 x \cos ^5 x \mathrm{~d} x$
-					\item $\int \tan ^5 x \sec ^3 x d x$
+					\item $\int \sin ^3 x \mathrm{~d} x$;
+					\item $\int \sin ^2 x \cos ^5 x \mathrm{~d} x$;
+					\item $\int \tan ^5 x \sec ^3 x d x$.
 				\end{enumerate}
 			\end{column}
 		\end{columns}
@@ -632,18 +632,18 @@ aspectratio=43,
 					      \pause
 					\item $\frac{2}{3}e^{3\sqrt{x}}+C$;
 					      \pause
-					\item $\frac15\tan^5x+\frac23\tan^3x+\tan x+C$
+					\item $\frac15\tan^5x+\frac23\tan^3x+\tan x+C$;
 				\end{enumerate}
 			\end{column}
 			\begin{column}{0.5\textwidth}
 				\begin{enumerate}
 					\setcounter{enumi}{3}
 					\pause
-					\item $-\cos x +\frac{1}{3}\cos x+C$,
+					\item $-\cos x +\frac{1}{3}\cos^3 x+C$;
 					      \pause
-					\item $\frac{1}{3}\sin^3 x +\frac{1}{5}\sin^5 x +C$,
+					\item $\frac{\sin x^7}{7}-\frac{2 \sin x^5}{5}+\frac{\sin x^3}{3}+C$;
 					      \pause
-					\item $\frac{\sec x^7}{7}-\frac{2 \sec x^5}{5}+\frac{\sec x^3}{3}+C$
+					\item $\frac{\sec x^7}{7}-\frac{2 \sec x^5}{5}+\frac{\sec x^3}{3}+C$.
 				\end{enumerate}
 			\end{column}
 		\end{columns}
@@ -660,16 +660,16 @@ aspectratio=43,
 		\begin{columns}[onlytextwidth]
 			\begin{column}{0.5\textwidth}
 				\begin{enumerate}
-					\item $\int \frac{\mathrm{~d} x}{2+3 x^2}$
-					\item $\int \frac{\mathrm{~d} x}{\sqrt{2-3 x^2}}$
+					\item $\int \frac{\mathrm{~d} x}{2+3 x^2}$;
+					\item $\int \frac{\mathrm{~d} x}{\sqrt{2-3 x^2}}$;
 				\end{enumerate}
 			\end{column}
 			\begin{column}{0.5\textwidth}
 				\begin{enumerate}
 					\setcounter{enumi}{2}
-					\item $\int \frac{\mathrm{~d} x}{1+\cos x}$
-					\item $\int \frac{\mathrm{~d} x}{1-\cos x}$
-					\item $\int \frac{\mathrm{~d} x}{1+\sin x}$
+					\item $\int \frac{\mathrm{~d} x}{1+\cos x}$;
+					\item $\int \frac{\mathrm{~d} x}{1-\cos x}$;
+					\item $\int \frac{\mathrm{~d} x}{1+\sin x}$.
 				\end{enumerate}
 			\end{column}
 		\end{columns}
@@ -686,7 +686,7 @@ aspectratio=43,
 				\begin{enumerate}
 					\setcounter{enumi}{2}
 					\pause
-					\item $\tan\frac{x}{2}+C$,
+					\item $\tan\frac{x}{2}+C$;
 					      \pause
 					\item $-\cot\frac{x}{2}+C$;
 					      \pause
@@ -723,7 +723,7 @@ aspectratio=43,
 	\everymath{\displaystyle}
 	\begin{exampleblock}{$\color{black}\int \frac{\mathrm{~d} x}{1+\cos x}$}
 		$
-			\int \frac{\mathrm{~d} x}{1+\cos x}=\int \frac{\mathrm{~d} x}{\cos^2\frac{1}{2}x + \sin^2\frac{1}{2}x+ \cos^2\frac{1}{2}x - \sin^2\frac{1}{2}x}=\int \frac{\mathrm{~d}\frac{1}{2}x}{\cos^2\frac{1}{2}x}
+			\int \frac{\mathrm{~d} x}{1+\cos x}=\int \frac{\mathrm{~d} x}{\cos^2\frac{1}{2}x + \sin^2\frac{1}{2}x+ \cos^2\frac{1}{2}x - \sin^2\frac{1}{2}x}=\int \frac{\mathrm{~d}\frac{1}{2}x}{\cos^2\frac{1}{2}x},
 		$\\
 		$
 			\int \frac{\mathrm{~d} x}{1+\cos x}=\tan\frac{1}{2}x+C.
@@ -745,20 +745,20 @@ aspectratio=43,
 	\everymath{\displaystyle}
 	\begin{exampleblock}{$\color{black}\int \frac{\mathrm{~d} x}{1+\sin x}$}
 		$
-			\int \frac{\mathrm{~d} x}{1+\sin x}=\int \frac{\mathrm{~d} x}{1+\sin x}\frac{1-\sin x}{1-\sin x}=\int \frac{1-\sin x}{\cos^2 x}\mathrm{~d} x
+			\int \frac{\mathrm{~d} x}{1+\sin x}=\int \frac{\mathrm{~d} x}{1+\sin x}\frac{1-\sin x}{1-\sin x}=\int \frac{1-\sin x}{\cos^2 x}\mathrm{~d} x,
 		$
 		$
-			\int \frac{\mathrm{~d} x}{1+\sin x}=\int \frac{1}{\cos^2 x}\mathrm{~d}x + \int \frac{-\sin x}{\cos^2 x}\mathrm{~d}x=\tan x -\frac{1}{\cos x} +C
+			\int \frac{\mathrm{~d} x}{1+\sin x}=\int \frac{1}{\cos^2 x}\mathrm{~d}x + \int \frac{-\sin x}{\cos^2 x}\mathrm{~d}x=\tan x -\frac{1}{\cos x} +C.
 		$
 	\end{exampleblock}
 	\pause
 	同理
 	\begin{exampleblock}{$\color{black}\int \frac{\mathrm{~d} x}{1-\sin x}$}
 		$
-			\int \frac{\mathrm{~d} x}{1-\sin x}=\int \frac{\mathrm{~d} x}{1-\sin x}\frac{1+\sin x}{1+\sin x}=\int \frac{1+\sin x}{\cos^2 x}\mathrm{~d} x
+			\int \frac{\mathrm{~d} x}{1-\sin x}=\int \frac{\mathrm{~d} x}{1-\sin x}\frac{1+\sin x}{1+\sin x}=\int \frac{1+\sin x}{\cos^2 x}\mathrm{~d} x,
 		$
 		$
-			\int \frac{\mathrm{~d} x}{1-\sin x}=\int \frac{1}{\cos^2 x}\mathrm{~d}x - \int \frac{-\sin x}{\cos^2 x}\mathrm{~d}x=\tan x +\frac{1}{\cos x} +C
+			\int \frac{\mathrm{~d} x}{1-\sin x}=\int \frac{1}{\cos^2 x}\mathrm{~d}x - \int \frac{-\sin x}{\cos^2 x}\mathrm{~d}x=\tan x +\frac{1}{\cos x} +C.
 		$
 	\end{exampleblock}
 \end{frame}
@@ -771,23 +771,23 @@ aspectratio=43,
 	如果凑不出 $g'(x)$ 使得积分好计算.
 	面对问题
 	$$
-		\int f(x)\mathrm{~d}x
+		\int f(x)\mathrm{~d}x.
 	$$
 	可以试着引入变量替换:
 	$$
 		\begin{aligned}
-			x=\phi(x);\,\,\,\, \,\,\,\,\mathrm{~d}x=\phi'(t)\mathrm{~d}t.
+			x=\phi(t);\,\,\,\, \,\,\,\,\mathrm{~d}x=\phi'(t)\mathrm{~d}t.
 		\end{aligned}
 	$$
 	将问题演变成
 	$$
-		\int f(x)\mathrm{~d}x=\int f(\phi(t))\phi'(t)\mathrm{~d}t
+		\int f(x)\mathrm{~d}x=\int f(\phi(t))\phi'(t)\mathrm{~d}t.
 	$$
 	如果演变后的问题方便计算, 假如最后计算出的结果为 $F(t)+C$, 那么再经过逆变换
 	$$
 		t=\phi^{-1}(x),
 	$$
-	后可以得到结 果 $F(\phi^{-1}x)+C$.
+	后可以得到结果 $F(\phi^{-1}(x))+C$.
 \end{frame}
 
 \begin{frame}
@@ -852,7 +852,7 @@ aspectratio=43,
 					% 左边的输入
 					\pause 考虑合适的变换, 令
 					$$
-						x=a \tan t,\,\,t=\arctan\frac{x}{a}.
+						x=a \tan t,\,\,t=\arctan\frac{x}{a},
 					$$
 					\pause 于是有
 					$$
@@ -887,7 +887,7 @@ aspectratio=43,
 			\pause
 			因此,
 			$$
-				\int \sec t \mathrm{~d} t= \ln |\sec t+\tan t|+C=\ln \left(x+\sqrt{x^2+a^2}\right)+C
+				\int \sec t \mathrm{~d} t= \ln |\sec t+\tan t|+C=\ln \left(x+\sqrt{x^2+a^2}\right)+C.
 			$$
 			\qed
 		\end{exampleblock}
@@ -910,9 +910,9 @@ aspectratio=43,
 			\pause 因此,
 			$$
 				\begin{aligned}
-					\int \frac{(\tan t+1)^3}{\sec ^4 t} \cdot \sec ^2 t \mathrm{~d} t & =\int\left(\sin ^3 t \cos ^{-1} t+3 \sin ^2 t+3 \sin t \cos t+\cos ^2 t\right) \mathrm{d} t \\
-					\pause                                                            & =\int\left(\sin ^2 t \cos ^{-1} t+3 \cos t\right) \sin t \mathrm{~d} t                      \\
-					\pause                                                            & \quad +\int\left(3 \sin ^2 t+\cos ^2 t\right) \mathrm{d} t
+					\int \frac{(\tan t+1)^3}{\sec ^4 t} \cdot \sec ^2 t \mathrm{~d} t & =\int\left(\sin ^3 t \cos ^{-1} t+3 \sin ^2 t+3 \sin t \cos t+\cos ^2 t\right) \mathrm{~d} t \\
+					\pause                                                            & =\int\left(\sin ^2 t \cos ^{-1} t+3 \cos t\right) \sin t \mathrm{~d} t                       \\
+					\pause                                                            & \quad +\int\left(3 \sin ^2 t+\cos ^2 t\right) \mathrm{~d} t.
 				\end{aligned}
 			$$
 		\end{exampleblock}
@@ -925,9 +925,9 @@ aspectratio=43,
 	\begin{exampleblock}{}
 		$$
 			\begin{aligned}
-				 & \pause =\int\left[\left(1-\cos ^2 t\right) \cos ^{-1} t+3 \cos t\right][-\mathrm{d}(\cos t)]+\int(2-\cos 2 t) \mathrm{d} t \\
-				 & \pause =-\int\left(\cos ^{-1} t+2 \cos t\right) \mathrm{d}(\cos t)+2 t-\frac{1}{2} \sin 2 t                                \\
-				 & \pause =-\ln \cos t-\cos ^2 t+2 t-\sin t \cos t+C
+				 & \pause =\int\left[\left(1-\cos ^2 t\right) \cos ^{-1} t+3 \cos t\right][-\mathrm{~d}(\cos t)]+\int(2-\cos 2 t) \mathrm{~d} t \\
+				 & \pause =-\int\left(\cos ^{-1} t+2 \cos t\right) \mathrm{~d}(\cos t)+2 t-\frac{1}{2} \sin 2 t                                 \\
+				 & \pause =-\ln \cos t-\cos ^2 t+2 t-\sin t \cos t+C.
 			\end{aligned}
 		$$
 		\pause 回忆辅助三角形, 有
@@ -963,7 +963,7 @@ aspectratio=43,
 	\begin{exampleblock}{$\color{black}\int \frac{1}{x+\sqrt{1-x^2}} \mathrm{~d} x=\frac{1}{2} \arcsin (x)+\frac{1}{2} \ln \left|x+\sqrt{1-x^2}\right|+C$}
 		令
 		$
-			\sin t =x,\,\,\mathrm{~d}x=\cos t\mathrm{d}t,
+			\sin t =x,\,\,\mathrm{~d}x=\cos t\mathrm{~d}t,
 		$
 		那么
 		$$
@@ -972,7 +972,7 @@ aspectratio=43,
 		因此
 		\begin{align*}
 			\int \frac{\cos t}{\sin t+\cos t}\mathrm{~d}t & =\int \frac{\frac{1}{2}(\cos t + \sin t)+ \frac{1}{2}(\cos t - \sin t)}{\sin t+\cos t}\mathrm{~d}t \\
-			                                              & =\int \frac{1}{2}\mathrm{~d}t+ \frac{1}{2}\int \frac{\mathrm{d}(\sin t+\cos t)}{\sin t+\cos t}     \\
+			                                              & =\int \frac{1}{2}\mathrm{~d}t+ \frac{1}{2}\int \frac{\mathrm{~d}(\sin t+\cos t)}{\sin t+\cos t}    \\
 			                                              & =\frac{1}{2}t+\frac{1}{2}\ln\left|\sin t + \cos t\right|+C.
 		\end{align*}
 	\end{exampleblock}
@@ -1016,7 +1016,7 @@ aspectratio=43,
 	\frametitle{练习题}
 	\everymath{\displaystyle}
 	{\small
-		\begin{exampleblock}{$\color{black}\int \frac{\mathrm{d} x}{x \sqrt{x^2-1}}$}
+		\begin{exampleblock}{$\color{black}\int \frac{\mathrm{~d} x}{x \sqrt{x^2-1}}$}
 			建立辅助三角形:
 			\begin{figure}
 				\centering
@@ -1039,7 +1039,7 @@ aspectratio=43,
 			$$
 			因此,\\
 			$$
-				\int \frac{\mathrm{d} x}{x \sqrt{x^2-1}}=\int \cos t\cot t\cdot \sec t\tan t\mathrm{d}t=t+C=\arctan (\sqrt{x^2-1})+C.
+				\int \frac{\mathrm{~d} x}{x \sqrt{x^2-1}}=\int \cos t\cot t\cdot \sec t\tan t\mathrm{~d}t=t+C=\arctan (\sqrt{x^2-1})+C.
 			$$
 		\end{exampleblock}
 	}
@@ -1048,15 +1048,15 @@ aspectratio=43,
 \begin{frame}
 	\frametitle{练习题}
 	\everymath{\displaystyle}
-		\begin{exampleblock}{$\color{black}\int x(2 x-1)^{100} \mathrm{~d} x=\frac{(2 x-1)^{101}}{4}\left(\frac{2 x-1}{102}+\frac{1}{101}\right)+C$}
-			令 $2 x-1=t$ 即 $x=\frac{t+1}{2}$, 则 $\mathrm{d} x=\frac{1}{2} \mathrm{~d} t$, 于是
-			$$
-				\begin{aligned}
-					\int x(2 x-1)^{100} \mathrm{~d} x & =\frac{1}{4} \int(t+1) t^{100} \mathrm{~d} t=\frac{1}{4}\left(\frac{t^{102}}{102}+\frac{t^{101}}{101}\right)+C \\
-					                                  & =\frac{(2 x-1)^{101}}{4}\left(\frac{2 x-1}{102}+\frac{1}{101}\right)+C
-				\end{aligned}
-			$$
-		\end{exampleblock}
+	\begin{exampleblock}{$\color{black}\int x(2 x-1)^{100} \mathrm{~d} x=\frac{(2 x-1)^{101}}{4}\left(\frac{2 x-1}{102}+\frac{1}{101}\right)+C$}
+		令 $2 x-1=t$ 即 $x=\frac{t+1}{2}$, 则 $\mathrm{~d} x=\frac{1}{2} \mathrm{~d} t$, 于是
+		$$
+			\begin{aligned}
+				\int x(2 x-1)^{100} \mathrm{~d} x & =\frac{1}{4} \int(t+1) t^{100} \mathrm{~d} t=\frac{1}{4}\left(\frac{t^{102}}{102}+\frac{t^{101}}{101}\right)+C \\
+				                                  & =\frac{(2 x-1)^{101}}{4}\left(\frac{2 x-1}{102}+\frac{1}{101}\right)+C
+			\end{aligned}
+		$$
+	\end{exampleblock}
 \end{frame}
 
 \begin{frame}
@@ -1066,26 +1066,26 @@ aspectratio=43,
 		\begin{columns}[onlytextwidth]
 			\begin{column}{0.5\textwidth}
 				\begin{enumerate}
-					\item $\int x^2(x+1)^n \mathrm{~d} x$
-					\item $\int \frac{\mathrm{d} x}{x \sqrt{1+x^2}}$
+					\item $\int x^2(x+1)^n \mathrm{~d} x$;
+					\item $\int \frac{\mathrm{~d} x}{x \sqrt{1+x^2}}$;
 				\end{enumerate}
 			\end{column}
 			\begin{column}{0.5\textwidth}
 				\begin{enumerate}
 					\setcounter{enumi}{2}
-					\item $\int \frac{\ln x \mathrm{~d} x}{x \sqrt{1+\ln x}}$
-					\item $\int \frac{\sin ^2 x}{\cos ^6 x} \mathrm{~d} x$
+					\item $\int \frac{\ln x \mathrm{~d} x}{x \sqrt{1+\ln x}}$;
+					\item $\int \frac{\sin ^2 x}{\cos ^6 x} \mathrm{~d} x$.
 				\end{enumerate}
 			\end{column}
 		\end{columns}
 	\end{block}
 	\begin{exampleblock}{}
-				\begin{enumerate}
-					\pause \item $\left(\frac{1}{n+1}-\frac{2(x+1)}{n+2}+\frac{(x+1)^2}{n+3}\right)(x+1)^{n+1}+C$;
-					\pause \item $\ln\left|\frac{\sqrt{1+x^2}-1}{x}\right|+C$;
-					\pause \item $\frac{2}{3}(\ln x-2) \sqrt{1+\ln x}+C$;
-					\pause \item $\frac{1}{5} \tan ^5 x+\frac{1}{3} \tan ^3 x+C$,
-				\end{enumerate}
+		\begin{enumerate}
+			\pause \item $\left(\frac{1}{n+1}-\frac{2(x+1)}{n+2}+\frac{(x+1)^2}{n+3}\right)(x+1)^{n+1}+C$;
+			      \pause \item $\ln\left|\frac{\sqrt{1+x^2}-1}{x}\right|+C$;
+			      \pause \item $\frac{2}{3}(\ln x-2) \sqrt{1+\ln x}+C$;
+			      \pause \item $\frac{1}{5} \tan ^5 x+\frac{1}{3} \tan ^3 x+C$.
+		\end{enumerate}
 	\end{exampleblock}
 \end{frame}
 
@@ -1093,6 +1093,7 @@ aspectratio=43,
 
 \begin{frame}
 	\frametitle{从微分计算法则到不定积分计算法则}
+	\everymath{\displaystyle}
 	回顾不定积分的乘积运算法则:\pause
 	\begin{block}{}
 		\begin{enumerate}
@@ -1110,6 +1111,327 @@ aspectratio=43,
 			      \end{itemize}
 		\end{enumerate}
 	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{分部积分法}
+	\everymath{\displaystyle}
+	\begin{block}{}
+		$$
+			\int u(x)v'(x)\mathrm{~d} x = uv - \int u'(x)v(x)\mathrm{~d} x.
+		$$
+	\end{block}
+	\begin{exampleblock}{$\color{black}\int x \cos x \mathrm{~d} x$}
+		将 $x$ 视作 $u(x)$, $\cos x$ 视作 $v^{\prime}(x)$, 则 $u^{\prime}(x)=1, v(x)=\sin x$,
+		$$
+			\int x \cos x \mathrm{~d} x  =\int x \mathrm{~d}(\sin x)  =x \sin x-\int \sin x \mathrm{~d} x=x \sin x+\cos x+C.
+		$$
+	\end{exampleblock}
+	\begin{alertblock}{$\color{black}\int x \cos x \mathrm{~d} x$, {\color{black}另个选择会更复杂}}
+		若将 $x$ 视作 $v^{\prime}(x)$, $\cos x$ 视作 $u(x)$, 则 $u^{\prime}(x)=\sin x, v(x)=\frac{1}{2}x^2$,
+		$$
+			\int x \cos x \mathrm{~d} x=\int \cos x \mathrm{~d}\left(\frac{x^2}{2}\right)=\frac{x^2}{2} \cos x-\int \frac{x^2}{2}(-\sin x) \mathrm{~d} x,
+		$$
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}
+	\frametitle{分部积分法的应用类型I}
+	\framesubtitle{对$u(x)$ 求导降低它的复杂程度, 而 $v^{\prime}(x)$ 与 $v(x)$ 复杂程度相当。}
+	\everymath{\displaystyle}
+	\begin{exampleblock}{$\color{black}\int x^2 \mathrm{e}^x \mathrm{~d} x$}
+		将 $x^2$ 视作 $u(x)$, $\mathrm{e}^x$ 视作 $v^{\prime}(x)$, 则 $u^{\prime}(x)=2 x$, $v(x)=\mathrm{e}^x$, 代入分部积分公式,
+		$$
+			\int x^2 \mathrm{e}^x \mathrm{~d} x=\int x^2 \mathrm{~d}\left(\mathrm{e}^x\right)=x^2 \mathrm{e}^x-\int \mathrm{e}^x \mathrm{~d}\left(x^2\right)=x^2 \mathrm{e}^x-2 \int x \mathrm{e}^x \mathrm{~d} x.
+		$$
+		对后一项再用一次分部积分,
+		$$
+			\int x \mathrm{e}^x \mathrm{~d} x=\int x \mathrm{~d}\left(\mathrm{e}^x\right)=x \mathrm{e}^x-\int \mathrm{e}^x \mathrm{~d} x=x \mathrm{e}^x-\mathrm{e}^x+C,
+		$$
+		于是
+		$$
+			\int x^2 \mathrm{e}^x \mathrm{~d} x=\mathrm{e}^x\left(x^2-2 x+2\right)+C.
+		$$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\frametitle{分部积分法的应用类型I}
+	\framesubtitle{对$u(x)$ 求导降低它的复杂程度, 而 $v^{\prime}(x)$ 与 $v(x)$ 复杂程度相当。}
+	\everymath{\displaystyle}
+	\begin{block}{}
+		\begin{columns}[onlytextwidth]
+			\begin{column}{0.5\textwidth}
+				\begin{enumerate}
+					\item $\int x \mathrm{e}^{2 x} \mathrm{~d} x$;
+					\item $\int x \ln (x-1) \mathrm{~d} x$;
+				\end{enumerate}
+			\end{column}
+			\begin{column}{0.5\textwidth}
+				\begin{enumerate}
+					\setcounter{enumi}{2}
+					\item $\int x^2 \sin 3 x \mathrm{~d} x$;
+					\item $\int \frac{x}{\sin ^2 x} \mathrm{~d} x$;
+				\end{enumerate}
+			\end{column}
+		\end{columns}
+	\end{block}
+	\pause
+	\begin{exampleblock}{}
+		\begin{columns}[onlytextwidth]
+			\begin{column}{0.5\textwidth}
+				\begin{enumerate}
+					\item $\left(-\frac{1}{4}+\frac{1}{2}x\right)e^{2x}+C$;
+					\item $-\frac{x}{2}\left(1+\frac{x}{2}\right)+\frac{1}{2}\left(x^2-1\right)\ln(x-1)+C$;
+				\end{enumerate}
+			\end{column}
+			\begin{column}{0.5\textwidth}
+				\begin{enumerate}
+					\setcounter{enumi}{2}
+					\item $-\frac{1}{27} \left(9 x^2-2\right) \cos (3 x)+\frac{2}{9} x \sin (3 x)+C$;
+					\item $-x\cot x+\ln|\sin x|+C$.
+				\end{enumerate}
+			\end{column}
+		\end{columns}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\frametitle{分部积分法的应用类型II}
+	\framesubtitle{对 $u(x)$ 求导使得它的类型与 $v(x)$ 的类型相同或相近, 然后将它们作为一个统一的形式来处理}
+	\everymath{\displaystyle}
+	\begin{exampleblock}{$\color{black}\int \ln x \mathrm{~d} x$}
+		$$
+			\int \ln x \mathrm{~d} x=x \ln x-\int x \cdot \frac{1}{x} \mathrm{~d} x=x(\ln x-1)+C.
+		$$
+	\end{exampleblock}
+	\begin{exampleblock}{$\color{black}\int x \arctan x \mathrm{~d} x$}
+		$$
+			\begin{aligned}
+				\int x \arctan x \mathrm{~d} x & =\frac{x^2}{2} \arctan x-\frac{1}{2} \int \frac{x^2}{1+x^2} \mathrm{~d} x             \\
+				                               & =\frac{x^2}{2} \arctan x-\frac{1}{2} \int\left(1-\frac{1}{1+x^2}\right) \mathrm{~d} x \\
+				                               & =\frac{1+x^2}{2} \arctan x-\frac{x}{2}+C.
+			\end{aligned}
+		$$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\frametitle{分部积分法的应用类型II}
+	\framesubtitle{对 $u(x)$ 求导使得它的类型与 $v(x)$ 的类型相同或相近, 然后将它们作为一个统一的形式来处理}
+	\everymath{\displaystyle}
+	{\small
+		\begin{exampleblock}{$\color{black}\int  \arctan x \mathrm{~d} x$}
+			$$
+				\begin{aligned}
+					\int  \arctan x \mathrm{~d} x & =x \arctan x- \int \frac{x}{1+x^2} \mathrm{~d} x                  \\
+					                              & = x \arctan x-\frac{1}{2} \int\frac{1}{1+x^2} \mathrm{~d} (x^2+1) \\
+					                              & = x \arctan x-\frac{1}{2}\ln\left(x^2+1\right)+C.
+				\end{aligned}
+			$$
+		\end{exampleblock}
+		\begin{exampleblock}{$\color{black}\int \frac{x}{1+\cos x} \mathrm{~d} x$}
+			$$
+				\begin{aligned}
+					\int \frac{x}{1+\cos x} \mathrm{~d} x & =\int \frac{x}{2 \cos ^2 \frac{x}{2}} \mathrm{~d} x=\int x \mathrm{~d} \tan \frac{x}{2} \\
+					                                      & =x \tan \frac{x}{2}-\int \tan \frac{x}{2} \mathrm{~d} x                                 \\
+					                                      & =x \tan \frac{x}{2}+2 \ln \left|\cos \frac{x}{2}\right|+C.
+				\end{aligned}
+			$$
+		\end{exampleblock}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{分部积分法的应用类型III}
+	\framesubtitle{通过若干次分部积分使等式右边也产生 $\int u(x) \cdot v^{\prime}(x) \mathrm{~d} x$ 的项, 只要它的系数不为 $1$, 解方程}
+	\everymath{\displaystyle}
+	\begin{exampleblock}{$\color{black}\int \mathrm{e}^x \sin x \mathrm{~d} x$}
+		利用两次分部积分公式, 可以得到
+		$$
+			\int \mathrm{e}^x \sin x \mathrm{~d} x=\mathrm{e}^x \sin x-\int \mathrm{e}^x \cos x \mathrm{~d} x=\mathrm{e}^x \sin x-\mathrm{e}^x \cos x-\int \mathrm{e}^x \sin x \mathrm{~d} x.
+		$$
+		因此,
+		$$
+			\int \mathrm{e}^x \sin x \mathrm{~d} x=\frac{\mathrm{e}^x(\sin x-\cos x)}{2}+C.
+		$$
+	\end{exampleblock}
+	同样地,
+	\begin{exampleblock}{}
+		$$
+			\int \mathrm{e}^x \cos x \mathrm{~d} x=\frac{\mathrm{e}^x(\sin x+\cos x)}{2}+C.
+		$$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\frametitle{分部积分法的应用类型III}
+	\framesubtitle{通过若干次分部积分使等式右边也产生 $\int u(x) \cdot v^{\prime}(x) \mathrm{~d} x$ 的项, 只要它的系数不为 $1$, 解方程}
+	\everymath{\displaystyle}
+	{\small
+		\begin{exampleblock}{$\color{black}\int \sqrt{x^2+a^2} \mathrm{~d} x$}
+			利用两次分部积分公式, 可以得到
+			$$
+				\begin{aligned}
+					\int \sqrt{x^2+a^2} \mathrm{~d} x & =x \sqrt{x^2+a^2}-\int \frac{x^2}{\sqrt{x^2+a^2}} \mathrm{~d} x                                   \\
+					                                  & =x \sqrt{x^2+a^2}-\int \frac{x^2+a^2-a^2}{\sqrt{x^2+a^2}} \mathrm{~d} x                           \\
+					                                  & =x \sqrt{x^2+a^2}+\int \frac{a^2}{\sqrt{x^2+a^2}} \mathrm{~d} x-\int \sqrt{x^2+a^2} \mathrm{~d} x \\
+					                                  & =\frac{1}{2}\left(x \sqrt{x^2+a^2}+a^2 \ln \left|x+\sqrt{x^2+a^2}\right|\right)+C.
+				\end{aligned}
+			$$
+			因此,
+			$$
+				\int \sqrt{x^2+a^2} \mathrm{~d} x=\frac{1}{2}\left(x \sqrt{x^2+a^2}+a^2 \ln \left|x+\sqrt{x^2+a^2}\right|\right)+C.
+			$$
+		\end{exampleblock}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{分部积分法的应用类型I}
+	\framesubtitle{对$u(x)$ 求导降低它的复杂程度, 而 $v^{\prime}(x)$ 与 $v(x)$ 复杂程度相当。}
+	\everymath{\displaystyle}
+	\begin{block}{}
+		\begin{columns}[onlytextwidth]
+			\begin{column}{0.5\textwidth}
+				\begin{enumerate}
+					\item $\int \mathrm{e}^{-x} \sin 5 x \mathrm{~d} x$;
+					\item $\int \mathrm{e}^x \sin ^2 x \mathrm{~d} x$;
+				\end{enumerate}
+			\end{column}
+			\begin{column}{0.5\textwidth}
+				\begin{enumerate}
+					\setcounter{enumi}{2}
+					\item $\int \cos (\ln x) \mathrm{~d} x$;
+					\item $\int \sec ^3 x \mathrm{~d} x$.
+				\end{enumerate}
+			\end{column}
+		\end{columns}
+	\end{block}
+	\begin{exampleblock}{}
+		\begin{enumerate}
+			\item $-\frac{1}{26}e^{-x}\left(\sin 5x +5\cos 5x\right)+C$;
+			\item $\frac{1}{5}e^{x}\left(\sin^2x -2\sin x\cos x+2\right)+C$;
+			\item $\frac12x\left(\cos(\ln x)+\sin(\ln x)\right)+C$;
+			\item $\frac{1}{2}(\sec x \tan x+\ln |\sec x+\tan x|)+C$.
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\frametitle{分部积分法的应用类型IV}
+	\framesubtitle{对某些形如 $\int f^n(x) \mathrm{~d} x$ 的不定积分, 利用分部积分法降低幂指数, 导出递推公式}
+	\everymath{\displaystyle}
+	{\small
+		\begin{exampleblock}{$\color{black}I_n=\int \frac{\mathrm{~d} x}{\left(x^2+a^2\right)^n}$}
+			Case $n=1$:
+			$$
+				I_1=\int \frac{\mathrm{~d} x}{x^2+a^2}=\frac{1}{a} \arctan \frac{x}{a}+C
+			$$
+			Case $n\ge2$:
+			$$
+				I_n=\int \frac{\mathrm{~d} x}{\left(x^2+a^2\right)^n}=\frac{1}{a^2} \int \frac{x^2+a^2-x^2}{\left(x^2+a^2\right)^n} \mathrm{~d} x=\frac{I_{n-1}}{a^2}+\frac{1}{a^2} \int \frac{-x^2}{\left(x^2+a^2\right)^n} \mathrm{~d} x
+			$$
+			对最后一项用分部积分,
+			$$
+				\begin{aligned}
+					I_n & =\frac{I_{n-1}}{a^2}+\frac{1}{2 a^2(n-1)} \int x \mathrm{~d}\left[\frac{1}{\left(x^2+a^2\right)^{n-1}}\right] \\
+					    & =\frac{I_{n-1}}{a^2}+\frac{1}{2 a^2(n-1)} \frac{x}{\left(x^2+a^2\right)^{n-1}}-\frac{I_{n-1}}{2 a^2(n-1)}     \\
+					    & =\frac{2 n-3}{2 a^2(n-1)} I_{n-1}+\frac{1}{2 a^2(n-1)} \cdot \frac{x}{\left(x^2+a^2\right)^{n-1}}.
+				\end{aligned}
+			$$
+		\end{exampleblock}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{分部积分法的应用类型IV}
+	\framesubtitle{对某些形如 $\int f^n(x) \mathrm{~d} x$ 的不定积分, 利用分部积分法降低幂指数, 导出递推公式}
+	\everymath{\displaystyle}
+	{\small
+		\begin{exampleblock}{$\color{black}I_n=\int \sin^n x\mathrm{~d} x$}
+			Case $n=1$:
+			$$
+				I_1=\int \sin x\mathrm{~d}x = -\cos x+C.
+			$$
+			Case $n=2$:
+			$$
+				I_2=-\int\sin x\mathrm{~d}\cos x =-\sin x\cos x+ \int 1-\sin^2x\mathrm{~d}x=-\sin x\cos x+x -I_2.
+			$$
+			也就是说, $I_2=\frac{1}{2}\left(-\sin x\cos x +x\right)$. Case $n\ge3$:
+			$$
+				\begin{aligned}
+					I_n & =-\int\sin ^{n-1}\mathrm{~d}\cos x  =-\sin^{n-1}x\cos x+(n-1)\int \sin^{n-2}\cos^2x\mathrm{~d}x \\
+					    & =-\sin^{n-1}x\cos x+(n-1)I_{n-2}-(n-1)I_{n}                                                     \\
+					    & =\frac{1}{n}\left(-\sin^{n-1}x\cos x +(n-1)I_{n-2}\right).
+				\end{aligned}
+			$$
+		\end{exampleblock}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{分部积分法的应用类型IV}
+	\framesubtitle{对某些形如 $\int f^n(x) \mathrm{~d} x$ 的不定积分, 利用分部积分法降低幂指数, 导出递推公式}
+	\everymath{\displaystyle}
+	{\small
+		\begin{exampleblock}{$\color{black}I_n=\int \sin^n x\mathrm{~d} x$}
+			递推公式为
+			$$
+				\left\{
+				\begin{aligned}
+					I_1 & =\int \sin x\mathrm{~d}x = -\cos x+C                                          \\
+					I_2 & =\frac{1}{2}\left(-\sin x\cos x +x\right)                                     \\
+					I_n & =\frac{1}{n}\left(-\sin^{n-1}x\cos x +(n-1)I_{n-2}\right)\,\,\,\,\,\,(n\ge3).
+				\end{aligned}
+				\right.
+			$$
+		\end{exampleblock}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{分部积分法的应用类型I}
+	\framesubtitle{对$u(x)$ 求导降低它的复杂程度, 而 $v^{\prime}(x)$ 与 $v(x)$ 复杂程度相当。}
+	\everymath{\displaystyle}
+	\begin{block}{}
+		\begin{columns}[onlytextwidth]
+			\begin{column}{0.5\textwidth}
+				\begin{enumerate}
+					\item $I_n=\int \frac{\mathrm{d} x}{\cos ^n x}$;
+				\end{enumerate}
+			\end{column}
+			\begin{column}{0.5\textwidth}
+				\begin{enumerate}
+					\setcounter{enumi}{1}
+					\item $I_n=\int x^a \ln ^n x \mathrm{~d} x \quad(\alpha \neq-1)$.
+				\end{enumerate}
+			\end{column}
+		\end{columns}
+	\end{block}
+	\begin{exampleblock}{}
+		\begin{enumerate}
+			\item 递推公式为
+			      $$
+				      \left\{
+				      \begin{aligned}
+					      I_1 & =\ln\left|\sec x+\tan x\right|+C;                       \\
+					      I_2 & =\tan x+C;                                              \\
+					      I_n & =\frac{1}{n-1}\sec^{n-2}x\tan x+\frac{n-2}{n-1}I_{n-2}.
+				      \end{aligned}
+				      \right.
+			      $$
+			\item 递推公式为
+			      $$
+				      \left\{
+				      \begin{aligned}
+					      I_0 & =\frac{1}{a+1}x^{a+1}+C;                                        \\
+					      I_n & =\frac{1}{a+1}x^{a+1}\left(\ln x\right)^n-\frac{n}{a+1}I_{n-1}.
+				      \end{aligned}
+				      \right.
+			      $$
+		\end{enumerate}
+	\end{exampleblock}
 \end{frame}
 
 % Thank you page
