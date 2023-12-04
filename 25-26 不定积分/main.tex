@@ -313,7 +313,7 @@ aspectratio=43,
 				            $$
 				      \item \pause 不定积分的和差法则:
 				            $$
-					            \int(ku'+lv')\mathrm{~d}x=\int\mathrm{~d}(ku+ lv) = \int k\mathrm{~d}u + l\mathrm{~d}v=k\int u'\mathrm{~d}x+l\int v'\mathrm{~d}x.
+					            \int(ku'+lv')\mathrm{d}x=\int\mathrm{d}(ku+ lv) = \int k\mathrm{d}u + l\mathrm{d}v=k\int u'\mathrm{d}x+l\int v'\mathrm{d}x.
 				            $$
 			      \end{itemize}
 			      \pause
@@ -922,6 +922,7 @@ aspectratio=43,
 \begin{frame}
 	\frametitle{}
 	\everymath{\displaystyle}
+	{\small
 	\begin{exampleblock}{}
 		$$
 			\begin{aligned}
@@ -955,6 +956,7 @@ aspectratio=43,
 
 		\qed
 	\end{exampleblock}
+}
 \end{frame}
 
 \begin{frame}
@@ -1121,34 +1123,38 @@ aspectratio=43,
 			\int u(x)v'(x)\mathrm{~d} x = uv - \int u'(x)v(x)\mathrm{~d} x.
 		$$
 	\end{block}
+	\pause 
+	{\small
 	\begin{exampleblock}{$\color{black}\int x \cos x \mathrm{~d} x$}
 		将 $x$ 视作 $u(x)$, $\cos x$ 视作 $v^{\prime}(x)$, 则 $u^{\prime}(x)=1, v(x)=\sin x$,
 		$$
-			\int x \cos x \mathrm{~d} x  =\int x \mathrm{~d}(\sin x)  =x \sin x-\int \sin x \mathrm{~d} x=x \sin x+\cos x+C.
+			\int x \cos x \mathrm{~d} x  =\pause \int x \mathrm{~d}(\sin x)  =\pause x \sin x-\int \sin x \mathrm{~d} x=\pause x \sin x+\cos x+C.
 		$$
 	\end{exampleblock}
+	\pause 
 	\begin{alertblock}{$\color{black}\int x \cos x \mathrm{~d} x$, {\color{black}另个选择会更复杂}}
 		若将 $x$ 视作 $v^{\prime}(x)$, $\cos x$ 视作 $u(x)$, 则 $u^{\prime}(x)=\sin x, v(x)=\frac{1}{2}x^2$,
 		$$
 			\int x \cos x \mathrm{~d} x=\int \cos x \mathrm{~d}\left(\frac{x^2}{2}\right)=\frac{x^2}{2} \cos x-\int \frac{x^2}{2}(-\sin x) \mathrm{~d} x,
 		$$
 	\end{alertblock}
+}
 \end{frame}
 
 \begin{frame}
 	\frametitle{分部积分法的应用类型I}
-	\framesubtitle{对$u(x)$ 求导降低它的复杂程度, 而 $v^{\prime}(x)$ 与 $v(x)$ 复杂程度相当。}
+	\framesubtitle{对$u(x)$ 求导降低它的复杂程度, 而 $v^{\prime}(x)$ 与 $v(x)$ 复杂程度相当. }
 	\everymath{\displaystyle}
 	\begin{exampleblock}{$\color{black}\int x^2 \mathrm{e}^x \mathrm{~d} x$}
-		将 $x^2$ 视作 $u(x)$, $\mathrm{e}^x$ 视作 $v^{\prime}(x)$, 则 $u^{\prime}(x)=2 x$, $v(x)=\mathrm{e}^x$, 代入分部积分公式,
+		\pause 将 $x^2$ 视作 $u(x)$, $\mathrm{e}^x$ 视作 $v^{\prime}(x)$, \pause 则 $u^{\prime}(x)=2 x$, $v(x)=\mathrm{e}^x$, 代入分部积分公式,
 		$$
 			\int x^2 \mathrm{e}^x \mathrm{~d} x=\int x^2 \mathrm{~d}\left(\mathrm{e}^x\right)=x^2 \mathrm{e}^x-\int \mathrm{e}^x \mathrm{~d}\left(x^2\right)=x^2 \mathrm{e}^x-2 \int x \mathrm{e}^x \mathrm{~d} x.
 		$$
-		对后一项再用一次分部积分,
+		\pause 对后一项再用一次分部积分,
 		$$
 			\int x \mathrm{e}^x \mathrm{~d} x=\int x \mathrm{~d}\left(\mathrm{e}^x\right)=x \mathrm{e}^x-\int \mathrm{e}^x \mathrm{~d} x=x \mathrm{e}^x-\mathrm{e}^x+C,
 		$$
-		于是
+		\pause 于是
 		$$
 			\int x^2 \mathrm{e}^x \mathrm{~d} x=\mathrm{e}^x\left(x^2-2 x+2\right)+C.
 		$$
@@ -1157,7 +1163,7 @@ aspectratio=43,
 
 \begin{frame}
 	\frametitle{分部积分法的应用类型I}
-	\framesubtitle{对$u(x)$ 求导降低它的复杂程度, 而 $v^{\prime}(x)$ 与 $v(x)$ 复杂程度相当。}
+	\framesubtitle{对$u(x)$ 求导降低它的复杂程度, 而 $v^{\prime}(x)$ 与 $v(x)$ 复杂程度相当. }
 	\everymath{\displaystyle}
 	\begin{block}{}
 		\begin{columns}[onlytextwidth]
@@ -1181,15 +1187,15 @@ aspectratio=43,
 		\begin{columns}[onlytextwidth]
 			\begin{column}{0.5\textwidth}
 				\begin{enumerate}
-					\item $\left(-\frac{1}{4}+\frac{1}{2}x\right)e^{2x}+C$;
-					\item $-\frac{x}{2}\left(1+\frac{x}{2}\right)+\frac{1}{2}\left(x^2-1\right)\ln(x-1)+C$;
+					\pause \item $\left(-\frac{1}{4}+\frac{1}{2}x\right)e^{2x}+C$;
+					\pause \item $-\frac{x}{2}\left(1+\frac{x}{2}\right)+\frac{1}{2}\left(x^2-1\right)\ln(x-1)+C$;
 				\end{enumerate}
 			\end{column}
 			\begin{column}{0.5\textwidth}
 				\begin{enumerate}
 					\setcounter{enumi}{2}
-					\item $-\frac{1}{27} \left(9 x^2-2\right) \cos (3 x)+\frac{2}{9} x \sin (3 x)+C$;
-					\item $-x\cot x+\ln|\sin x|+C$.
+					\pause \item $-\frac{1}{27} \left(9 x^2-2\right) \cos (3 x)+\frac{2}{9} x \sin (3 x)+C$;
+					\pause \item $-x\cot x+\ln|\sin x|+C$.
 				\end{enumerate}
 			\end{column}
 		\end{columns}
@@ -1202,15 +1208,17 @@ aspectratio=43,
 	\everymath{\displaystyle}
 	\begin{exampleblock}{$\color{black}\int \ln x \mathrm{~d} x$}
 		$$
-			\int \ln x \mathrm{~d} x=x \ln x-\int x \cdot \frac{1}{x} \mathrm{~d} x=x(\ln x-1)+C.
+		\pause \int \ln x \mathrm{~d} x=x \ln x-\int x \cdot \frac{1}{x} \mathrm{~d} x=x(\ln x-1)+C.
 		$$
 	\end{exampleblock}
+	\pause 
 	\begin{exampleblock}{$\color{black}\int x \arctan x \mathrm{~d} x$}
+		\pause 
 		$$
-			\begin{aligned}
+		\begin{aligned}
 				\int x \arctan x \mathrm{~d} x & =\frac{x^2}{2} \arctan x-\frac{1}{2} \int \frac{x^2}{1+x^2} \mathrm{~d} x             \\
-				                               & =\frac{x^2}{2} \arctan x-\frac{1}{2} \int\left(1-\frac{1}{1+x^2}\right) \mathrm{~d} x \\
-				                               & =\frac{1+x^2}{2} \arctan x-\frac{x}{2}+C.
+				                               & \pause =\frac{x^2}{2} \arctan x-\frac{1}{2} \int\left(1-\frac{1}{1+x^2}\right) \mathrm{~d} x \\
+				                               & \pause =\frac{1+x^2}{2} \arctan x-\frac{x}{2}+C.
 			\end{aligned}
 		$$
 	\end{exampleblock}
@@ -1222,20 +1230,22 @@ aspectratio=43,
 	\everymath{\displaystyle}
 	{\small
 		\begin{exampleblock}{$\color{black}\int  \arctan x \mathrm{~d} x$}
+			\pause 
 			$$
 				\begin{aligned}
 					\int  \arctan x \mathrm{~d} x & =x \arctan x- \int \frac{x}{1+x^2} \mathrm{~d} x                  \\
-					                              & = x \arctan x-\frac{1}{2} \int\frac{1}{1+x^2} \mathrm{~d} (x^2+1) \\
-					                              & = x \arctan x-\frac{1}{2}\ln\left(x^2+1\right)+C.
+					                              & \pause = x \arctan x-\frac{1}{2} \int\frac{1}{1+x^2} \mathrm{~d} (x^2+1) \\
+					                              & \pause = x \arctan x-\frac{1}{2}\ln\left(x^2+1\right)+C.
 				\end{aligned}
 			$$
 		\end{exampleblock}
 		\begin{exampleblock}{$\color{black}\int \frac{x}{1+\cos x} \mathrm{~d} x$}
+			\pause 
 			$$
 				\begin{aligned}
-					\int \frac{x}{1+\cos x} \mathrm{~d} x & =\int \frac{x}{2 \cos ^2 \frac{x}{2}} \mathrm{~d} x=\int x \mathrm{~d} \tan \frac{x}{2} \\
-					                                      & =x \tan \frac{x}{2}-\int \tan \frac{x}{2} \mathrm{~d} x                                 \\
-					                                      & =x \tan \frac{x}{2}+2 \ln \left|\cos \frac{x}{2}\right|+C.
+					\int \frac{x}{1+\cos x} \mathrm{~d} x & \pause =\int \frac{x}{2 \cos ^2 \frac{x}{2}} \mathrm{~d} x\pause =\int x \mathrm{~d} \tan \frac{x}{2} \\
+					                                      & \pause =x \tan \frac{x}{2}-\int \tan \frac{x}{2} \mathrm{~d} x                                 \\
+					                                      & \pause =x \tan \frac{x}{2}+2 \ln \left|\cos \frac{x}{2}\right|+C.
 				\end{aligned}
 			$$
 		\end{exampleblock}
@@ -1247,16 +1257,16 @@ aspectratio=43,
 	\framesubtitle{通过若干次分部积分使等式右边也产生 $\int u(x) \cdot v^{\prime}(x) \mathrm{~d} x$ 的项, 只要它的系数不为 $1$, 解方程}
 	\everymath{\displaystyle}
 	\begin{exampleblock}{$\color{black}\int \mathrm{e}^x \sin x \mathrm{~d} x$}
-		利用两次分部积分公式, 可以得到
+		\pause 利用两次分部积分公式, 可以得到 \pause 
 		$$
-			\int \mathrm{e}^x \sin x \mathrm{~d} x=\mathrm{e}^x \sin x-\int \mathrm{e}^x \cos x \mathrm{~d} x=\mathrm{e}^x \sin x-\mathrm{e}^x \cos x-\int \mathrm{e}^x \sin x \mathrm{~d} x.
+			\int \mathrm{e}^x \sin x \mathrm{~d} x\pause =\mathrm{e}^x \sin x-\int \mathrm{e}^x \cos x \mathrm{~d} x\pause =\mathrm{e}^x \sin x-\mathrm{e}^x \cos x-\int \mathrm{e}^x \sin x \mathrm{~d} x.
 		$$
-		因此,
+		\pause 因此,
 		$$
 			\int \mathrm{e}^x \sin x \mathrm{~d} x=\frac{\mathrm{e}^x(\sin x-\cos x)}{2}+C.
 		$$
 	\end{exampleblock}
-	同样地,
+	\pause 同样地,\pause 
 	\begin{exampleblock}{}
 		$$
 			\int \mathrm{e}^x \cos x \mathrm{~d} x=\frac{\mathrm{e}^x(\sin x+\cos x)}{2}+C.
@@ -1270,16 +1280,16 @@ aspectratio=43,
 	\everymath{\displaystyle}
 	{\small
 		\begin{exampleblock}{$\color{black}\int \sqrt{x^2+a^2} \mathrm{~d} x$}
-			利用两次分部积分公式, 可以得到
+			\pause 利用两次分部积分公式, 可以得到
 			$$
 				\begin{aligned}
 					\int \sqrt{x^2+a^2} \mathrm{~d} x & =x \sqrt{x^2+a^2}-\int \frac{x^2}{\sqrt{x^2+a^2}} \mathrm{~d} x                                   \\
-					                                  & =x \sqrt{x^2+a^2}-\int \frac{x^2+a^2-a^2}{\sqrt{x^2+a^2}} \mathrm{~d} x                           \\
-					                                  & =x \sqrt{x^2+a^2}+\int \frac{a^2}{\sqrt{x^2+a^2}} \mathrm{~d} x-\int \sqrt{x^2+a^2} \mathrm{~d} x \\
-					                                  & =\frac{1}{2}\left(x \sqrt{x^2+a^2}+a^2 \ln \left|x+\sqrt{x^2+a^2}\right|\right)+C.
+					                                  & \pause =x \sqrt{x^2+a^2}-\int \frac{x^2+a^2-a^2}{\sqrt{x^2+a^2}} \mathrm{~d} x                           \\
+					                                  & \pause =x \sqrt{x^2+a^2}+\int \frac{a^2}{\sqrt{x^2+a^2}} \mathrm{~d} x-\int \sqrt{x^2+a^2} \mathrm{~d} x \\
+					                                  & \pause =\frac{1}{2}\left(x \sqrt{x^2+a^2}+a^2 \ln \left|x+\sqrt{x^2+a^2}\right|\right)+C.
 				\end{aligned}
 			$$
-			因此,
+			\pause 因此,
 			$$
 				\int \sqrt{x^2+a^2} \mathrm{~d} x=\frac{1}{2}\left(x \sqrt{x^2+a^2}+a^2 \ln \left|x+\sqrt{x^2+a^2}\right|\right)+C.
 			$$
@@ -1289,7 +1299,7 @@ aspectratio=43,
 
 \begin{frame}
 	\frametitle{分部积分法的应用类型I}
-	\framesubtitle{对$u(x)$ 求导降低它的复杂程度, 而 $v^{\prime}(x)$ 与 $v(x)$ 复杂程度相当。}
+	\framesubtitle{对$u(x)$ 求导降低它的复杂程度, 而 $v^{\prime}(x)$ 与 $v(x)$ 复杂程度相当. }
 	\everymath{\displaystyle}
 	\begin{block}{}
 		\begin{columns}[onlytextwidth]
@@ -1310,10 +1320,10 @@ aspectratio=43,
 	\end{block}
 	\begin{exampleblock}{}
 		\begin{enumerate}
-			\item $-\frac{1}{26}e^{-x}\left(\sin 5x +5\cos 5x\right)+C$;
-			\item $\frac{1}{5}e^{x}\left(\sin^2x -2\sin x\cos x+2\right)+C$;
-			\item $\frac12x\left(\cos(\ln x)+\sin(\ln x)\right)+C$;
-			\item $\frac{1}{2}(\sec x \tan x+\ln |\sec x+\tan x|)+C$.
+			\pause \item $-\frac{1}{26}e^{-x}\left(\sin 5x +5\cos 5x\right)+C$;
+			\pause \item $\frac{1}{5}e^{x}\left(\sin^2x -2\sin x\cos x+2\right)+C$;
+			\pause \item $\frac12x\left(\cos(\ln x)+\sin(\ln x)\right)+C$;
+			\pause \item $\frac{1}{2}(\sec x \tan x+\ln |\sec x+\tan x|)+C$.
 		\end{enumerate}
 	\end{exampleblock}
 \end{frame}
@@ -1324,15 +1334,15 @@ aspectratio=43,
 	\everymath{\displaystyle}
 	{\small
 		\begin{exampleblock}{$\color{black}I_n=\int \frac{\mathrm{~d} x}{\left(x^2+a^2\right)^n}$}
-			Case $n=1$:
+			\pause Case $n=1$:\pause 
 			$$
 				I_1=\int \frac{\mathrm{~d} x}{x^2+a^2}=\frac{1}{a} \arctan \frac{x}{a}+C
 			$$
-			Case $n\ge2$:
+			\pause Case $n\ge2$:\pause 
 			$$
 				I_n=\int \frac{\mathrm{~d} x}{\left(x^2+a^2\right)^n}=\frac{1}{a^2} \int \frac{x^2+a^2-x^2}{\left(x^2+a^2\right)^n} \mathrm{~d} x=\frac{I_{n-1}}{a^2}+\frac{1}{a^2} \int \frac{-x^2}{\left(x^2+a^2\right)^n} \mathrm{~d} x
 			$$
-			对最后一项用分部积分,
+			\pause 对最后一项用分部积分,\pause 
 			$$
 				\begin{aligned}
 					I_n & =\frac{I_{n-1}}{a^2}+\frac{1}{2 a^2(n-1)} \int x \mathrm{~d}\left[\frac{1}{\left(x^2+a^2\right)^{n-1}}\right] \\
@@ -1350,20 +1360,20 @@ aspectratio=43,
 	\everymath{\displaystyle}
 	{\small
 		\begin{exampleblock}{$\color{black}I_n=\int \sin^n x\mathrm{~d} x$}
-			Case $n=1$:
+			\pause Case $n=1$:\pause 
 			$$
 				I_1=\int \sin x\mathrm{~d}x = -\cos x+C.
 			$$
-			Case $n=2$:
+			\pause Case $n=2$:\pause 
 			$$
 				I_2=-\int\sin x\mathrm{~d}\cos x =-\sin x\cos x+ \int 1-\sin^2x\mathrm{~d}x=-\sin x\cos x+x -I_2.
 			$$
-			也就是说, $I_2=\frac{1}{2}\left(-\sin x\cos x +x\right)$. Case $n\ge3$:
+			\pause 也就是说, $I_2=\frac{1}{2}\left(-\sin x\cos x +x\right)$. \pause Case $n\ge3$:\pause 
 			$$
 				\begin{aligned}
 					I_n & =-\int\sin ^{n-1}\mathrm{~d}\cos x  =-\sin^{n-1}x\cos x+(n-1)\int \sin^{n-2}\cos^2x\mathrm{~d}x \\
-					    & =-\sin^{n-1}x\cos x+(n-1)I_{n-2}-(n-1)I_{n}                                                     \\
-					    & =\frac{1}{n}\left(-\sin^{n-1}x\cos x +(n-1)I_{n-2}\right).
+					    & \pause =-\sin^{n-1}x\cos x+(n-1)I_{n-2}-(n-1)I_{n}                                                     \\
+					    & \pause =\frac{1}{n}\left(-\sin^{n-1}x\cos x +(n-1)I_{n-2}\right).
 				\end{aligned}
 			$$
 		\end{exampleblock}
@@ -1392,7 +1402,7 @@ aspectratio=43,
 
 \begin{frame}
 	\frametitle{分部积分法的应用类型I}
-	\framesubtitle{对$u(x)$ 求导降低它的复杂程度, 而 $v^{\prime}(x)$ 与 $v(x)$ 复杂程度相当。}
+	\framesubtitle{对$u(x)$ 求导降低它的复杂程度, 而 $v^{\prime}(x)$ 与 $v(x)$ 复杂程度相当. }
 	\everymath{\displaystyle}
 	\begin{block}{}
 		\begin{columns}[onlytextwidth]
@@ -1411,7 +1421,7 @@ aspectratio=43,
 	\end{block}
 	\begin{exampleblock}{}
 		\begin{enumerate}
-			\item 递推公式为
+			\pause \item 递推公式为
 			      $$
 				      \left\{
 				      \begin{aligned}
@@ -1421,7 +1431,7 @@ aspectratio=43,
 				      \end{aligned}
 				      \right.
 			      $$
-			\item 递推公式为
+				  \pause \item 递推公式为
 			      $$
 				      \left\{
 				      \begin{aligned}
