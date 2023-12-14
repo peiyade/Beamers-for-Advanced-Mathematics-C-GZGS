@@ -923,40 +923,40 @@ aspectratio=43,
 	\frametitle{}
 	\everymath{\displaystyle}
 	{\small
-	\begin{exampleblock}{}
-		$$
-			\begin{aligned}
-				 & \pause =\int\left[\left(1-\cos ^2 t\right) \cos ^{-1} t+3 \cos t\right][-\mathrm{~d}(\cos t)]+\int(2-\cos 2 t) \mathrm{~d} t \\
-				 & \pause =-\int\left(\cos ^{-1} t+2 \cos t\right) \mathrm{~d}(\cos t)+2 t-\frac{1}{2} \sin 2 t                                 \\
-				 & \pause =-\ln \cos t-\cos ^2 t+2 t-\sin t \cos t+C.
-			\end{aligned}
-		$$
-		\pause 回忆辅助三角形, 有
-		\begin{figure}
-			\centering
-			\begin{tikzpicture}[scale=0.65]
-				% 绘制直角三角形
-				\draw (0,0) -- (4,0) -- (0,3) -- cycle;
-				% 标记直角符号
-				\draw (0.3,0) -- (0.3,0.3) -- (0,0.3);
-				% 标记角度
-				\draw (3.6,0.2) arc (2:atan(3/4):0) node[midway,left] {$t$};
-				% 标记边长
-				\draw (2,0) node[below] {$1$};
-				\draw (0,1.5) node[left] {$x-1$};
-				\draw (2,1.5) node[right] {$\sqrt{(x-1)^2+1}$};
-			\end{tikzpicture}
-		\end{figure}
-		\pause 因此
-		$$
-			\cos t=\frac{1}{\sqrt{x^2-2 x+2}}, \sin t=\frac{x-1}{\sqrt{x^2-2 x+2}},
-		$$
-		\pause
-		{\small $\color{black}\int \frac{x^3}{\left(x^2-2 x+2\right)^2} \mathrm{~d} x=\frac{1}{2} \ln \left(x^2-2 x+2\right)+2 \arctan (x-1)-\frac{x}{x^2-2 x+2}+C.$}
+		\begin{exampleblock}{}
+			$$
+				\begin{aligned}
+					 & \pause =\int\left[\left(1-\cos ^2 t\right) \cos ^{-1} t+3 \cos t\right][-\mathrm{~d}(\cos t)]+\int(2-\cos 2 t) \mathrm{~d} t \\
+					 & \pause =-\int\left(\cos ^{-1} t+2 \cos t\right) \mathrm{~d}(\cos t)+2 t-\frac{1}{2} \sin 2 t                                 \\
+					 & \pause =-\ln \cos t-\cos ^2 t+2 t-\sin t \cos t+C.
+				\end{aligned}
+			$$
+			\pause 回忆辅助三角形, 有
+			\begin{figure}
+				\centering
+				\begin{tikzpicture}[scale=0.65]
+					% 绘制直角三角形
+					\draw (0,0) -- (4,0) -- (0,3) -- cycle;
+					% 标记直角符号
+					\draw (0.3,0) -- (0.3,0.3) -- (0,0.3);
+					% 标记角度
+					\draw (3.6,0.2) arc (2:atan(3/4):0) node[midway,left] {$t$};
+					% 标记边长
+					\draw (2,0) node[below] {$1$};
+					\draw (0,1.5) node[left] {$x-1$};
+					\draw (2,1.5) node[right] {$\sqrt{(x-1)^2+1}$};
+				\end{tikzpicture}
+			\end{figure}
+			\pause 因此
+			$$
+				\cos t=\frac{1}{\sqrt{x^2-2 x+2}}, \sin t=\frac{x-1}{\sqrt{x^2-2 x+2}},
+			$$
+			\pause
+			{\small $\color{black}\int \frac{x^3}{\left(x^2-2 x+2\right)^2} \mathrm{~d} x=\frac{1}{2} \ln \left(x^2-2 x+2\right)+2 \arctan (x-1)-\frac{x}{x^2-2 x+2}+C.$}
 
-		\qed
-	\end{exampleblock}
-}
+			\qed
+		\end{exampleblock}
+	}
 \end{frame}
 
 \begin{frame}
@@ -1123,22 +1123,22 @@ aspectratio=43,
 			\int u(x)v'(x)\mathrm{~d} x = uv - \int u'(x)v(x)\mathrm{~d} x.
 		$$
 	\end{block}
-	\pause 
+	\pause
 	{\small
-	\begin{exampleblock}{$\color{black}\int x \cos x \mathrm{~d} x$}
-		将 $x$ 视作 $u(x)$, $\cos x$ 视作 $v^{\prime}(x)$, 则 $u^{\prime}(x)=1, v(x)=\sin x$,
-		$$
-			\int x \cos x \mathrm{~d} x  =\pause \int x \mathrm{~d}(\sin x)  =\pause x \sin x-\int \sin x \mathrm{~d} x=\pause x \sin x+\cos x+C.
-		$$
-	\end{exampleblock}
-	\pause 
-	\begin{alertblock}{$\color{black}\int x \cos x \mathrm{~d} x$, {\color{black}另个选择会更复杂}}
-		若将 $x$ 视作 $v^{\prime}(x)$, $\cos x$ 视作 $u(x)$, 则 $u^{\prime}(x)=\sin x, v(x)=\frac{1}{2}x^2$,
-		$$
-			\int x \cos x \mathrm{~d} x=\int \cos x \mathrm{~d}\left(\frac{x^2}{2}\right)=\frac{x^2}{2} \cos x-\int \frac{x^2}{2}(-\sin x) \mathrm{~d} x,
-		$$
-	\end{alertblock}
-}
+		\begin{exampleblock}{$\color{black}\int x \cos x \mathrm{~d} x$}
+			将 $x$ 视作 $u(x)$, $\cos x$ 视作 $v^{\prime}(x)$, 则 $u^{\prime}(x)=1, v(x)=\sin x$,
+			$$
+				\int x \cos x \mathrm{~d} x  =\pause \int x \mathrm{~d}(\sin x)  =\pause x \sin x-\int \sin x \mathrm{~d} x=\pause x \sin x+\cos x+C.
+			$$
+		\end{exampleblock}
+		\pause
+		\begin{alertblock}{$\color{black}\int x \cos x \mathrm{~d} x$, {\color{black}另个选择会更复杂}}
+			若将 $x$ 视作 $v^{\prime}(x)$, $\cos x$ 视作 $u(x)$, 则 $u^{\prime}(x)=\sin x, v(x)=\frac{1}{2}x^2$,
+			$$
+				\int x \cos x \mathrm{~d} x=\int \cos x \mathrm{~d}\left(\frac{x^2}{2}\right)=\frac{x^2}{2} \cos x-\int \frac{x^2}{2}(-\sin x) \mathrm{~d} x,
+			$$
+		\end{alertblock}
+	}
 \end{frame}
 
 \begin{frame}
@@ -1188,14 +1188,14 @@ aspectratio=43,
 			\begin{column}{0.5\textwidth}
 				\begin{enumerate}
 					\pause \item $\left(-\frac{1}{4}+\frac{1}{2}x\right)e^{2x}+C$;
-					\pause \item $-\frac{x}{2}\left(1+\frac{x}{2}\right)+\frac{1}{2}\left(x^2-1\right)\ln(x-1)+C$;
+					      \pause \item $-\frac{x}{2}\left(1+\frac{x}{2}\right)+\frac{1}{2}\left(x^2-1\right)\ln(x-1)+C$;
 				\end{enumerate}
 			\end{column}
 			\begin{column}{0.5\textwidth}
 				\begin{enumerate}
 					\setcounter{enumi}{2}
 					\pause \item $-\frac{1}{27} \left(9 x^2-2\right) \cos (3 x)+\frac{2}{9} x \sin (3 x)+C$;
-					\pause \item $-x\cot x+\ln|\sin x|+C$.
+					      \pause \item $-x\cot x+\ln|\sin x|+C$.
 				\end{enumerate}
 			\end{column}
 		\end{columns}
@@ -1208,15 +1208,15 @@ aspectratio=43,
 	\everymath{\displaystyle}
 	\begin{exampleblock}{$\color{black}\int \ln x \mathrm{~d} x$}
 		$$
-		\pause \int \ln x \mathrm{~d} x=x \ln x-\int x \cdot \frac{1}{x} \mathrm{~d} x=x(\ln x-1)+C.
+			\pause \int \ln x \mathrm{~d} x=x \ln x-\int x \cdot \frac{1}{x} \mathrm{~d} x=x(\ln x-1)+C.
 		$$
 	\end{exampleblock}
-	\pause 
+	\pause
 	\begin{exampleblock}{$\color{black}\int x \arctan x \mathrm{~d} x$}
-		\pause 
+		\pause
 		$$
-		\begin{aligned}
-				\int x \arctan x \mathrm{~d} x & =\frac{x^2}{2} \arctan x-\frac{1}{2} \int \frac{x^2}{1+x^2} \mathrm{~d} x             \\
+			\begin{aligned}
+				\int x \arctan x \mathrm{~d} x & =\frac{x^2}{2} \arctan x-\frac{1}{2} \int \frac{x^2}{1+x^2} \mathrm{~d} x                    \\
 				                               & \pause =\frac{x^2}{2} \arctan x-\frac{1}{2} \int\left(1-\frac{1}{1+x^2}\right) \mathrm{~d} x \\
 				                               & \pause =\frac{1+x^2}{2} \arctan x-\frac{x}{2}+C.
 			\end{aligned}
@@ -1230,21 +1230,21 @@ aspectratio=43,
 	\everymath{\displaystyle}
 	{\small
 		\begin{exampleblock}{$\color{black}\int  \arctan x \mathrm{~d} x$}
-			\pause 
+			\pause
 			$$
 				\begin{aligned}
-					\int  \arctan x \mathrm{~d} x & =x \arctan x- \int \frac{x}{1+x^2} \mathrm{~d} x                  \\
+					\int  \arctan x \mathrm{~d} x & =x \arctan x- \int \frac{x}{1+x^2} \mathrm{~d} x                         \\
 					                              & \pause = x \arctan x-\frac{1}{2} \int\frac{1}{1+x^2} \mathrm{~d} (x^2+1) \\
 					                              & \pause = x \arctan x-\frac{1}{2}\ln\left(x^2+1\right)+C.
 				\end{aligned}
 			$$
 		\end{exampleblock}
 		\begin{exampleblock}{$\color{black}\int \frac{x}{1+\cos x} \mathrm{~d} x$}
-			\pause 
+			\pause
 			$$
 				\begin{aligned}
 					\int \frac{x}{1+\cos x} \mathrm{~d} x & \pause =\int \frac{x}{2 \cos ^2 \frac{x}{2}} \mathrm{~d} x\pause =\int x \mathrm{~d} \tan \frac{x}{2} \\
-					                                      & \pause =x \tan \frac{x}{2}-\int \tan \frac{x}{2} \mathrm{~d} x                                 \\
+					                                      & \pause =x \tan \frac{x}{2}-\int \tan \frac{x}{2} \mathrm{~d} x                                        \\
 					                                      & \pause =x \tan \frac{x}{2}+2 \ln \left|\cos \frac{x}{2}\right|+C.
 				\end{aligned}
 			$$
@@ -1257,7 +1257,7 @@ aspectratio=43,
 	\framesubtitle{通过若干次分部积分使等式右边也产生 $\int u(x) \cdot v^{\prime}(x) \mathrm{~d} x$ 的项, 只要它的系数不为 $1$, 解方程}
 	\everymath{\displaystyle}
 	\begin{exampleblock}{$\color{black}\int \mathrm{e}^x \sin x \mathrm{~d} x$}
-		\pause 利用两次分部积分公式, 可以得到 \pause 
+		\pause 利用两次分部积分公式, 可以得到 \pause
 		$$
 			\int \mathrm{e}^x \sin x \mathrm{~d} x\pause =\mathrm{e}^x \sin x-\int \mathrm{e}^x \cos x \mathrm{~d} x\pause =\mathrm{e}^x \sin x-\mathrm{e}^x \cos x-\int \mathrm{e}^x \sin x \mathrm{~d} x.
 		$$
@@ -1266,7 +1266,7 @@ aspectratio=43,
 			\int \mathrm{e}^x \sin x \mathrm{~d} x=\frac{\mathrm{e}^x(\sin x-\cos x)}{2}+C.
 		$$
 	\end{exampleblock}
-	\pause 同样地,\pause 
+	\pause 同样地,\pause
 	\begin{exampleblock}{}
 		$$
 			\int \mathrm{e}^x \cos x \mathrm{~d} x=\frac{\mathrm{e}^x(\sin x+\cos x)}{2}+C.
@@ -1283,7 +1283,7 @@ aspectratio=43,
 			\pause 利用两次分部积分公式, 可以得到
 			$$
 				\begin{aligned}
-					\int \sqrt{x^2+a^2} \mathrm{~d} x & =x \sqrt{x^2+a^2}-\int \frac{x^2}{\sqrt{x^2+a^2}} \mathrm{~d} x                                   \\
+					\int \sqrt{x^2+a^2} \mathrm{~d} x & =x \sqrt{x^2+a^2}-\int \frac{x^2}{\sqrt{x^2+a^2}} \mathrm{~d} x                                          \\
 					                                  & \pause =x \sqrt{x^2+a^2}-\int \frac{x^2+a^2-a^2}{\sqrt{x^2+a^2}} \mathrm{~d} x                           \\
 					                                  & \pause =x \sqrt{x^2+a^2}+\int \frac{a^2}{\sqrt{x^2+a^2}} \mathrm{~d} x-\int \sqrt{x^2+a^2} \mathrm{~d} x \\
 					                                  & \pause =\frac{1}{2}\left(x \sqrt{x^2+a^2}+a^2 \ln \left|x+\sqrt{x^2+a^2}\right|\right)+C.
@@ -1298,7 +1298,7 @@ aspectratio=43,
 \end{frame}
 
 \begin{frame}
-	\frametitle{分部积分法的应用类型I}
+	\frametitle{分部积分法的应用类型IV}
 	\framesubtitle{对$u(x)$ 求导降低它的复杂程度, 而 $v^{\prime}(x)$ 与 $v(x)$ 复杂程度相当. }
 	\everymath{\displaystyle}
 	\begin{block}{}
@@ -1321,9 +1321,9 @@ aspectratio=43,
 	\begin{exampleblock}{}
 		\begin{enumerate}
 			\pause \item $-\frac{1}{26}e^{-x}\left(\sin 5x +5\cos 5x\right)+C$;
-			\pause \item $\frac{1}{5}e^{x}\left(\sin^2x -2\sin x\cos x+2\right)+C$;
-			\pause \item $\frac12x\left(\cos(\ln x)+\sin(\ln x)\right)+C$;
-			\pause \item $\frac{1}{2}(\sec x \tan x+\ln |\sec x+\tan x|)+C$.
+			      \pause \item $\frac{1}{5}e^{x}\left(\sin^2x -2\sin x\cos x+2\right)+C$;
+			      \pause \item $\frac12x\left(\cos(\ln x)+\sin(\ln x)\right)+C$;
+			      \pause \item $\frac{1}{2}(\sec x \tan x+\ln |\sec x+\tan x|)+C$.
 		\end{enumerate}
 	\end{exampleblock}
 \end{frame}
@@ -1334,15 +1334,15 @@ aspectratio=43,
 	\everymath{\displaystyle}
 	{\small
 		\begin{exampleblock}{$\color{black}I_n=\int \frac{\mathrm{~d} x}{\left(x^2+a^2\right)^n}$}
-			\pause Case $n=1$:\pause 
+			\pause Case $n=1$:\pause
 			$$
 				I_1=\int \frac{\mathrm{~d} x}{x^2+a^2}=\frac{1}{a} \arctan \frac{x}{a}+C
 			$$
-			\pause Case $n\ge2$:\pause 
+			\pause Case $n\ge2$:\pause
 			$$
 				I_n=\int \frac{\mathrm{~d} x}{\left(x^2+a^2\right)^n}=\frac{1}{a^2} \int \frac{x^2+a^2-x^2}{\left(x^2+a^2\right)^n} \mathrm{~d} x=\frac{I_{n-1}}{a^2}+\frac{1}{a^2} \int \frac{-x^2}{\left(x^2+a^2\right)^n} \mathrm{~d} x
 			$$
-			\pause 对最后一项用分部积分,\pause 
+			\pause 对最后一项用分部积分,\pause
 			$$
 				\begin{aligned}
 					I_n & =\frac{I_{n-1}}{a^2}+\frac{1}{2 a^2(n-1)} \int x \mathrm{~d}\left[\frac{1}{\left(x^2+a^2\right)^{n-1}}\right] \\
@@ -1360,19 +1360,19 @@ aspectratio=43,
 	\everymath{\displaystyle}
 	{\small
 		\begin{exampleblock}{$\color{black}I_n=\int \sin^n x\mathrm{~d} x$}
-			\pause Case $n=1$:\pause 
+			\pause Case $n=1$:\pause
 			$$
 				I_1=\int \sin x\mathrm{~d}x = -\cos x+C.
 			$$
-			\pause Case $n=2$:\pause 
+			\pause Case $n=2$:\pause
 			$$
 				I_2=-\int\sin x\mathrm{~d}\cos x =-\sin x\cos x+ \int 1-\sin^2x\mathrm{~d}x=-\sin x\cos x+x -I_2.
 			$$
-			\pause 也就是说, $I_2=\frac{1}{2}\left(-\sin x\cos x +x\right)$. \pause Case $n\ge3$:\pause 
+			\pause 也就是说, $I_2=\frac{1}{2}\left(-\sin x\cos x +x\right)$. \pause Case $n\ge3$:\pause
 			$$
 				\begin{aligned}
 					I_n & =-\int\sin ^{n-1}\mathrm{~d}\cos x  =-\sin^{n-1}x\cos x+(n-1)\int \sin^{n-2}\cos^2x\mathrm{~d}x \\
-					    & \pause =-\sin^{n-1}x\cos x+(n-1)I_{n-2}-(n-1)I_{n}                                                     \\
+					    & \pause =-\sin^{n-1}x\cos x+(n-1)I_{n-2}-(n-1)I_{n}                                              \\
 					    & \pause =\frac{1}{n}\left(-\sin^{n-1}x\cos x +(n-1)I_{n-2}\right).
 				\end{aligned}
 			$$
@@ -1401,7 +1401,7 @@ aspectratio=43,
 \end{frame}
 
 \begin{frame}
-	\frametitle{分部积分法的应用类型I}
+	\frametitle{分部积分法的应用类型IV}
 	\framesubtitle{对$u(x)$ 求导降低它的复杂程度, 而 $v^{\prime}(x)$ 与 $v(x)$ 复杂程度相当. }
 	\everymath{\displaystyle}
 	\begin{block}{}
@@ -1431,7 +1431,7 @@ aspectratio=43,
 				      \end{aligned}
 				      \right.
 			      $$
-				  \pause \item 递推公式为
+			      \pause \item 递推公式为
 			      $$
 				      \left\{
 				      \begin{aligned}
@@ -1443,6 +1443,102 @@ aspectratio=43,
 		\end{enumerate}
 	\end{exampleblock}
 \end{frame}
+
+\section{有理函数积分法}
+
+\begin{frame}
+	\frametitle{有理函数积分法:分母为一次多项式}
+	\everymath{\displaystyle}
+	\pause
+	\begin{block}{有理分式,真分式,假分式}
+		如果 $f(x)=\frac{P(x)}{Q(x)}$ ，其中 $P(x)$ 和 $Q(x)$ 都是多项式, 则称 $f(x)$ 为有理分式.
+		\begin{enumerate}
+			\pause\item  如果 $P(x)$ 次数 $<Q(x)$ 次数, 则称它为真分式;
+			      \pause\item  如果 $P(x)$ 次数 $\geqslant Q(x)$ 次数, 则称它为假分式.
+		\end{enumerate}
+	\end{block}
+	\vspace{0.3cm}
+	\pause
+	\begin{block}{}
+		假分式 $=$ 多项式 + 真分式.
+	\end{block}
+	\pause
+	\begin{exampleblock}{求不定积分}
+		$\qquad\qquad\int \frac{x^2+3 x+7}{x+1} \mathrm{~d} x,\qquad\qquad\int \frac{x^3+2 x+4}{x-1}\mathrm{~d}x.$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\frametitle{有理函数积分法:分母为二次多项式}
+	\everymath{\displaystyle}
+	\pause
+	\begin{alertblock}{定义}
+		称一个多项式是不可约的, 如果它不能表示为两个非常数多项式的乘积.
+	\end{alertblock}
+	\pause
+	\begin{block}{分类}
+		若分母等于 $x^2+p x+q$, 其判别式为 $\Delta=p^2-4 q$,此时
+		\begin{enumerate}
+			\pause\item 若 $\Delta>0$, 则 $x^2+p x+q=(x+a)(x+b)$;
+			      \pause\item 若 $\Delta=0$, 则 $x^2+p x+q=(x+a)^2$;
+			      \pause\item 若 $\Delta<0$, 则 $x^2+p x+q$ 是不可约的.
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{有理函数积分法:分母为二次多项式}
+	\everymath{\displaystyle}
+	\pause
+	\begin{block}{分类}
+		若分母等于 $x^2+p x+q$, 其判别式为 $\Delta=p^2-4 q$,此时
+		\begin{enumerate}
+			\item<1-> 若 $\Delta>0$, 则
+				$$
+					\frac{r x+s}{x^2+p x+q}=\frac{A}{x+a}+\frac{B}{x+b};
+				$$
+			\item<2-> 若 $\Delta=0$, 则
+				$$
+					\frac{r x+s}{x^2+p x+q}=\frac{A}{x+a}+\frac{B}{(x+a)^2};
+				$$
+			\item<3-> 若 $\Delta<0$, 则
+				$$
+					\frac{r x+s}{x^2+p x+q}=\frac{A(2 x+p)}{x^2+p x+q}+\frac{B}{x^2+p x+q}.
+				$$
+		\end{enumerate}
+	\end{block}
+	\pause
+	\begin{exampleblock}{}
+		$\qquad\qquad\int \frac{2 x-1}{x^2-5 x+6}  \mathrm{~d} x,\qquad\qquad\int \frac{2 x+3}{x^2+2 x+1}\mathrm{~d}x.$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\frametitle{有理函数积分法: 分母为高次多项式}
+	\everymath{\displaystyle}
+	\pause
+	\begin{block}{定理}
+		设多项式 $Q(x)$ 不为常数, 则有因式分解
+		$$
+			Q(x)=Q_1(x)^{m_1} Q_2(x)^{m_2} \cdots Q_k(x)^{m_k} \text {, }
+		$$
+		其中各个 $Q_i(x)$ 是一次多项式或二次不可约多项式.
+	\end{block}
+	\pause
+	\begin{block}{定理}
+		假定上面任何两个 $Q_i(x)$ 都无公因式, 则有
+		$$
+			\frac{P(x)}{Q(x)}=\frac{P_1(x)}{Q_1(x)^{m_1}}+\frac{P_2(x)}{Q_2(x)^{m_2}} \cdots+\frac{P_k(x)}{Q_k(x)^{m_k}} .
+		$$
+		若等式左边为真分式，等式右边也可以都取为真分式.
+	\end{block}
+	\pause
+	\begin{exampleblock}{}
+		$\int \frac{x^2-x+2}{(x+1)^3}  \mathrm{~d} x,\quad\int \frac{x^2+2 x+3}{(x+1)\left(x^2+1\right)}\mathrm{~d}x,\quad\int \frac{1}{\left(x^2+1\right)^2}\mathrm{~d}x.$
+	\end{exampleblock}
+\end{frame}
+
+
 
 % Thank you page
 \beamertemplateshadingbackground{structure.fg!90}{structure.fg}

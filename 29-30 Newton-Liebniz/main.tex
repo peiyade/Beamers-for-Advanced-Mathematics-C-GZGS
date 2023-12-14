@@ -1,0 +1,191 @@
+% !TEX encoding = UTF-8 Unicode.
+
+% Based on https://github.com/Miracle0565/BUCT-Beamer-Theme
+
+\documentclass[
+10pt,
+aspectratio=43,
+]{beamer}
+\setbeamercovered{transparent=10}
+\usetheme[
+%  showheader,
+%  red,
+  purple,
+%  gray,
+%  graytitle,
+  colorblocks,
+%  noframetitlerule,
+]{Verona}
+
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+\usepackage{pgfplots}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Mac上使用如下命令声明隶书字体, windows也有相关方式, 大家可自行修改
+\providecommand{\lishu}{\CJKfamily{zhli}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz}
+\usetikzlibrary{fadings}
+%
+%\setbeamertemplate{sections/subsections in toc}[ball]
+\usepackage{xeCJK}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{subfigure}
+\usefonttheme{professionalfonts}
+\def\mathfamilydefault{\rmdefault}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{bm}
+\usepackage{mathtools}
+\usepackage[T1]{fontenc}
+\setbeamertemplate{section in toc}{\hspace*{1em}\inserttocsectionnumber.~\inserttocsection\par}
+\setbeamertemplate{subsection in toc}{\hspace*{2em}\inserttocsectionnumber.\inserttocsubsectionnumber.~\inserttocsubsection\par}
+\setbeamerfont{subsection in toc}{size=\small}
+\AtBeginSection[]{%
+	\begin{frame}%
+		\frametitle{Outline}%
+		\textbf{\tableofcontents[currentsection]} %
+	\end{frame}%
+}
+
+\AtBeginSubsection[]{%
+	\begin{frame}%
+		\frametitle{Outline}%
+		\textbf{\tableofcontents[currentsection, currentsubsection]} %
+	\end{frame}%
+}
+
+\pgfplotsset{
+    integral segments/.code={\pgfmathsetmacro\integralsegments{#1}},
+    integral segments=3,
+    integral/.style args={#1:#2}{
+        ybar interval,
+        domain=#1+((#2-#1)/\integralsegments)/2:#2+((#2-#1)/\integralsegments)/2,
+        samples=\integralsegments+1,
+        x filter/.code=\pgfmathparse{\pgfmathresult-((#2-#1)/\integralsegments)/2}
+    }
+}
+
+
+\title{高等数学C}
+%\subtitle{A Simple while elegant template}
+\author[P.Yu]{余沛}
+\mail{peiy\_gzgs@qq.com}
+\institute[Guangzhou College of Technology and Business]{Guangzhou College of Technology and Business \\
+  广州工商学院}
+\date{\today}
+\titlegraphic[width=4cm]{logo.png}{}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ----------- 标题页 ------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+
+\maketitle
+
+%%% define code
+\defverbatim[colored]\lstI{
+	\begin{lstlisting}[language=C++,basicstyle=\ttfamily,keywordstyle=\color{red}]
+	int main() {
+	// Define variables at the beginning
+	// of the block, as in C:
+	CStash intStash, stringStash;
+	int i;
+	char* cp;
+	ifstream in;
+	string line;
+	[...]
+	\end{lstlisting}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ----------- FRAME ------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{微积分基本定理}
+\subsection{变上限积分与原函数存在定理}
+
+\begin{frame}
+	\frametitle{变上限积分}
+	\begin{block}{定义: 变上限积分}
+		设函数 $f(x)$ 在 $[a, b]$ 上连续, 变上限积分
+	$$
+	p(x)=\int_a^x f(t) \mathrm{~d} t, \quad x \in[a, b]
+	$$
+	\end{block}
+	\begin{block}{定理}
+		设函数 $f(x)$ 在 $[a, b]$ 上连续, 则有
+$$
+p^{\prime}(x)=\left(\int_a^x f(t) \mathrm{~d} t\right)^{\prime}=f(x)
+$$
+	\end{block}
+
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{变上限积分}
+
+	\begin{proof}
+		对于任意 $x$ 和改变量 $\Delta x$, 有
+		$$ 
+			p(x+\Delta x) - p(x) = \int_a^{x+\Delta x}f(t)\mathrm{~d}t -\int_a^{x}f(t)\mathrm{~d}t =\int_{x}^{x+\Delta x}f(t)\mathrm{~d}t
+		$$
+		由积分中值定理, 存在 $\xi\in(x,x+\Delta x)$ 使得
+		$$
+		p(x+\Delta x) - p(x)=f(\xi)(\Delta x)
+		$$
+		于是 $\Delta x\to0 \Rightarrow \xi\to x$, 由 $f(x)$ 在$[a,b]$上的连续性, 有
+		$$
+			p'(x)=\lim_{\Delta x\to0}\frac{p(x+\Delta x) - p(x)}{\Delta x} = \lim_{\Delta x\to0}f(\xi) = f(x).
+		$$
+	\end{proof}
+	这个证明也给出了不定积分里的原函数存在性.
+\end{frame}
+
+\begin{frame}
+	\frametitle{训练题}
+	\everymath{\displaystyle}
+	\begin{block}{求导数}
+		\begin{columns}
+			\begin{column}{0.5\textwidth}
+				\begin{enumerate}
+					\item $\int_0^x\sqrt{1+t}\mathrm{~d}t$;
+					\item $\int_{x}^3se^{-3s}\mathrm{~d}s$;
+				\end{enumerate}
+			\end{column}
+			\begin{column}{0.5\textwidth}
+				
+			\end{column}
+		\end{columns}
+	\end{block}
+\end{frame}
+\subsection{Newton-Leibniz公式}
+\section{积分法}
+\subsection{换元积分}
+\subsection{分部积分}
+\section{定积分的应用}
+
+% Thank you page
+\beamertemplateshadingbackground{structure.fg!90}{structure.fg}
+\begin{frame}[plain]
+	\vfill
+	\centering
+	{
+		\centering \Huge \color{white} Thank you for your attention!\\[10pt]Questions?
+	}
+	\vfill
+\end{frame}
+
+
+\end{document}
+
+
