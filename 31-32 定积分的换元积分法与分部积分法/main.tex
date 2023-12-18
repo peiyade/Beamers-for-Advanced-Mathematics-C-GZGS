@@ -209,6 +209,266 @@ aspectratio=43,
 	\end{block}
 \end{frame}
 
+\subsection{微分关系}
+\begin{frame}
+	\frametitle{微分的定义}
+	\begin{block}{定义}
+		设函数 $y=f(x)$ 在 $x_0$ 的某个邻域内有定义, 当自变量在 $x_0$ 处取得增量 $\Delta x$ 时,如果函数的增量 $\Delta y=f\left(x_0+\Delta x\right)-f\left(x_0\right)$ 可以表示为
+		$$
+			\Delta y=A \Delta x+o(\Delta x).
+		$$
+		\pause
+		其中 $\mathrm{A}$ 是与 $x_0$ 有关而与 $\Delta x$ 无关的常数, $o(\Delta x)$ 是比 $\Delta x$ 高阶的无穷小量, 则函数 $y=f(x)$在点 $x_0$ 可微, $A \Delta x$ 称为微分, 即 $\mathrm{~d} y=A \Delta x$.
+		\vspace{0.2cm}
+		\pause
+
+		由于 $\Delta x=\Delta x$ 是恒等等式, 于是有
+		$$
+			\mathrm{~d} y=A \Delta x=A\mathrm{~d}x.
+		$$
+		\pause`'
+		可以看到 $A=\lim_{\Delta x\to0}\frac{\Delta y}{\Delta y}+\frac{o(\Delta x)}{\Delta x} = \lim_{\Delta x\to0}\frac{\Delta y}{\Delta y}=f'(x_0)$.
+	\end{block}
+	\pause
+	于是:
+	{\huge
+	\begin{quote}
+		$$
+			\mathrm{d} y=f^{\prime}(x) \mathrm{~d} x.
+		$$
+	\end{quote}
+	}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{参数函数求微分}
+	\everymath{\displaystyle}
+	\begin{block}{隐函数求微分方式}
+		\begin{equation*}
+			\left\{
+			\begin{array}{ll}
+				y=f_1(t);\vspace{0.2cm} \\
+				x=f_2(t).
+			\end{array}
+			\right.
+		\end{equation*}
+		求 $\frac{\mathrm{d}y}{\mathrm{d}x}$, $\frac{\mathrm{d}^2y}{\mathrm{d}x^2}$.
+	\end{block}
+	\pause
+	\begin{exampleblock}{隐函数求微分}
+		对两个方程进行微分, 得到:
+		\begin{equation*}
+			\left\{
+			\begin{array}{ll}
+				\mathrm{d}y=\mathrm{d}(f_1(t))=f_1'(t)\mathrm{d}t;\vspace{0.2cm} \\
+				\mathrm{d}x=\mathrm{d}(f_2(t))=f_2'(t)\mathrm{d}t.
+			\end{array}
+			\right.
+		\end{equation*}
+		\pause
+		于是有
+		$$
+			\frac{\mathrm{d}y}{\mathrm{d}x}=\frac{f_1'(t)\mathrm{d}t}{f_2'(t)\mathrm{d}t}=\frac{f_1'(t)}{f_2'(t)}.
+		$$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\frametitle{参数函数求微分}
+	\everymath{\displaystyle}
+	\begin{exampleblock}{隐函数求二阶微分}
+		根据以上计算, 可以得到:
+		\begin{equation*}
+			\left\{
+			\begin{array}{ll}
+				\frac{\mathrm{d}y}{\mathrm{d}x}=\frac{f_1'(t)}{f_2'(t)},\vspace{0.1cm} \\
+				\mathrm{d}x=f_2'(t).
+			\end{array}
+			\right.
+		\end{equation*}
+		\pause
+		分别进行对 $t$ 变量的微分, 得到
+		$$
+			\left\{
+			\begin{array}{ll}
+				\mathrm{d}\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)=\left(\frac{f_1'(t)}{f_2'(t)}\right)'\mathrm{d}t\vspace{0.1cm}, \\
+				\mathrm{d}x=f_2'(t)\mathrm{d}t.
+			\end{array}
+			\right.
+		$$
+		\pause
+		因此:
+		$$
+			\frac{\mathrm{d}^2y}{\mathrm{d}x^2}=\frac{\mathrm{d}\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)}{\mathrm{d}x}=\frac{\left(\frac{f_1'(t)}{f_2'(t)}\right)'\mathrm{d}t}{f_2'(t)\mathrm{d}t}=\frac{\left(\frac{f_1'(t)}{f_2'(t)}\right)'}{f_2'(t)}=\frac{f_1^{''}(t)f_2^{'}(t)-f_1^{'}(t)f_2^{''}(t)}{\left(f_2'(t)\right)^3}.
+		$$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\frametitle{隐函数求微分}
+	\everymath{\displaystyle}
+	\begin{block}{隐函数}
+		由方程 $F(x, y)=0$ 所确定的函数, 称之为隐函数.
+	\end{block}
+	\pause
+	\begin{exampleblock}{举个栗子}
+		$$
+			e^{x+y}=\sin x\cos y,\qquad \ln \sqrt{x^2+y^2}=\arctan \frac{y}{x}.
+		$$
+	\end{exampleblock}
+	\pause
+	\begin{block}{计算$\frac{\mathrm{d}y}{\mathrm{d}x}$}
+		\begin{enumerate}
+			\item 移项: 化归成 $F(x, y)=0$ 的形式;
+			\item 计算微分: $\mathrm{d}F(x,y)=0\,\,\Rightarrow\,\,F_x(x,y)\mathrm{d}x+F_y(x,y)\mathrm{d}y=0$;
+			\item 得到结果: $F_y(x,y)\mathrm{d}y=-F_x(x,y)\mathrm{d}x\,\,\Rightarrow\,\,\frac{\mathrm{d}y}{\mathrm{d}x}=-\frac{F_x(x,y)}{F_y(x,y)}$.
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{隐函数求微分}
+	\everymath{\displaystyle}
+	\begin{exampleblock}{\color{black}计算栗子里的$\frac{\mathrm{d}y}{\mathrm{d}x}$和$\frac{\mathrm{d}^2y}{\mathrm{d}x^2}$}
+		$$
+			e^{x+y}=\sin x\cos y.
+		$$
+	\end{exampleblock}
+	\pause
+	\begin{block}{Ans}
+		由于:
+		{\small
+		$$
+			\mathrm{d}\left(e^{x+y}-\sin x\cos y\right)=\left(e^{x+y}-\cos x\cos y\right)\mathrm{d}x+\left(e^{x+y}+\sin x\sin y\right)\mathrm{d}y=0.
+		$$
+		}
+		得到
+		$$
+			\frac{\mathrm{d}y}{\mathrm{d}x}=-\frac{e^{x+y}-\cos x\cos y}{e^{x+y}+\sin x\sin y}.
+		$$
+		那么怎么得到 $\frac{\mathrm{d}^2y}{\mathrm{d}x^2}$呢?
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{隐函数求微分}
+	\everymath{\displaystyle}
+	\begin{exampleblock}{{\color{black} 计算栗子里的$\frac{\mathrm{d}y}{\mathrm{d}x}$和$\frac{\mathrm{d}^2y}{\mathrm{d}x^2}$}}
+		$$
+			e^{x+y}=\sin x\cos y,\,\,\, \text{已知}\,\,\, \frac{\mathrm{d}y}{\mathrm{d}x}=-\frac{e^{x+y}-\cos x\cos y}{e^{x+y}+\sin x\sin y}.
+		$$
+	\end{exampleblock}
+	\begin{block}{Ans}
+		由于:
+		$$
+			\begin{aligned}
+				\mathrm{d}\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right) & =-\mathrm{d}\left(\frac{e^{x+y}-\cos x\cos y}{e^{x+y}+\sin x\sin y}\right)                                                     \\
+				                                                       & =-\frac{\mathrm{d}\left(e^{x+y}-\cos x\cos y\right)\left(e^{x+y}+\sin x\sin y\right)}{\left(e^{x+y}+\sin x\sin y\right)^2}     \\
+				                                                       & \quad+\frac{\left(e^{x+y}-\cos x\cos y\right)\mathrm{d}\left(e^{x+y}+\sin x\sin y\right)}{\left(e^{x+y}+\sin x\sin y\right)^2}
+			\end{aligned}
+		$$
+		$\mathrm{d}\left(e^{x+y}-\cos x\cos y\right)=\left(e^{x+y}+\sin x\cos y\right)\mathrm{d}x+\left(e^{x+y}+\cos x\sin y\right)\mathrm{d}y,$\\
+		$\mathrm{d}\left(e^{x+y}+\sin x\sin y\right)=\left(e^{x+y}+\cos x\sin y\right)\mathrm{d}x+\left(e^{x+y}+\sin x\cos y\right)\mathrm{d}y.$
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{隐函数求微分}
+	\everymath{\displaystyle}
+	\begin{exampleblock}{\color{black}计算栗子里的$\frac{\mathrm{d}y}{\mathrm{d}x}$和$\frac{\mathrm{d}^2y}{\mathrm{d}x^2}$}
+		$$
+			e^{x+y}=\sin x\cos y,\,\,\, \text{已知}\,\,\, \frac{\mathrm{d}y}{\mathrm{d}x}=-\frac{e^{x+y}-\cos x\cos y}{e^{x+y}+\sin x\sin y}.
+		$$
+	\end{exampleblock}
+	\begin{block}{Ans}
+		由于:
+		$$
+			\begin{aligned}
+				 & \mathrm{d}\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)                                                                                                                                    \\
+				 & =-\frac{\left(\left(e^{x+y}+\sin x\cos y\right)\mathrm{d}x+\left(e^{x+y}+\cos x\sin y\right)\mathrm{d}y\right)\left(e^{x+y}+\sin x\sin y\right)}{\left(e^{x+y}+\sin x\sin y\right)^2}     \\
+				 & \quad+\frac{\left(e^{x+y}-\cos x\cos y\right)\left(\left(e^{x+y}+\cos x\sin y\right)\mathrm{d}x+\left(e^{x+y}+\sin x\cos y\right)\mathrm{d}y\right)}{\left(e^{x+y}+\sin x\sin y\right)^2}
+			\end{aligned}
+		$$
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{隐函数求微分}
+	\everymath{\displaystyle}
+	\begin{block}{继续}
+		由于:
+		$$
+			\begin{aligned}
+				 & \frac{\mathrm{d}^2y}{\mathrm{d}x^2}=\frac{\mathrm{d}}{\mathrm{d}x}\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)                                                                                     \\
+				 & =-\frac{\left(\left(e^{x+y}+\sin x\cos y\right)+\left(e^{x+y}+\cos x\sin y\right)\frac{\mathrm{d}y}{\mathrm{d}x}\right)\left(e^{x+y}+\sin x\sin y\right)}{\left(e^{x+y}+\sin x\sin y\right)^2}     \\
+				 & \quad+\frac{\left(e^{x+y}-\cos x\cos y\right)\left(\left(e^{x+y}+\cos x\sin y\right)+\left(e^{x+y}+\sin x\cos y\right)\frac{\mathrm{d}y}{\mathrm{d}x}\right)}{\left(e^{x+y}+\sin x\sin y\right)^2}
+			\end{aligned}
+		$$
+		其中, $\frac{\mathrm{d}y}{\mathrm{d}x}=-\frac{e^{x+y}-\cos x\cos y}{e^{x+y}+\sin x\sin y}$.
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{隐函数求微分}
+	\everymath{\displaystyle}
+	\begin{block}{练习题}
+		$$
+			\mathrm{e}^y+x y-\mathrm{e}=0.
+		$$
+	\end{block}
+	\pause
+	\vspace{0.2cm}
+	\begin{exampleblock}{}
+		考虑
+		$$
+			F(x,y)= \mathrm{e}^y+x y-\mathrm{e}.
+		$$
+		\pause
+		在方程两端进行微分, 得到
+		$$
+			\begin{aligned}
+				0=d(0) & =\mathrm{d}\left(\mathrm{e}^y+x y-\mathrm{e}\right) \\
+				       & =y\mathrm{d}x+(e^y+x)\mathrm{d}y.
+			\end{aligned}
+		$$
+		\pause
+		于是有
+		$$
+			0=y\mathrm{d}x+(e^y+x)\mathrm{d}y\Rightarrow\frac{\mathrm{d}y}{\mathrm{d}x}=-\frac{y}{x+e^y}.
+		$$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\frametitle{隐函数求微分}
+	\everymath{\displaystyle}
+	\begin{block}{练习题}
+		$$
+			\ln \sqrt{x^2+y^2}=\arctan \frac{y}{x}.
+		$$
+	\end{block}
+	\pause
+	\vspace{0.3cm}
+	\begin{exampleblock}{}
+		考虑
+		$$
+			F(x,y)= \ln \sqrt{x^2+y^2}-\arctan \frac{y}{x}.
+		$$
+		\pause
+		$$
+			\begin{aligned}
+				0 & =\mathrm{d}\left(\ln \sqrt{x^2+y^2}-\arctan \frac{y}{x}\right)                                                                                                    \\
+				  & =\frac{1}{{\sqrt{x^2+y^2}}}\cdot\frac{x\mathrm{d}x+y\mathrm{d}y}{\sqrt{x^2+y^2}}-\frac{1}{1+\left(\frac{y}{x}\right)^2}\cdot\frac{x\mathrm{d}y-y\mathrm{d}x}{x^2} \\
+				  & =\frac{(y-x)\mathrm{d}y+(x+y)\mathrm{d}x}{x^2+y^2}.
+			\end{aligned}
+		$$
+		\pause
+		$$
+			0=(y-x)\mathrm{d}y+(x+y)\mathrm{d}x\Rightarrow\frac{\mathrm{d}y}{\mathrm{d}x}=-\frac{x+y}{x-y}.
+		$$
+	\end{exampleblock}
+\end{frame}
 \begin{frame}
 	\frametitle{定积分的换元积分法}
 	\everymath{\displaystyle}
@@ -317,6 +577,7 @@ aspectratio=43,
 	\begin{exampleblock}{}
 		因为 $\int_{-a}^a f(x) \mathrm{~d} x=\int_{-a}^0 f(x) \mathrm{~d} x+\int_0^a f(x) \mathrm{~d} x$,\\\vspace{0.2cm}
 		由于 $\int_{-a}^0 f(x) \mathrm{~d} x \stackrel{\text { 令 } x=-t}{=}-\int_a^0 f(-t) \mathrm{~d} t=\int_0^a f(-t) \mathrm{~d} t=\int_0^a f(-x) \mathrm{~d} x$,\\\vspace{0.2cm}
+		\pause
 		因此,
 		$$
 			\begin{aligned}
@@ -332,9 +593,10 @@ aspectratio=43,
 	\everymath{\displaystyle}
 	\begin{block}{}
 		若 $f(x)$ 在 $[0,1]$ 上连续, 证明\\\vspace{0.1cm}
-		$\int_0^{\frac{\pi}{2}} f(\sin x) \mathrm{~d} x=\int_0^{\frac{\pi}{2}} f(\cos x) \mathrm{~d} x$; $\int_0^\pi x f(\sin x) \mathrm{~d} x=\frac{\pi}{2} \int_0^\pi f(\sin x) \mathrm{~d} x$.
+		$\int_0^{\frac{\pi}{2}} f(\sin x) \mathrm{~d} x=\int_0^{\frac{\pi}{2}} f(\cos x) \mathrm{~d} x$.
 	\end{block}
 	\pause
+	\vspace{0.6cm}
 	\begin{exampleblock}{}
 		$$
 			\begin{aligned}
@@ -348,21 +610,29 @@ aspectratio=43,
 \begin{frame}
 	\frametitle{定积分的换元积分法}
 	\everymath{\displaystyle}
-	\begin{exampleblock}{}
-		令 $x=-t$, 则
-		$$
-			\begin{aligned}
-				\int_0^\pi x f(\sin x) \mathrm{~d} x & =-\int_\pi^0(\pi-t) f[\sin (\pi-t)] \mathrm{~d} t                                          \\
-				                                     & =\int_0^\pi(\pi-t) f[\sin (\pi-t)] \mathrm{~d} t=\int_0^\pi(\pi-t) f(\sin t) \mathrm{~d} t \\
-				                                     & =\pi \int_0^\pi f(\sin t) \mathrm{~d} t-\int_0^\pi t f(\sin t) \mathrm{~d} t               \\
-				                                     & =\pi \int_0^\pi f(\sin x) \mathrm{~d} x-\int_0^\pi x f(\sin x) \mathrm{~d} x,
-			\end{aligned}
-		$$
-		所以
-		$$
-			\int_0^\pi x f(\sin x) \mathrm{~d} x=\frac{\pi}{2} \int_0^\pi f(\sin x) \mathrm{~d} x.
-		$$
-	\end{exampleblock}
+	{\small
+		\begin{block}{}
+			若 $f(x)$ 在 $[0,1]$ 上连续, 证明\\\vspace{0.1cm}
+			$$
+				\int_0^\pi x f(\sin x) \mathrm{~d} x=\frac{\pi}{2} \int_0^\pi f(\sin x) \mathrm{~d} x
+			$$
+		\end{block}
+		\pause
+		\begin{exampleblock}{}
+			$$
+				\begin{aligned}
+					\int_0^\pi x f(\sin x) \mathrm{~d} x & =-\int_\pi^0(\pi-t) f[\sin (\pi-t)] \mathrm{~d} t\qquad (x=-t)                             \\
+					                                     & =\int_0^\pi(\pi-t) f[\sin (\pi-t)] \mathrm{~d} t=\int_0^\pi(\pi-t) f(\sin t) \mathrm{~d} t \\
+					                                     & =\pi \int_0^\pi f(\sin t) \mathrm{~d} t-\int_0^\pi t f(\sin t) \mathrm{~d} t               \\
+					                                     & =\pi \int_0^\pi f(\sin x) \mathrm{~d} x-\int_0^\pi x f(\sin x) \mathrm{~d} x.
+				\end{aligned}
+			$$
+			所以
+			$$
+				\int_0^\pi x f(\sin x) \mathrm{~d} x=\frac{\pi}{2} \int_0^\pi f(\sin x) \mathrm{~d} x.
+			$$
+		\end{exampleblock}
+	}
 \end{frame}
 
 \begin{frame}
@@ -519,7 +789,7 @@ aspectratio=43,
 			      $$
 		\end{enumerate}
 	\end{block}
-	\pause 
+	\pause
 	\begin{exampleblock}{答案}
 		\begin{enumerate}[<+->]
 			\item $5\ln 5-4$;\vspace{0.5cm}
@@ -543,7 +813,7 @@ aspectratio=43,
 			      $$
 		\end{enumerate}
 	\end{block}
-	\pause 
+	\pause
 	\begin{exampleblock}{答案}
 		\begin{enumerate}[<+->]
 			\item $\frac{e-2}{e}$;\vspace{0.5cm}

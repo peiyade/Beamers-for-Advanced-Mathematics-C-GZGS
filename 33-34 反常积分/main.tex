@@ -1,0 +1,421 @@
+% !TEX encoding = UTF-8 Unicode.
+
+% Based on https://github.com/Miracle0565/BUCT-Beamer-Theme
+
+\documentclass[
+10pt,
+aspectratio=43,
+]{beamer}
+\setbeamercovered{transparent=10}
+\usetheme[
+%  showheader,
+%  red,
+  purple,
+%  gray,
+%  graytitle,
+  colorblocks,
+%  noframetitlerule,
+]{Verona}
+
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+\usepackage{pgfplots}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Mac上使用如下命令声明隶书字体, windows也有相关方式, 大家可自行修改
+\providecommand{\lishu}{\CJKfamily{zhli}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz}
+\usetikzlibrary{fadings}
+%
+%\setbeamertemplate{sections/subsections in toc}[ball]
+\usepackage{xeCJK}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{subfigure}
+\usefonttheme{professionalfonts}
+\def\mathfamilydefault{\rmdefault}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{bm}
+\usepackage{mathtools}
+\usepackage[T1]{fontenc}
+\setbeamertemplate{section in toc}{\hspace*{1em}\inserttocsectionnumber.~\inserttocsection\par}
+\setbeamertemplate{subsection in toc}{\hspace*{2em}\inserttocsectionnumber.\inserttocsubsectionnumber.~\inserttocsubsection\par}
+\setbeamerfont{subsection in toc}{size=\small}
+\AtBeginSection[]{%
+	\begin{frame}%
+		\frametitle{Outline}%
+		\textbf{\tableofcontents[currentsection]} %
+	\end{frame}%
+}
+
+\AtBeginSubsection[]{%
+	\begin{frame}%
+		\frametitle{Outline}%
+		\textbf{\tableofcontents[currentsection, currentsubsection]} %
+	\end{frame}%
+}
+
+\pgfplotsset{
+    integral segments/.code={\pgfmathsetmacro\integralsegments{#1}},
+    integral segments=3,
+    integral/.style args={#1:#2}{
+        ybar interval,
+        domain=#1+((#2-#1)/\integralsegments)/2:#2+((#2-#1)/\integralsegments)/2,
+        samples=\integralsegments+1,
+        x filter/.code=\pgfmathparse{\pgfmathresult-((#2-#1)/\integralsegments)/2}
+    }
+}
+
+
+\title{高等数学C}
+%\subtitle{A Simple while elegant template}
+\author[P.Yu]{余沛}
+\mail{peiy\_gzgs@qq.com}
+\institute[Guangzhou College of Technology and Business]{Guangzhou College of Technology and Business \\
+  广州工商学院}
+\date{\today}
+\titlegraphic[width=4cm]{logo.png}{}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ----------- 标题页 ------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+
+\maketitle
+
+%%% define code
+\defverbatim[colored]\lstI{
+	\begin{lstlisting}[language=C++,basicstyle=\ttfamily,keywordstyle=\color{red}]
+	int main() {
+	// Define variables at the beginning
+	// of the block, as in C:
+	CStash intStash, stringStash;
+	int i;
+	char* cp;
+	ifstream in;
+	string line;
+	[...]
+	\end{lstlisting}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ----------- FRAME ------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{知识补充}
+\subsection{微分关系}
+\begin{frame}
+	\frametitle{微分的定义}
+	\begin{block}{定义}
+		设函数 $y=f(x)$ 在 $x_0$ 的某个邻域内有定义, 当自变量在 $x_0$ 处取得增量 $\Delta x$ 时,如果函数的增量 $\Delta y=f\left(x_0+\Delta x\right)-f\left(x_0\right)$ 可以表示为
+		$$
+			\Delta y=A \Delta x+o(\Delta x)
+		$$
+
+		其中 $\mathrm{A}$ 是与 $x_0$ 有关而与 $\Delta x$ 无关的常数, $o(\Delta x)$ 是比 $\Delta x$ 高阶的无穷小量, 则函数 $y=f(x)$在点 $x_0$ 可微, $A \Delta x$ 称为微分, 即 $\mathrm{~d} y=A \Delta x$.
+
+		\vspace{0.2cm}
+		由于 $\Delta x=\Delta x$ 是恒等等式, 于是有
+		$$
+			\mathrm{~d} y=A \Delta x=A\mathrm{~d}x.
+		$$
+	\end{block}
+	\vspace{0.5cm}
+	{\huge
+		\begin{quote}
+			$$
+				\mathrm{d} y=f^{\prime}(x) \mathrm{~d} x
+			$$
+		\end{quote}
+	}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{参数函数求微分}
+	\everymath{\displaystyle}
+	\begin{block}{隐函数求微分方式}
+		\begin{equation*}
+			\left\{
+			\begin{array}{ll}
+				y=f_1(t);\vspace{0.2cm} \\
+				x=f_2(t).
+			\end{array}
+			\right.
+		\end{equation*}
+		求 $\frac{\mathrm{d}y}{\mathrm{d}x}$, $\frac{\mathrm{d}^2y}{\mathrm{d}x^2}$.
+	\end{block}
+	\begin{exampleblock}{隐函数求微分}
+		对两个方程进行微分, 得到:
+		\begin{equation*}
+			\left\{
+			\begin{array}{ll}
+				\mathrm{d}y=\mathrm{d}(f_1(t))=f_1'(t)\mathrm{d}t;\vspace{0.2cm} \\
+				\mathrm{d}x=\mathrm{d}(f_2(t))=f_2'(t)\mathrm{d}t.
+			\end{array}
+			\right.
+		\end{equation*}
+		于是有
+		$$
+			\frac{\mathrm{d}y}{\mathrm{d}x}=\frac{f_1'(t)\mathrm{d}t}{f_2'(t)\mathrm{d}t}=\frac{f_1'(t)}{f_2'(t)}.
+		$$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\frametitle{参数函数求微分}
+	\everymath{\displaystyle}
+	\begin{exampleblock}{隐函数求二阶微分}
+		根据以上计算, 可以得到:
+		\begin{equation*}
+			\left\{
+			\begin{array}{ll}
+				\frac{\mathrm{d}y}{\mathrm{d}x}=\frac{f_1'(t)}{f_2'(t)},\vspace{0.1cm} \\
+				\mathrm{d}x=f_2'(t).
+			\end{array}
+			\right.
+		\end{equation*}
+		分别进行对 $t$ 变量的微分, 得到
+		$$
+			\left\{
+			\begin{array}{ll}
+				\mathrm{d}\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)=\left(\frac{f_1'(t)}{f_2'(t)}\right)'\mathrm{d}t\vspace{0.1cm} \\
+				\mathrm{d}x=f_2'(t)\mathrm{d}t.
+			\end{array}
+			\right.
+		$$
+		因此:
+		$$
+			\frac{\mathrm{d}^2y}{\mathrm{d}x^2}=\frac{\mathrm{d}\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)}{\mathrm{d}x}=\frac{\left(\frac{f_1'(t)}{f_2'(t)}\right)'\mathrm{d}t}{f_2'(t)\mathrm{d}t}=\frac{\left(\frac{f_1'(t)}{f_2'(t)}\right)'}{f_2'(t)}=\frac{f_1^{''}(t)f_2^{'}(t)-f_1^{'}(t)f_2^{''}(t)}{\left(f_2'(t)\right)^3}.
+		$$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\frametitle{隐函数求微分}
+	\everymath{\displaystyle}
+	\begin{block}{隐函数}
+		由方程 $F(x, y)=0$ 所确定的函数, 称之为隐函数.
+	\end{block}
+	\begin{exampleblock}{举个栗子}
+		$$
+			e^{x+y}=\sin x\cos y,\qquad \ln \sqrt{x^2+y^2}=\arctan \frac{y}{x}.
+		$$
+	\end{exampleblock}
+	\begin{block}{计算$\frac{\mathrm{d}y}{\mathrm{d}x}$}
+		\begin{enumerate}
+			\item 移项: 化归成 $F(x, y)=0$ 的形式;
+			\item 计算微分: $\mathrm{d}F(x,y)=0\,\,\Rightarrow\,\,F_x(x,y)\mathrm{d}x+F_y(x,y)\mathrm{d}y=0$;
+			\item 得到结果: $F_y(x,y)\mathrm{d}y=-F_x(x,y)\mathrm{d}x\,\,\Rightarrow\,\,\frac{\mathrm{d}y}{\mathrm{d}x}=-\frac{F_x(x,y)}{F_y(x,y)}$.
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{隐函数求微分}
+	\everymath{\displaystyle}
+	\begin{exampleblock}{计算栗子里的$\frac{\mathrm{d}y}{\mathrm{d}x}$和$\frac{\mathrm{d}^2y}{\mathrm{d}x^2}$}
+		$$
+			e^{x+y}=\sin x\cos y.
+		$$
+	\end{exampleblock}
+	\begin{block}{Ans}
+		由于:
+		$$
+			\mathrm{d}\left(e^{x+y}-\sin x\cos y\right)=\left(e^{x+y}-\cos x\cos y\right)\mathrm{d}x+\left(e^{x+y}+\sin x\sin y\right)\mathrm{d}y=0.
+		$$
+		得到
+		$$
+			\frac{\mathrm{d}y}{\mathrm{d}x}=-\frac{e^{x+y}-\cos x\cos y}{e^{x+y}+\sin x\sin y}.
+		$$
+		那么怎么得到 $\frac{\mathrm{d}^2y}{\mathrm{d}x^2}$呢?
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{隐函数求微分}
+	\everymath{\displaystyle}
+	\begin{exampleblock}{计算栗子里的$\frac{\mathrm{d}y}{\mathrm{d}x}$和$\frac{\mathrm{d}^2y}{\mathrm{d}x^2}$}
+		$$
+			e^{x+y}=\sin x\cos y,\,\,\, \text{已知}\,\,\, \frac{\mathrm{d}y}{\mathrm{d}x}=-\frac{e^{x+y}-\cos x\cos y}{e^{x+y}+\sin x\sin y}.
+		$$
+	\end{exampleblock}
+	\begin{block}{Ans}
+		由于:
+		$$
+			\begin{aligned}
+				\mathrm{d}\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right) & =-\mathrm{d}\left(\frac{e^{x+y}-\cos x\cos y}{e^{x+y}+\sin x\sin y}\right)                                                     \\
+				                                                       & =-\frac{\mathrm{d}\left(e^{x+y}-\cos x\cos y\right)\left(e^{x+y}+\sin x\sin y\right)}{\left(e^{x+y}+\sin x\sin y\right)^2}     \\
+				                                                       & \quad+\frac{\left(e^{x+y}-\cos x\cos y\right)\mathrm{d}\left(e^{x+y}+\sin x\sin y\right)}{\left(e^{x+y}+\sin x\sin y\right)^2}
+			\end{aligned}
+		$$
+		$\mathrm{d}\left(e^{x+y}-\cos x\cos y\right)=\left(e^{x+y}+\sin x\cos y\right)\mathrm{d}x+\left(e^{x+y}+\cos x\sin y\right)\mathrm{d}y,$\\
+		$\mathrm{d}\left(e^{x+y}+\sin x\sin y\right)=\left(e^{x+y}+\cos x\sin y\right)\mathrm{d}x+\left(e^{x+y}+\sin x\cos y\right)\mathrm{d}y.$
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{隐函数求微分}
+	\everymath{\displaystyle}
+	\begin{exampleblock}{计算栗子里的$\frac{\mathrm{d}y}{\mathrm{d}x}$和$\frac{\mathrm{d}^2y}{\mathrm{d}x^2}$}
+		$$
+			e^{x+y}=\sin x\cos y,\,\,\, \text{已知}\,\,\, \frac{\mathrm{d}y}{\mathrm{d}x}=-\frac{e^{x+y}-\cos x\cos y}{e^{x+y}+\sin x\sin y}.
+		$$
+	\end{exampleblock}
+	\begin{block}{Ans}
+		由于:
+		$$
+			\begin{aligned}
+				 & \mathrm{d}\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)                                                                                                                                    \\
+				 & =-\frac{\left(\left(e^{x+y}+\sin x\cos y\right)\mathrm{d}x+\left(e^{x+y}+\cos x\sin y\right)\mathrm{d}y\right)\left(e^{x+y}+\sin x\sin y\right)}{\left(e^{x+y}+\sin x\sin y\right)^2}     \\
+				 & \quad+\frac{\left(e^{x+y}-\cos x\cos y\right)\left(\left(e^{x+y}+\cos x\sin y\right)\mathrm{d}x+\left(e^{x+y}+\sin x\cos y\right)\mathrm{d}y\right)}{\left(e^{x+y}+\sin x\sin y\right)^2}
+			\end{aligned}
+		$$
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{隐函数求微分}
+	\everymath{\displaystyle}
+	\begin{block}{继续}
+		由于:
+		$$
+			\begin{aligned}
+				 & \frac{\mathrm{d}^2y}{\mathrm{d}x^2}=\frac{\mathrm{d}}{\mathrm{d}x}\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)                                                                                     \\
+				 & =-\frac{\left(\left(e^{x+y}+\sin x\cos y\right)+\left(e^{x+y}+\cos x\sin y\right)\frac{\mathrm{d}y}{\mathrm{d}x}\right)\left(e^{x+y}+\sin x\sin y\right)}{\left(e^{x+y}+\sin x\sin y\right)^2}     \\
+				 & \quad+\frac{\left(e^{x+y}-\cos x\cos y\right)\left(\left(e^{x+y}+\cos x\sin y\right)+\left(e^{x+y}+\sin x\cos y\right)\frac{\mathrm{d}y}{\mathrm{d}x}\right)}{\left(e^{x+y}+\sin x\sin y\right)^2}
+			\end{aligned}
+		$$
+		其中, $\frac{\mathrm{d}y}{\mathrm{d}x}=-\frac{e^{x+y}-\cos x\cos y}{e^{x+y}+\sin x\sin y}$.
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{隐函数求微分}
+	\everymath{\displaystyle}
+	\begin{block}{练习题}
+		$$
+			\mathrm{e}^y+x y-\mathrm{e}=0.
+		$$
+	\end{block}
+
+	\begin{exampleblock}{}
+		$$
+		\begin{aligned}
+			0&=\mathrm{d}\left(\mathrm{e}^y+x y-\mathrm{e}\right)\\
+			&=y\mathrm{d}x+(e^y+x)\mathrm{d}y.
+		\end{aligned}
+		$$
+	\end{exampleblock}
+	\begin{exampleblock}{}
+		$$
+		0=y\mathrm{d}x+(e^y+x)\mathrm{d}y\Rightarrow\frac{\mathrm{d}y}{\mathrm{d}x}=-\frac{y}{x+e^y}.
+		$$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\frametitle{隐函数求微分}
+	\everymath{\displaystyle}
+	\begin{block}{练习题}
+		$$
+			\ln \sqrt{x^2+y^2}=\arctan \frac{y}{x}.
+		$$
+	\end{block}
+
+	\begin{exampleblock}{}
+		$$
+		\begin{aligned}
+			0&=\mathrm{d}\left(\ln \sqrt{x^2+y^2}-\arctan \frac{y}{x}\right)\\
+			&=\frac{1}{{\sqrt{x^2+y^2}}}\cdot\frac{x\mathrm{d}x+y\mathrm{d}y}{\sqrt{x^2+y^2}}-\frac{1}{1+\left(\frac{y}{x}\right)^2}\cdot\frac{x\mathrm{d}y-y\mathrm{d}x}{x^2}\\
+			&=\frac{(y-x)\mathrm{d}y+(x+y)\mathrm{d}x}{x^2+y^2}.
+		\end{aligned}
+		$$
+	\end{exampleblock}
+	\begin{exampleblock}{}
+		$$
+		0=(y-x)\mathrm{d}y+(x+y)\mathrm{d}x\Rightarrow\frac{\mathrm{d}y}{\mathrm{d}x}=-\frac{x+y}{x-y}.
+		$$
+	\end{exampleblock}
+\end{frame}
+
+
+
+\subsection{反常积分}
+\begin{frame}
+	\frametitle{回顾:定积分}
+	\begin{block}{Riemann 积分的定义}
+		设$f(x)$在区间$[a,b]$上有定义, $\mathrm{P}:a=x_0<x_1<x_2<\ldots<x_n=b$.
+		在每段$[x_{i-1},x_i]$上 {\bf 任意}选取点$\xi_i$, 得到近似和
+		$$
+			\sum_{i=1}^n f(\xi_i)(x_i-x_{i-1}).
+		$$
+		如果对于$\mathrm{P}$的精细化
+		我们就称$f(x)$在区间$[a,b]$上是 {\bf Riemann 可积}的, 并将这个极限值称为$f(x)$在$[a,b]$上的 {\bf Riemann 积分}, 记为
+		\[
+			\lim_{\lambda\to 0} \sum_{i=1}^n f(\xi_i)(x_i-x_{i-1}) := \int_a^b f(x)\mathrm{~d} x.
+		\]
+	\end{block}
+
+\end{frame}
+\begin{frame}
+	\frametitle{归纳:定积分的性质}
+	\everymath{\displaystyle}
+	\begin{enumerate}
+		\item 线性性: $\int_a^b[k_1f_1(x) + k_2f_2(x)] \mathrm{d} x=\int_a^b k_1f_1(x) \mathrm{~d} x+\int_a^b k_2f_2(x) \mathrm{~d}x$;
+		\item 区间可加性: $\int_a^b f(x) \mathrm{~d} x=\int_a^c f(x) \mathrm{~d} x+\int_c^b f(x) \mathrm{~d} x$;
+		\item 保号性: $f(x) \geq 0, x\in[a,b]$, 则 $\int_a^b f(x) \mathrm{~d} x\geq 0$;
+		\item 上下界估计: $(b-a)\inf_{x\in[a,b]}f(x)=\int_a^{b} f(x) \mathrm{~d} x=(b-a)\sup_{x\in[a,b]}f(x)$;
+		\item 中值定理: 设 $f(x)$ 在 $[a, b]$ 上连续, 则存在 $\xi\in[a, b]$, 使
+		      $$
+			      \int_a^b f(x) \mathrm{~d} x=f(\xi)(b-a).
+		      $$
+	\end{enumerate}
+	\vspace{0.5cm}
+\end{frame}
+
+\begin{frame}
+	\frametitle{回顾: Newton-Leibniz公式}
+
+	\begin{theorem}[Newton-Leibniz公式]
+		如果函数 $F(x)$ 是连续函数 $f(x)$ 在区间 $[a, b]$ 上的一个原函数, 则
+		$$
+			\int_a^b f(x) \mathrm{~d} x=F(b)-F(a) .
+		$$
+	\end{theorem}
+	\vspace{1cm}
+	\pause
+	\begin{quote}
+		原函数 $F(x)$ 满足
+		$$
+			F (x)+C=\int f(x)\mathrm{~d}x.
+		$$
+	\end{quote}
+\end{frame}
+
+
+
+
+% Thank you page
+\beamertemplateshadingbackground{structure.fg!90}{structure.fg}
+\begin{frame}[plain]
+	\vfill
+	\centering
+	{
+		\centering \Huge \color{white} Thank you for your attention!\\[10pt]Questions?
+	}
+	\vfill
+\end{frame}
+
+
+\end{document}
+
+
