@@ -110,246 +110,8 @@ aspectratio=43,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ----------- FRAME ------------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{知识补充}
-\subsection{微分关系}
-\begin{frame}
-	\frametitle{微分的定义}
-	\begin{block}{定义}
-		设函数 $y=f(x)$ 在 $x_0$ 的某个邻域内有定义, 当自变量在 $x_0$ 处取得增量 $\Delta x$ 时,如果函数的增量 $\Delta y=f\left(x_0+\Delta x\right)-f\left(x_0\right)$ 可以表示为
-		$$
-			\Delta y=A \Delta x+o(\Delta x)
-		$$
 
-		其中 $\mathrm{A}$ 是与 $x_0$ 有关而与 $\Delta x$ 无关的常数, $o(\Delta x)$ 是比 $\Delta x$ 高阶的无穷小量, 则函数 $y=f(x)$在点 $x_0$ 可微, $A \Delta x$ 称为微分, 即 $\mathrm{~d} y=A \Delta x$.
-
-		\vspace{0.2cm}
-		由于 $\Delta x=\Delta x$ 是恒等等式, 于是有
-		$$
-			\mathrm{~d} y=A \Delta x=A\mathrm{~d}x.
-		$$
-	\end{block}
-	\vspace{0.5cm}
-	{\huge
-		\begin{quote}
-			$$
-				\mathrm{d} y=f^{\prime}(x) \mathrm{~d} x
-			$$
-		\end{quote}
-	}
-\end{frame}
-
-
-\begin{frame}
-	\frametitle{参数函数求微分}
-	\everymath{\displaystyle}
-	\begin{block}{隐函数求微分方式}
-		\begin{equation*}
-			\left\{
-			\begin{array}{ll}
-				y=f_1(t);\vspace{0.2cm} \\
-				x=f_2(t).
-			\end{array}
-			\right.
-		\end{equation*}
-		求 $\frac{\mathrm{d}y}{\mathrm{d}x}$, $\frac{\mathrm{d}^2y}{\mathrm{d}x^2}$.
-	\end{block}
-	\begin{exampleblock}{隐函数求微分}
-		对两个方程进行微分, 得到:
-		\begin{equation*}
-			\left\{
-			\begin{array}{ll}
-				\mathrm{d}y=\mathrm{d}(f_1(t))=f_1'(t)\mathrm{d}t;\vspace{0.2cm} \\
-				\mathrm{d}x=\mathrm{d}(f_2(t))=f_2'(t)\mathrm{d}t.
-			\end{array}
-			\right.
-		\end{equation*}
-		于是有
-		$$
-			\frac{\mathrm{d}y}{\mathrm{d}x}=\frac{f_1'(t)\mathrm{d}t}{f_2'(t)\mathrm{d}t}=\frac{f_1'(t)}{f_2'(t)}.
-		$$
-	\end{exampleblock}
-\end{frame}
-
-\begin{frame}
-	\frametitle{参数函数求微分}
-	\everymath{\displaystyle}
-	\begin{exampleblock}{隐函数求二阶微分}
-		根据以上计算, 可以得到:
-		\begin{equation*}
-			\left\{
-			\begin{array}{ll}
-				\frac{\mathrm{d}y}{\mathrm{d}x}=\frac{f_1'(t)}{f_2'(t)},\vspace{0.1cm} \\
-				\mathrm{d}x=f_2'(t).
-			\end{array}
-			\right.
-		\end{equation*}
-		分别进行对 $t$ 变量的微分, 得到
-		$$
-			\left\{
-			\begin{array}{ll}
-				\mathrm{d}\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)=\left(\frac{f_1'(t)}{f_2'(t)}\right)'\mathrm{d}t\vspace{0.1cm} \\
-				\mathrm{d}x=f_2'(t)\mathrm{d}t.
-			\end{array}
-			\right.
-		$$
-		因此:
-		$$
-			\frac{\mathrm{d}^2y}{\mathrm{d}x^2}=\frac{\mathrm{d}\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)}{\mathrm{d}x}=\frac{\left(\frac{f_1'(t)}{f_2'(t)}\right)'\mathrm{d}t}{f_2'(t)\mathrm{d}t}=\frac{\left(\frac{f_1'(t)}{f_2'(t)}\right)'}{f_2'(t)}=\frac{f_1^{''}(t)f_2^{'}(t)-f_1^{'}(t)f_2^{''}(t)}{\left(f_2'(t)\right)^3}.
-		$$
-	\end{exampleblock}
-\end{frame}
-
-\begin{frame}
-	\frametitle{隐函数求微分}
-	\everymath{\displaystyle}
-	\begin{block}{隐函数}
-		由方程 $F(x, y)=0$ 所确定的函数, 称之为隐函数.
-	\end{block}
-	\begin{exampleblock}{举个栗子}
-		$$
-			e^{x+y}=\sin x\cos y,\qquad \ln \sqrt{x^2+y^2}=\arctan \frac{y}{x}.
-		$$
-	\end{exampleblock}
-	\begin{block}{计算$\frac{\mathrm{d}y}{\mathrm{d}x}$}
-		\begin{enumerate}
-			\item 移项: 化归成 $F(x, y)=0$ 的形式;
-			\item 计算微分: $\mathrm{d}F(x,y)=0\,\,\Rightarrow\,\,F_x(x,y)\mathrm{d}x+F_y(x,y)\mathrm{d}y=0$;
-			\item 得到结果: $F_y(x,y)\mathrm{d}y=-F_x(x,y)\mathrm{d}x\,\,\Rightarrow\,\,\frac{\mathrm{d}y}{\mathrm{d}x}=-\frac{F_x(x,y)}{F_y(x,y)}$.
-		\end{enumerate}
-	\end{block}
-\end{frame}
-
-\begin{frame}
-	\frametitle{隐函数求微分}
-	\everymath{\displaystyle}
-	\begin{exampleblock}{计算栗子里的$\frac{\mathrm{d}y}{\mathrm{d}x}$和$\frac{\mathrm{d}^2y}{\mathrm{d}x^2}$}
-		$$
-			e^{x+y}=\sin x\cos y.
-		$$
-	\end{exampleblock}
-	\begin{block}{Ans}
-		由于:
-		$$
-			\mathrm{d}\left(e^{x+y}-\sin x\cos y\right)=\left(e^{x+y}-\cos x\cos y\right)\mathrm{d}x+\left(e^{x+y}+\sin x\sin y\right)\mathrm{d}y=0.
-		$$
-		得到
-		$$
-			\frac{\mathrm{d}y}{\mathrm{d}x}=-\frac{e^{x+y}-\cos x\cos y}{e^{x+y}+\sin x\sin y}.
-		$$
-		那么怎么得到 $\frac{\mathrm{d}^2y}{\mathrm{d}x^2}$呢?
-	\end{block}
-\end{frame}
-
-\begin{frame}
-	\frametitle{隐函数求微分}
-	\everymath{\displaystyle}
-	\begin{exampleblock}{计算栗子里的$\frac{\mathrm{d}y}{\mathrm{d}x}$和$\frac{\mathrm{d}^2y}{\mathrm{d}x^2}$}
-		$$
-			e^{x+y}=\sin x\cos y,\,\,\, \text{已知}\,\,\, \frac{\mathrm{d}y}{\mathrm{d}x}=-\frac{e^{x+y}-\cos x\cos y}{e^{x+y}+\sin x\sin y}.
-		$$
-	\end{exampleblock}
-	\begin{block}{Ans}
-		由于:
-		$$
-			\begin{aligned}
-				\mathrm{d}\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right) & =-\mathrm{d}\left(\frac{e^{x+y}-\cos x\cos y}{e^{x+y}+\sin x\sin y}\right)                                                     \\
-				                                                       & =-\frac{\mathrm{d}\left(e^{x+y}-\cos x\cos y\right)\left(e^{x+y}+\sin x\sin y\right)}{\left(e^{x+y}+\sin x\sin y\right)^2}     \\
-				                                                       & \quad+\frac{\left(e^{x+y}-\cos x\cos y\right)\mathrm{d}\left(e^{x+y}+\sin x\sin y\right)}{\left(e^{x+y}+\sin x\sin y\right)^2}
-			\end{aligned}
-		$$
-		$\mathrm{d}\left(e^{x+y}-\cos x\cos y\right)=\left(e^{x+y}+\sin x\cos y\right)\mathrm{d}x+\left(e^{x+y}+\cos x\sin y\right)\mathrm{d}y,$\\
-		$\mathrm{d}\left(e^{x+y}+\sin x\sin y\right)=\left(e^{x+y}+\cos x\sin y\right)\mathrm{d}x+\left(e^{x+y}+\sin x\cos y\right)\mathrm{d}y.$
-	\end{block}
-\end{frame}
-
-\begin{frame}
-	\frametitle{隐函数求微分}
-	\everymath{\displaystyle}
-	\begin{exampleblock}{计算栗子里的$\frac{\mathrm{d}y}{\mathrm{d}x}$和$\frac{\mathrm{d}^2y}{\mathrm{d}x^2}$}
-		$$
-			e^{x+y}=\sin x\cos y,\,\,\, \text{已知}\,\,\, \frac{\mathrm{d}y}{\mathrm{d}x}=-\frac{e^{x+y}-\cos x\cos y}{e^{x+y}+\sin x\sin y}.
-		$$
-	\end{exampleblock}
-	\begin{block}{Ans}
-		由于:
-		$$
-			\begin{aligned}
-				 & \mathrm{d}\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)                                                                                                                                    \\
-				 & =-\frac{\left(\left(e^{x+y}+\sin x\cos y\right)\mathrm{d}x+\left(e^{x+y}+\cos x\sin y\right)\mathrm{d}y\right)\left(e^{x+y}+\sin x\sin y\right)}{\left(e^{x+y}+\sin x\sin y\right)^2}     \\
-				 & \quad+\frac{\left(e^{x+y}-\cos x\cos y\right)\left(\left(e^{x+y}+\cos x\sin y\right)\mathrm{d}x+\left(e^{x+y}+\sin x\cos y\right)\mathrm{d}y\right)}{\left(e^{x+y}+\sin x\sin y\right)^2}
-			\end{aligned}
-		$$
-	\end{block}
-\end{frame}
-
-\begin{frame}
-	\frametitle{隐函数求微分}
-	\everymath{\displaystyle}
-	\begin{block}{继续}
-		由于:
-		$$
-			\begin{aligned}
-				 & \frac{\mathrm{d}^2y}{\mathrm{d}x^2}=\frac{\mathrm{d}}{\mathrm{d}x}\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)                                                                                     \\
-				 & =-\frac{\left(\left(e^{x+y}+\sin x\cos y\right)+\left(e^{x+y}+\cos x\sin y\right)\frac{\mathrm{d}y}{\mathrm{d}x}\right)\left(e^{x+y}+\sin x\sin y\right)}{\left(e^{x+y}+\sin x\sin y\right)^2}     \\
-				 & \quad+\frac{\left(e^{x+y}-\cos x\cos y\right)\left(\left(e^{x+y}+\cos x\sin y\right)+\left(e^{x+y}+\sin x\cos y\right)\frac{\mathrm{d}y}{\mathrm{d}x}\right)}{\left(e^{x+y}+\sin x\sin y\right)^2}
-			\end{aligned}
-		$$
-		其中, $\frac{\mathrm{d}y}{\mathrm{d}x}=-\frac{e^{x+y}-\cos x\cos y}{e^{x+y}+\sin x\sin y}$.
-	\end{block}
-\end{frame}
-
-\begin{frame}
-	\frametitle{隐函数求微分}
-	\everymath{\displaystyle}
-	\begin{block}{练习题}
-		$$
-			\mathrm{e}^y+x y-\mathrm{e}=0.
-		$$
-	\end{block}
-
-	\begin{exampleblock}{}
-		$$
-		\begin{aligned}
-			0&=\mathrm{d}\left(\mathrm{e}^y+x y-\mathrm{e}\right)\\
-			&=y\mathrm{d}x+(e^y+x)\mathrm{d}y.
-		\end{aligned}
-		$$
-	\end{exampleblock}
-	\begin{exampleblock}{}
-		$$
-		0=y\mathrm{d}x+(e^y+x)\mathrm{d}y\Rightarrow\frac{\mathrm{d}y}{\mathrm{d}x}=-\frac{y}{x+e^y}.
-		$$
-	\end{exampleblock}
-\end{frame}
-
-\begin{frame}
-	\frametitle{隐函数求微分}
-	\everymath{\displaystyle}
-	\begin{block}{练习题}
-		$$
-			\ln \sqrt{x^2+y^2}=\arctan \frac{y}{x}.
-		$$
-	\end{block}
-
-	\begin{exampleblock}{}
-		$$
-		\begin{aligned}
-			0&=\mathrm{d}\left(\ln \sqrt{x^2+y^2}-\arctan \frac{y}{x}\right)\\
-			&=\frac{1}{{\sqrt{x^2+y^2}}}\cdot\frac{x\mathrm{d}x+y\mathrm{d}y}{\sqrt{x^2+y^2}}-\frac{1}{1+\left(\frac{y}{x}\right)^2}\cdot\frac{x\mathrm{d}y-y\mathrm{d}x}{x^2}\\
-			&=\frac{(y-x)\mathrm{d}y+(x+y)\mathrm{d}x}{x^2+y^2}.
-		\end{aligned}
-		$$
-	\end{exampleblock}
-	\begin{exampleblock}{}
-		$$
-		0=(y-x)\mathrm{d}y+(x+y)\mathrm{d}x\Rightarrow\frac{\mathrm{d}y}{\mathrm{d}x}=-\frac{x+y}{x-y}.
-		$$
-	\end{exampleblock}
-\end{frame}
-
-
-
-\subsection{反常积分}
+\section{反常积分}
 \begin{frame}
 	\frametitle{回顾:定积分}
 	\begin{block}{Riemann 积分的定义}
@@ -402,7 +164,166 @@ aspectratio=43,
 \end{frame}
 
 
+\begin{frame}
+	\frametitle{再回顾:定积分}
+	\begin{block}{Riemann 积分的定义}
+		设$f(x)$在区间$[a,b]$上有定义, $\mathrm{P}:a=x_0<x_1<x_2<\ldots<x_n=b$.
+		在每段$[x_{i-1},x_i]$上 {\bf 任意}选取点$\xi_i$, 得到近似和
+		$$
+			\sum_{i=1}^n f(\xi_i)(x_i-x_{i-1}).
+		$$
+		如果对于$\mathrm{P}$的精细化
+		我们就称$f(x)$在区间$[a,b]$上是 {\bf Riemann 可积}的, 并将这个极限值称为$f(x)$在$[a,b]$上的 {\bf Riemann 积分}, 记为
+		\[
+			\lim_{\lambda\to 0} \sum_{i=1}^n f(\xi_i)(x_i-x_{i-1}) := \int_a^b f(x)\mathrm{~d} x.
+		\]
+	\end{block}
+	\vspace{0.2cm}
+	{\color{blue}那么, $f(x)$ 在 $[a,b]$ 上无定义的情况, 和 $a, b$其中之一为无穷大的情形, 应当怎么去定义求面积的过程?}
+\end{frame}
 
+\begin{frame}
+	\frametitle{无穷上下限反常积分的定义}
+	\everymath{\displaystyle}
+	\begin{block}{定义}
+		设函数 $f(x)$ 在区间 $[a,+\infty)$ 上连续, 取 $b>a$. 如果极限 $\lim _{b \rightarrow+\infty} \int_a^b f(x) \mathrm{~d}x$存在, 则称此极限为函数 $f(x)$ 在无穷区间 $[a,+\infty)$ 上的反常积分, 记作 $\int_a^{+\infty} f(x) \mathrm{~d}x$, 即 $\int_a^{+\infty} f(x) \mathrm{~d}x=\lim _{b \rightarrow+\infty} \int_a^b f(x) \mathrm{~d}x$
+								这时也称反常积分 $\int_a^{+\infty} f(x) \mathrm{~d}x$ 收敛.\\\vspace{0.2cm}
+								同理, 可以定义处在无穷区间 $(-\infty,b]$ 上的反常积分 $\int_{-\infty}^b f(x) \mathrm{~d}x$ 和 无穷区间 $(-\infty,+\infty]$ 上的反常积分 $\int_{-\infty}^{+\infty} f(x) \mathrm{~d}x$ 及其相关的敛散性.
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{无穷上下限反常积分的计算}
+	\everymath{\displaystyle}
+	利用 Newton-Leibniz 公式, 如果 $F(x)$ 是 $f(x)$ 的原函数
+	$$
+		\begin{aligned}
+			\int_a^{+\infty} f(x)  \mathrm{~d}x & =\lim _{b \rightarrow+\infty} \int_a^b f(x) \mathrm{~d}x=\lim _{b \rightarrow+\infty}[F(x)]_a^b \\\vspace{0.4cm}
+			                                    & =  \lim _{b \rightarrow+\infty} F(b)-F(a)=\lim _{x \rightarrow+\infty} F(x)-F(a) .
+		\end{aligned}
+	$$
+	类似地
+	$$
+		\begin{aligned}
+			\int_{-\infty}^b f(x)  \mathrm{~d}x & =\lim _{a \rightarrow-\infty} \int_a^b f(x) \mathrm{~d}x=\lim _{a \rightarrow-\infty}[F(x)]_a^b \\\vspace{0.4cm}
+			                                    & =  \lim _{a \rightarrow-\infty} F(b)-F(a)=F(b)-\lim _{x \rightarrow-\infty} F(x) .
+		\end{aligned}
+	$$
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{无穷上下限反常积分的计算}
+	\everymath{\displaystyle}
+	\begin{block}{计算反常积分 $\int_{-\infty}^{+\infty} \frac{1}{1+x^2} \mathrm{~d}x$}
+		$$
+			\begin{aligned}
+				\int_{-\infty}^{+\infty} \frac{1}{1+x^2} \mathrm{~d} x & =[\arctan x]_{-\infty}^{+\infty} =\lim _{x \rightarrow+\infty} \arctan x-\lim _{x \rightarrow-\infty} \arctan x \\
+				                                                       & =\frac{\pi}{2}-\left(-\frac{\pi}{2}\right)=\pi .
+			\end{aligned}
+		$$
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{无穷上下限反常积分的计算}
+	\everymath{\displaystyle}
+	\begin{block}{计算反常积分 $\int_0^{+\infty} t e^{-p t} \mathrm{~d} t \quad(p$ 是常数, 且 $p>0)$}
+		$$
+			\begin{aligned}
+				\int_0^{+\infty} t e^{-p t} \mathrm{~d}t & =\left[\int t e^{-p t} \mathrm{~d}t\right]_0^{+\infty}=\left[-\frac{1}{p} \int t \mathrm{~d} e^{-p t}\right]_0^{+\infty} \\
+				                                         & =\left[-\frac{1}{p} t e^{-p t}+\frac{1}{p} \int e^{-p t} \mathrm{~d}t\right]_0^{+\infty}                                 \\
+				                                         & =\left[-\frac{1}{p} t e^{-p t}-\frac{1}{p^2} e^{-p t}\right]_0^{+\infty}                                                 \\
+				                                         & =\lim _{t \rightarrow+\infty}\left[-\frac{1}{p} t e^{-p t}-\frac{1}{p^2} e^{-p t}\right]+\frac{1}{p^2}=\frac{1}{p^2} .
+			\end{aligned}
+		$$
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{无穷上下限反常积分的计算}
+	\everymath{\displaystyle}
+	\begin{block}{讨论反常积分 $\int_a^{+\infty} \frac{1}{x^p} \mathrm{~d}x(a>0)$ 的敛散性}
+		\begin{enumerate}
+			\item 当 $p=1$ 时, $\int_a^{+\infty} \frac{1}{x^p} \mathrm{~d}x=\int_a^{+\infty} \frac{1}{x} \mathrm{~d}x=[\ln x]_a^{+\infty}=+\infty$.
+			\item 当 $p=1$ 时, $\int_a^{+\infty} \frac{1}{x^p} \mathrm{~d}x=\int_a^{+\infty} \frac{1}{x} \mathrm{~d}x=[\ln x]_a^{+\infty}=+\infty$.
+			\item 当 $p<1$ 时, $\int_a^{+\infty} \frac{1}{x^p} \mathrm{~d}x=\left[\frac{1}{1-p} x^{1-p}\right]_a^{+\infty}=+\infty$.
+			\item 当 $p>1$ 时, $\int_a^{+\infty} \frac{1}{x^p} \mathrm{~d}x=\left[\frac{1}{1-p} x^{1-p}\right]_a^{+\infty}=\frac{a^{1-p}}{p-1}$.
+		\end{enumerate}
+		因此, 当 $p>1$ 时, 此反常积分收玫, 其值为 $\frac{a^{1-p}}{p-1}$; 当 $p \leq 1$ 时, 此反常积分发散.
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{瑕积分的定义}
+	\everymath{\displaystyle}
+	\begin{block}{定义}
+		设函数 $f(x)$ 在区间 $(a, b]$ 上连续, 而在点 $a$ 的右邻域内无界. 取 $\varepsilon>0$, 如果极限
+		$$
+			\lim _{t \rightarrow a^{+}} \int_t^b f(x) \mathrm{~d}x
+		$$
+
+		存在, 则称此极限为函数 $f(x)$ 在 $(a, b]$ 上的反常积分, 仍然记作 $\int_a^b f(x) \mathrm{~d}x$, 即
+		$$
+			\int_a^b f(x) \mathrm{~d}x=\lim _{t \rightarrow a^{+}} \int_t^b f(x) \mathrm{~d}x .
+		$$
+
+		这时也称反常积分 $\int_a^b f(x) \mathrm{~d}x$ 收敛.
+		如果上述极限不存在, 就称反常积分 $\int_a^b f(x) \mathrm{~d}x$ 发散.
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{无穷上下限反常积分的计算}
+	\everymath{\displaystyle}
+	利用 Newton-Leibniz 公式, 如果 $F(x)$ 是 $f(x)$ 的原函数
+	$$
+		\begin{aligned}
+			\int_a^b f(x) \mathrm{~d}x & =\lim _{t \rightarrow a^{+}} \int_t^b f(x) \mathrm{~d}x=\lim _{t \rightarrow a^{+}}[F(x)]_t^b \\
+			                           & =F(b)-\lim _{t \rightarrow a^{+}} F(t)=F(b)-\lim _{x \rightarrow a^{+}} F(x) .
+		\end{aligned}
+	$$
+	\begin{enumerate}
+		\item 当 $a$ 为瑕点时, $\int_a^b f(x) \mathrm{~d}x=[F(x)]_a^b=F(b)-\lim _{x \rightarrow a^{+}} F(x)$ ;
+		\item 当 $b$ 为瑕点时, $\int_a^b f(x) \mathrm{~d}x=[F(x)]_a^b=\lim _{x \rightarrow b^{-}} F(x)-F(a)$;
+		\item
+		      当 $c(a<c<b)$ 为瑕点时,
+		      $$
+			      \begin{aligned}
+				      \int_a^b f(x) \mathrm{~d}x & =\int_a^c f(x) \mathrm{~d}x+\int_c^b f(x) \mathrm{~d}x                                                   \\
+				                                 & =\left[\lim _{x \rightarrow c^{-}} F(x)-F(a)\right]+\left[F(b)-\lim _{x \rightarrow c^{+}} F(x)\right] .
+			      \end{aligned}
+		      $$
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{瑕积分的计算}
+	\everymath{\displaystyle}
+	\begin{block}{计算反常积分 $\int_0^a \frac{1}{\sqrt{a^2-x^2}} d x$}
+		因为 $\lim _{x \rightarrow a^{-}} \frac{1}{\sqrt{a^2-x^2}}=+\infty$, 所以点 $a$ 为被积函数的瑕点.
+		$$
+			\int_0^a \frac{1}{\sqrt{a^2-x^2}} d x=\left[\arcsin \frac{x}{a}\right]_0^a=\lim _{x \rightarrow a^{-}} \arcsin \frac{x}{a}-0=\frac{\pi}{2}
+		$$
+	\end{block}
+	\begin{block}{讨论反常积分 $\int_{-1}^1 \frac{1}{x^2} d x$ 的收敛性}
+		函数 $\frac{1}{x^2}$ 在区间 $[-1,1]$ 上除 $x=0$ 外连续, 且 $\lim _{x \rightarrow 0} \frac{1}{x^2}=\infty$.
+		由于 $\int_{-1}^0 \frac{1}{x^2} d x=\left[-\frac{1}{x}\right]_{-1}^0=\lim _{x \rightarrow 0^{-}}\left(-\frac{1}{x}\right)-1=+\infty$,即反常积分 $\int_{-1}^0 \frac{1}{x^2} d x$ 发散, 所以反常积分 $\int_{-1}^1 \frac{1}{x^2} d x$ 发散.
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{瑕积分的计算}
+	\everymath{\displaystyle}
+	\begin{block}{讨论反常积分 $\int_a^b \frac{d x}{(x-a)^q}$ 的收敛性}
+		\begin{enumerate}
+			\item 当 $q=1$ 时, $\int_a^b \frac{d x}{(x-a)^q}=\int_a^b \frac{d x}{x-a}=[\ln (x-a)]_a^b=+\infty$;
+			\item 当 $q>1$ 时, $\int_a^b \frac{d x}{(x-a)^q}=\left[\frac{1}{1-q}(x-a)^{1-q}\right]_a^b=+\infty$;
+			\item 当 $q<1$ 时, $\int_a^b \frac{d x}{(x-a)^q}=\left[\frac{1}{1-q}(x-a)^{1-q}\right]_a^b=\frac{1}{1-q}(b-a)^{1-q}$.
+		\end{enumerate}
+		因此, 当 $q<1$ 时, 此反常积分收敛, 其值为 $\frac{1}{1-q}(b-a)^{1-q}$; 当 $q \geq 1$ 时, 此反常积分发散.
+	\end{block}
+\end{frame}
 
 % Thank you page
 \beamertemplateshadingbackground{structure.fg!90}{structure.fg}
@@ -410,7 +331,9 @@ aspectratio=43,
 	\vfill
 	\centering
 	{
-		\centering \Huge \color{white} Thank you for your attention!\\[10pt]Questions?
+		\centering \Huge \color{white} Thank you for your attention!\\[10pt]Questions?\\[10pt]Homework: Page 224: 4, 5:(1)(3)(5)(7)(9)(11)(13)(15)\\
+		6: (1)(3)(5)(7)(9)\\
+		12:(1)(3)(5)(7)(9)
 	}
 	\vfill
 \end{frame}
